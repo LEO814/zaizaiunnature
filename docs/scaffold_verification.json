@@ -1,0 +1,218 @@
+{
+  "schemaVersion": "0.2.0",
+  "date": "2026-10-09",
+  "project": "仔仔超现实",
+  "overall": "scaffold_contract_and_lua51_smoke_passed",
+  "contractValidation": {
+    "ok": true,
+    "mode": "contract",
+    "counts": {
+      "packages": 16,
+      "resources": 18,
+      "clips": 42,
+      "luaFiles": 40,
+      "staticImports": 70
+    },
+    "errors": [],
+    "scope": "Only directory, manifest, static Lua imports and generated registry contracts are checked. This does not parse GLB/Blender files, prove SDK compatibility, or verify gameplay in the editor."
+  },
+  "unitTests": {
+    "status": "passed",
+    "testsRun": 22,
+    "failures": 0,
+    "errors": 0,
+    "command": "python3 -m unittest discover -s tests -p test_package_contract.py",
+    "scope": "Meaningful contract failures including module boundaries, package paths, generated registry drift, additional resource locations and owned clip resource binding."
+  },
+  "deliveryValidation": {
+    "expectedRejected": true,
+    "errorCount": 34,
+    "codes": [
+      "planned-package",
+      "planned-resource"
+    ],
+    "meaning": "全部对象和资源仍为planned；此骨架不代表已交付模型或已完成玩法。"
+  },
+  "luaRuntimeSmoke": {
+    "ok": true,
+    "runtime": {
+      "package": "lupa",
+      "version": "2.6",
+      "module": "lupa.lua51",
+      "implementation": "Lua 5.1",
+      "luaVersion": [
+        5,
+        1
+      ]
+    },
+    "bundle": {
+      "path": "dist/zaizai_surreal.lua",
+      "moduleCount": 40,
+      "sha256": "fa337bc04b2bb6ccea27ace2943d8c350b76f1155d84d3cbf3e8db4a7873c5e8"
+    },
+    "declaredMethodCount": 34,
+    "checks": [
+      {
+        "name": "bundle_loads_bootstrap",
+        "passed": true,
+        "detail": "Bootstrap.create is a Lua function"
+      },
+      {
+        "name": "default_adapter_rejected",
+        "passed": true,
+        "detail": "ADAPTER_NOT_READY"
+      },
+      {
+        "name": "empty_service_tables_rejected",
+        "passed": true,
+        "detail": "ADAPTER_NOT_READY"
+      },
+      {
+        "name": "declared_methods_allow_scaffold_binding",
+        "passed": true,
+        "detail": "34 inert method doubles"
+      },
+      {
+        "name": "definition_identity_matches_manifest",
+        "passed": true,
+        "detail": "16 definition IDs and types match registry entries"
+      },
+      {
+        "name": "clip_sources_match_owned_runtime_resources",
+        "passed": true,
+        "detail": "Every clip identifies its package's runtime model/animation/scene chunk"
+      },
+      {
+        "name": "all_planned_controllers_refuse_gameplay_start",
+        "passed": true,
+        "detail": "16 controllers return NOT_IMPLEMENTED"
+      },
+      {
+        "name": "all_disposed_controllers_refuse_restart",
+        "passed": true,
+        "detail": "16 controllers return DISPOSED"
+      },
+      {
+        "name": "unknown_entity_rejected",
+        "passed": true,
+        "detail": "UNKNOWN_ENTITY"
+      }
+    ],
+    "entities": [
+      {
+        "id": "chest_basic",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "gate_exit",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "item_capture",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "item_flashlight",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "item_heal_small",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "item_music_box",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "item_treasure",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "map_tomb",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "monster_bat",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "monster_marmot",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "monster_slime",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "player_default",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "trap_spikes",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "ui_main",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "weapon_ranged_sample",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      },
+      {
+        "id": "weapon_shovel",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED"
+      }
+    ],
+    "scope": "Lua syntax, static module closure, bootstrap service checks and honest unimplemented lifecycle responses only. Test doubles do not implement editor APIs or gameplay. No model import, SDK compatibility or gameplay acceptance is claimed.",
+    "documentation": "https://pypi.org/project/lupa/2.6/"
+  },
+  "limitations": [
+    "没有真实模型导入、骨骼/动作内容解析或材质验证。",
+    "Lupa Lua 5.1 是离线 QA 运行时，不是仔仔编辑器 SDK 或生产依赖。",
+    "34 个服务方法只是无行为的测试替身，只验证接口存在性和骨架挂接。",
+    "全部控制器仍返回 NOT_IMPLEMENTED，不包含怪物 AI、战斗、背包、寻路等已实现玩法。",
+    "编辑器能力、资源导入、行为效果与完整探索撤离流程须在 G0 之后分别实测验收。"
+  ],
+  "sources": [
+    {
+      "title": "Lupa 2.6 official package documentation",
+      "url": "https://pypi.org/project/lupa/2.6/"
+    }
+  ],
+  "enforcedModuleBoundaries": [
+    "Business packages may not import another package controller, even when its entity ID is declared as a dependency.",
+    "Business packages must use context services and may not import gameplay.adapters.*.",
+    "Shared gameplay.core may not import gameplay.packages.*; bootstrap and generated factories assemble packages."
+  ],
+  "resourceContract": {
+    "fixedLocations": [
+      "model: model/main.glb",
+      "source: model/source.blend (optional)",
+      "ui_texture: materials/ui_atlas.png"
+    ],
+    "additionalLocations": [
+      "animation: animations/<snake_case>.glb",
+      "texture: materials/<snake_case>.png",
+      "scene_chunk: model/chunks/<snake_case>.glb"
+    ],
+    "clipResourceRule": "Each clip declares resourceId from its own manifest, with kind model, animation or scene_chunk. Source and texture resources cannot hold clips."
+  },
+  "responsibilityVersion": "0.3.0"
+}

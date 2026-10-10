@@ -1,0 +1,25 @@
+-- Read-only object definition. Runtime HP/ammo/AI state belongs to instances.
+return {
+  ["schemaVersion"] = "0.2.0",
+  ["id"] = "item_capture",
+  ["displayName"] = "封印器",
+  ["gate"] = "G2",
+  ["assetId"] = "asset_item_capture",
+  ["weightKg"] = 0.4,
+  ["maxStack"] = 3,
+  ["sellValue"] = 100,
+  ["equipmentSlot"] = "none",
+  ["castSec"] = 2.5,
+  ["cooldownSec"] = 3,
+  ["consumePolicy"] = "on_effect_commit",
+  ["cancelOnDamage"] = true,
+  ["cancelOnMoveBeyondM"] = 0.4,
+  ["useClipId"] = "clip_item_capture_use",
+  ["effect"] = {
+    ["kind"] = "capture",
+    ["rangeM"] = 3,
+    ["requireLineOfSight"] = true,
+    ["requiresCanCapture"] = true,
+  },
+  ["type"] = "item",
+}

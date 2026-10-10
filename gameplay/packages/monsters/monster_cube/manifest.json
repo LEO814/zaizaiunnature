@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "monster_cube",
+  "type": "monster",
+  "packageId": "PKG-MONSTER",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.monsters.monster_cube.definition",
+  "controllerModule": "gameplay.packages.monsters.monster_cube.controller",
+  "resources": [
+    {
+      "id": "asset_monster_cube",
+      "path": "gameplay/packages/monsters/monster_cube/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Movement",
+    "Navigation",
+    "Interaction",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

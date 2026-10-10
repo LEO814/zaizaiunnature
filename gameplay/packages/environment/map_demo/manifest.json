@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "map_demo",
+  "type": "environment",
+  "packageId": "PKG-SCENE",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.environment.map_demo.definition",
+  "controllerModule": "gameplay.packages.environment.map_demo.controller",
+  "resources": [
+    {
+      "id": "asset_map_demo",
+      "path": "gameplay/packages/environment/map_demo/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [],
+  "requiredServices": [
+    "Assets",
+    "Navigation",
+    "Movement"
+  ],
+  "dependencies": []
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "weapon_ranged_sample",
+  "type": "weapon",
+  "packageId": "PKG-TOOL",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.weapons.weapon_ranged_sample.definition",
+  "controllerModule": "gameplay.packages.weapons.weapon_ranged_sample.controller",
+  "resources": [
+    {
+      "id": "asset_weapon_ranged_sample",
+      "path": "gameplay/packages/weapons/weapon_ranged_sample/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    },
+    {
+      "id": "anim_weapon_ranged_sample_player",
+      "path": "gameplay/packages/weapons/weapon_ranged_sample/animations/player_actions.glb",
+      "kind": "animation",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_weapon_ranged_sample_idle",
+      "name": "weapon_ranged_sample_idle",
+      "role": "idle",
+      "resourceId": "anim_weapon_ranged_sample_player"
+    },
+    {
+      "id": "clip_weapon_ranged_sample_attack",
+      "name": "weapon_ranged_sample_attack",
+      "role": "attack",
+      "resourceId": "anim_weapon_ranged_sample_player"
+    }
+  ],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Inventory",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

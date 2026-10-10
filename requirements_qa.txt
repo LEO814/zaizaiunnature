@@ -1,0 +1,2 @@
+# Optional offline Lua 5.1 smoke only; not a production dependency.
+lupa==2.6

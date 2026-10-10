@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "monster_bat",
+  "type": "monster",
+  "packageId": "PKG-MONSTER",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.monsters.monster_bat.definition",
+  "controllerModule": "gameplay.packages.monsters.monster_bat.controller",
+  "resources": [
+    {
+      "id": "asset_monster_bat",
+      "path": "gameplay/packages/monsters/monster_bat/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_monster_bat_idle",
+      "name": "monster_bat_idle",
+      "role": "idle",
+      "resourceId": "asset_monster_bat"
+    },
+    {
+      "id": "clip_monster_bat_patrol",
+      "name": "monster_bat_patrol",
+      "role": "patrol",
+      "resourceId": "asset_monster_bat"
+    },
+    {
+      "id": "clip_monster_bat_chase",
+      "name": "monster_bat_chase",
+      "role": "chase",
+      "resourceId": "asset_monster_bat"
+    },
+    {
+      "id": "clip_monster_bat_attack",
+      "name": "monster_bat_attack",
+      "role": "attack",
+      "resourceId": "asset_monster_bat"
+    },
+    {
+      "id": "clip_monster_bat_hurt",
+      "name": "monster_bat_hurt",
+      "role": "hurt",
+      "resourceId": "asset_monster_bat"
+    },
+    {
+      "id": "clip_monster_bat_death",
+      "name": "monster_bat_death",
+      "role": "death",
+      "resourceId": "asset_monster_bat"
+    },
+    {
+      "id": "clip_monster_bat_special",
+      "name": "monster_bat_special",
+      "role": "special",
+      "resourceId": "asset_monster_bat"
+    }
+  ],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Movement",
+    "Navigation",
+    "Inventory",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

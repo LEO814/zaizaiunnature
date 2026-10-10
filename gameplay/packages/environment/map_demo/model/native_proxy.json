@@ -1,0 +1,7 @@
+{
+  "status": "native_demo",
+  "source": "editor_native_cube",
+  "geometryDefinition": "gameplay.packages.environment.map_demo.definition",
+  "sceneNodePrefix": "map_demo_",
+  "modelGlb": "planned_not_required_for_native_demo"
+}

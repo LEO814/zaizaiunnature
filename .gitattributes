@@ -1,0 +1,2 @@
+# Native editor scenes are binary snapshots and must not be line-merged.
+*.data binary

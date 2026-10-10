@@ -1,0 +1,26 @@
+-- Read-only object definition. Runtime HP/ammo/AI state belongs to instances.
+return {
+  ["schemaVersion"] = "0.2.0",
+  ["id"] = "item_flashlight",
+  ["displayName"] = "手电筒",
+  ["gate"] = "G1",
+  ["assetId"] = "asset_item_flashlight",
+  ["weightKg"] = 0.5,
+  ["maxStack"] = 1,
+  ["sellValue"] = 60,
+  ["equipmentSlot"] = "tool",
+  ["castSec"] = 0,
+  ["cooldownSec"] = 0.2,
+  ["consumePolicy"] = "not_consumed",
+  ["cancelOnDamage"] = true,
+  ["cancelOnMoveBeyondM"] = 0.4,
+  ["useClipId"] = "clip_item_flashlight_use",
+  ["effect"] = {
+    ["kind"] = "illumination",
+    ["rangeM"] = 8,
+    ["fullAngleDeg"] = 55,
+    ["batteryMaxSec"] = 120,
+    ["drainPerSec"] = 1,
+  },
+  ["type"] = "item",
+}

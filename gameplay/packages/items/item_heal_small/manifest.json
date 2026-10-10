@@ -1,0 +1,34 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "item_heal_small",
+  "type": "item",
+  "packageId": "PKG-TOOL",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.items.item_heal_small.definition",
+  "controllerModule": "gameplay.packages.items.item_heal_small.controller",
+  "resources": [
+    {
+      "id": "asset_item_heal_small",
+      "path": "gameplay/packages/items/item_heal_small/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_item_heal_small_use",
+      "name": "item_heal_small_use",
+      "role": "use",
+      "resourceId": "asset_item_heal_small"
+    }
+  ],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Inventory",
+    "Interaction",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "0.2.0",
+  "entity_id": "monster_cube",
+  "runtime_kind": "editor_native_cube",
+  "mapping_status": "native_cube_created_binding_pending_preview",
+  "binding_key": "monster_cube",
+  "planned_runtime_model": "model/main.glb",
+  "glb_delivered": false,
+  "skeletal_animation_delivered": false,
+  "native_feedback": [
+    "native_patrol",
+    "native_windup",
+    "native_attack",
+    "native_hit",
+    "native_death"
+  ],
+  "feedback_implementation": "Adapter-owned transform/color feedback, not skeletal animation",
+  "note": "主框架已在编辑器创建原生方块样件；具体句柄由 Adapter 按实例绑定，预览证据由集成人记录。原生动作不登记为 GLB clip。"
+}

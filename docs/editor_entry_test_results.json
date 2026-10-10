@@ -1,0 +1,126 @@
+{
+  "ok": true,
+  "runtime": {
+    "package": "lupa",
+    "version": "2.6",
+    "modules": [
+      "lupa.lua51",
+      "lupa.lua54"
+    ]
+  },
+  "entry": "scripts/modules/demo_entry.lua",
+  "moduleCount": 52,
+  "testsRun": 18,
+  "luaAssertions": 92,
+  "checks": [
+    {
+      "runtime": "lua51",
+      "name": "test_component_without_script_or_get_profile_waits",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_defaults_still_work_when_ready_profile_has_no_overrides",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_destroy_releases_real_adapter_resources",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_each_of_three_missing_profiles_blocks_all_initialization",
+      "passed": true,
+      "luaAssertions": 12
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_entry_contains_current_canonical_modules_and_loads",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_loading_timeout_fails_explicitly_without_starting_world",
+      "passed": true,
+      "luaAssertions": 4
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_real_globals_profiles_propagate_to_spawn_hud_and_runtime",
+      "passed": true,
+      "luaAssertions": 10
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_start_is_deferred_and_actor_readiness_is_retried",
+      "passed": true,
+      "luaAssertions": 5
+    },
+    {
+      "runtime": "lua51",
+      "name": "test_throwing_or_malformed_profile_is_not_defaulted",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_component_without_script_or_get_profile_waits",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_defaults_still_work_when_ready_profile_has_no_overrides",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_destroy_releases_real_adapter_resources",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_each_of_three_missing_profiles_blocks_all_initialization",
+      "passed": true,
+      "luaAssertions": 12
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_entry_contains_current_canonical_modules_and_loads",
+      "passed": true,
+      "luaAssertions": 3
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_loading_timeout_fails_explicitly_without_starting_world",
+      "passed": true,
+      "luaAssertions": 4
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_real_globals_profiles_propagate_to_spawn_hud_and_runtime",
+      "passed": true,
+      "luaAssertions": 10
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_start_is_deferred_and_actor_readiness_is_retried",
+      "passed": true,
+      "luaAssertions": 5
+    },
+    {
+      "runtime": "lua54",
+      "name": "test_throwing_or_malformed_profile_is_not_defaulted",
+      "passed": true,
+      "luaAssertions": 3
+    }
+  ],
+  "scope": "Generated native entry, profile scripts and real Demo/Adapter/services/controllers under Lua 5.1 and 5.4; only Unity/Douyin SDK objects are doubles. Checks deferred Start, all-three-profile readiness, explicit loading failure and Inspector value propagation into spawned HP/HUD. Does not claim native rendering or serialization."
+}

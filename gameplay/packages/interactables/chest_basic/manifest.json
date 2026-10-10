@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "chest_basic",
+  "type": "interactable",
+  "packageId": "PKG-SCENE",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.interactables.chest_basic.definition",
+  "controllerModule": "gameplay.packages.interactables.chest_basic.controller",
+  "resources": [
+    {
+      "id": "asset_chest_basic",
+      "path": "gameplay/packages/interactables/chest_basic/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_chest_basic_open",
+      "name": "chest_basic_open",
+      "role": "open",
+      "resourceId": "asset_chest_basic"
+    },
+    {
+      "id": "clip_chest_basic_close",
+      "name": "chest_basic_close",
+      "role": "close",
+      "resourceId": "asset_chest_basic"
+    }
+  ],
+  "requiredServices": [
+    "Interaction",
+    "Inventory",
+    "Combat",
+    "Session",
+    "Assets"
+  ],
+  "dependencies": [
+    "item_treasure",
+    "item_heal_small"
+  ]
+}

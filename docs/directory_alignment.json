@@ -1,0 +1,3886 @@
+{
+  "schemaVersion": "1.0.0",
+  "audit": "directory_and_native_binding_alignment",
+  "projectName": "仔仔搜打撤1.0",
+  "scope": "Read-only file/HTML/static-reference inspection. This audit does not rerun gameplay; recorded real-editor verification is documented separately in docs/test_results.json and docs/demo_scope.json.",
+  "snapshot": {
+    "startedAtUTC": "2026-10-09T13:12:59.972338+00:00",
+    "finishedAtUTC": "2026-10-09T13:13:01.358875+00:00",
+    "sourceRoot": "/Users/bytedance/Documents/Codex/zaizaipc3/仔仔搜打撤1.0",
+    "nativeProjectRoot": "/Users/bytedance/Library/Application Support/AI World Creator/projects/project_wv4fb1w4",
+    "htmlSpecification": "/Users/bytedance/Documents/Codex/zaizaipc3/交付物/仔仔超现实_整包需求与目录规范_20261008/仔仔超现实_整包需求与目录规范.html",
+    "htmlSha256": "62618cd783dd780fe46cd88ea39d147a6c497fd083281a3ad73a5e5e35e90b20",
+    "sourceChangedDuringRead": [],
+    "nativeChangedDuringRead": [],
+    "sceneChangedDuringRead": false,
+    "reportSelfExcluded": "docs/directory_alignment.json",
+    "selfExclusionReason": "The report is created after its snapshot and excluded from the content comparison to avoid recursive self hashing. Copy this final report to native after audit completion.",
+    "protectedNativeHashesBefore": {
+      "scene.data": "7686230db293ab29535902ae3399419cd0098201e49ca992b299dcee81791993",
+      "project.json": "3071aef5ea7e7830473feec52dcaf12adea670ed3ddda5ca755559ff99f25a7a",
+      "world-config.json": "1628346205ed5054280a669faf107df11f7d3566f08a610fc79ccbbee2906c82"
+    },
+    "protectedNativeHashesAfter": {
+      "scene.data": "7686230db293ab29535902ae3399419cd0098201e49ca992b299dcee81791993",
+      "project.json": "3071aef5ea7e7830473feec52dcaf12adea670ed3ddda5ca755559ff99f25a7a",
+      "world-config.json": "1628346205ed5054280a669faf107df11f7d3566f08a610fc79ccbbee2906c82"
+    }
+  },
+  "summary": {
+    "canonicalDirectorySetsIdentical": true,
+    "canonicalFilesIdenticalAtSnapshot": true,
+    "canonicalManagedFileCountIncludingAuditSource": 225,
+    "canonicalManagedFileCountIncludingAuditNative": 225,
+    "canonicalSourceFileCountExcludingAudit": 224,
+    "canonicalNativeFileCountExcludingAudit": 224,
+    "canonicalDirectoryCountSource": 120,
+    "canonicalDirectoryCountNative": 120,
+    "fileMismatchCount": 0,
+    "htmlFixedSourcePathsPresent": true,
+    "htmlNativeCanonicalPathsPresent": true,
+    "htmlTemplateEntityDirectoriesIdentical": true,
+    "sourceContractPassed": true,
+    "nativeContractPassed": true,
+    "staticReferencesResolveBothTrees": true,
+    "sourceBundleModuleCount": 52,
+    "nativeBundleModuleCount": 52,
+    "all52CanonicalModulesPresent": true,
+    "sourceWrapperCurrent": true,
+    "nativeWrapperCurrentToNative": true,
+    "nativeWrapperCurrentToSource": true,
+    "offlineDistModuleCount": 47,
+    "offlineDistIdentical": true,
+    "sceneScriptBindingCount": 4,
+    "all4SceneBindingsResolve": true,
+    "inspectorDefaultCount": 36,
+    "all36DefaultsReferencedByScene": true,
+    "sceneEmbeddedEntryEqualsNativeFile": true,
+    "sceneEmbeddedEntryEqualsCurrentSource": true,
+    "nativeSceneProjectWorldConfigUnchangedDuringAudit": true,
+    "snapshotStable": true,
+    "previewAcceptance": "not_rerun_by_directory_audit"
+  },
+  "canonicalFolders": {
+    "managedTopLevelPaths": [
+      "art",
+      "gameplay",
+      "docs",
+      "tools",
+      "tests",
+      "dist",
+      "scripts",
+      "README.md",
+      ".gitignore",
+      "requirements_qa.txt"
+    ],
+    "sourceDirectories": [
+      "art",
+      "art/characters",
+      "art/monsters",
+      "art/visual_ui",
+      "dist",
+      "docs",
+      "docs/change_requests",
+      "docs/editor_seed_backup",
+      "docs/evidence",
+      "gameplay",
+      "gameplay/adapters",
+      "gameplay/adapters/zaizai",
+      "gameplay/core",
+      "gameplay/packages",
+      "gameplay/packages/environment",
+      "gameplay/packages/environment/map_demo",
+      "gameplay/packages/environment/map_demo/animations",
+      "gameplay/packages/environment/map_demo/materials",
+      "gameplay/packages/environment/map_demo/model",
+      "gameplay/packages/environment/map_demo/tests",
+      "gameplay/packages/environment/map_tomb",
+      "gameplay/packages/environment/map_tomb/animations",
+      "gameplay/packages/environment/map_tomb/materials",
+      "gameplay/packages/environment/map_tomb/model",
+      "gameplay/packages/environment/map_tomb/tests",
+      "gameplay/packages/interactables",
+      "gameplay/packages/interactables/chest_basic",
+      "gameplay/packages/interactables/chest_basic/animations",
+      "gameplay/packages/interactables/chest_basic/materials",
+      "gameplay/packages/interactables/chest_basic/model",
+      "gameplay/packages/interactables/chest_basic/tests",
+      "gameplay/packages/interactables/gate_exit",
+      "gameplay/packages/interactables/gate_exit/animations",
+      "gameplay/packages/interactables/gate_exit/materials",
+      "gameplay/packages/interactables/gate_exit/model",
+      "gameplay/packages/interactables/gate_exit/tests",
+      "gameplay/packages/interactables/trap_spikes",
+      "gameplay/packages/interactables/trap_spikes/animations",
+      "gameplay/packages/interactables/trap_spikes/materials",
+      "gameplay/packages/interactables/trap_spikes/model",
+      "gameplay/packages/interactables/trap_spikes/tests",
+      "gameplay/packages/items",
+      "gameplay/packages/items/item_capture",
+      "gameplay/packages/items/item_capture/animations",
+      "gameplay/packages/items/item_capture/materials",
+      "gameplay/packages/items/item_capture/model",
+      "gameplay/packages/items/item_capture/tests",
+      "gameplay/packages/items/item_flashlight",
+      "gameplay/packages/items/item_flashlight/animations",
+      "gameplay/packages/items/item_flashlight/materials",
+      "gameplay/packages/items/item_flashlight/model",
+      "gameplay/packages/items/item_flashlight/tests",
+      "gameplay/packages/items/item_heal_small",
+      "gameplay/packages/items/item_heal_small/animations",
+      "gameplay/packages/items/item_heal_small/materials",
+      "gameplay/packages/items/item_heal_small/model",
+      "gameplay/packages/items/item_heal_small/tests",
+      "gameplay/packages/items/item_music_box",
+      "gameplay/packages/items/item_music_box/animations",
+      "gameplay/packages/items/item_music_box/materials",
+      "gameplay/packages/items/item_music_box/model",
+      "gameplay/packages/items/item_music_box/tests",
+      "gameplay/packages/items/item_treasure",
+      "gameplay/packages/items/item_treasure/animations",
+      "gameplay/packages/items/item_treasure/materials",
+      "gameplay/packages/items/item_treasure/model",
+      "gameplay/packages/items/item_treasure/tests",
+      "gameplay/packages/monsters",
+      "gameplay/packages/monsters/monster_bat",
+      "gameplay/packages/monsters/monster_bat/animations",
+      "gameplay/packages/monsters/monster_bat/materials",
+      "gameplay/packages/monsters/monster_bat/model",
+      "gameplay/packages/monsters/monster_bat/tests",
+      "gameplay/packages/monsters/monster_cube",
+      "gameplay/packages/monsters/monster_cube/animations",
+      "gameplay/packages/monsters/monster_cube/materials",
+      "gameplay/packages/monsters/monster_cube/model",
+      "gameplay/packages/monsters/monster_cube/tests",
+      "gameplay/packages/monsters/monster_marmot",
+      "gameplay/packages/monsters/monster_marmot/animations",
+      "gameplay/packages/monsters/monster_marmot/materials",
+      "gameplay/packages/monsters/monster_marmot/model",
+      "gameplay/packages/monsters/monster_marmot/tests",
+      "gameplay/packages/monsters/monster_slime",
+      "gameplay/packages/monsters/monster_slime/animations",
+      "gameplay/packages/monsters/monster_slime/materials",
+      "gameplay/packages/monsters/monster_slime/model",
+      "gameplay/packages/monsters/monster_slime/tests",
+      "gameplay/packages/player",
+      "gameplay/packages/player/player_default",
+      "gameplay/packages/player/player_default/animations",
+      "gameplay/packages/player/player_default/materials",
+      "gameplay/packages/player/player_default/model",
+      "gameplay/packages/player/player_default/tests",
+      "gameplay/packages/ui",
+      "gameplay/packages/ui/ui_main",
+      "gameplay/packages/ui/ui_main/animations",
+      "gameplay/packages/ui/ui_main/materials",
+      "gameplay/packages/ui/ui_main/model",
+      "gameplay/packages/ui/ui_main/tests",
+      "gameplay/packages/weapons",
+      "gameplay/packages/weapons/weapon_ranged_sample",
+      "gameplay/packages/weapons/weapon_ranged_sample/animations",
+      "gameplay/packages/weapons/weapon_ranged_sample/materials",
+      "gameplay/packages/weapons/weapon_ranged_sample/model",
+      "gameplay/packages/weapons/weapon_ranged_sample/tests",
+      "gameplay/packages/weapons/weapon_shovel",
+      "gameplay/packages/weapons/weapon_shovel/animations",
+      "gameplay/packages/weapons/weapon_shovel/materials",
+      "gameplay/packages/weapons/weapon_shovel/model",
+      "gameplay/packages/weapons/weapon_shovel/tests",
+      "gameplay/systems",
+      "gameplay/systems/inventory_meta",
+      "gameplay/systems/match",
+      "gameplay/systems/round_setup",
+      "gameplay/systems/settlement",
+      "scripts",
+      "scripts/modules",
+      "tests",
+      "tools"
+    ],
+    "nativeDirectories": [
+      "art",
+      "art/characters",
+      "art/monsters",
+      "art/visual_ui",
+      "dist",
+      "docs",
+      "docs/change_requests",
+      "docs/editor_seed_backup",
+      "docs/evidence",
+      "gameplay",
+      "gameplay/adapters",
+      "gameplay/adapters/zaizai",
+      "gameplay/core",
+      "gameplay/packages",
+      "gameplay/packages/environment",
+      "gameplay/packages/environment/map_demo",
+      "gameplay/packages/environment/map_demo/animations",
+      "gameplay/packages/environment/map_demo/materials",
+      "gameplay/packages/environment/map_demo/model",
+      "gameplay/packages/environment/map_demo/tests",
+      "gameplay/packages/environment/map_tomb",
+      "gameplay/packages/environment/map_tomb/animations",
+      "gameplay/packages/environment/map_tomb/materials",
+      "gameplay/packages/environment/map_tomb/model",
+      "gameplay/packages/environment/map_tomb/tests",
+      "gameplay/packages/interactables",
+      "gameplay/packages/interactables/chest_basic",
+      "gameplay/packages/interactables/chest_basic/animations",
+      "gameplay/packages/interactables/chest_basic/materials",
+      "gameplay/packages/interactables/chest_basic/model",
+      "gameplay/packages/interactables/chest_basic/tests",
+      "gameplay/packages/interactables/gate_exit",
+      "gameplay/packages/interactables/gate_exit/animations",
+      "gameplay/packages/interactables/gate_exit/materials",
+      "gameplay/packages/interactables/gate_exit/model",
+      "gameplay/packages/interactables/gate_exit/tests",
+      "gameplay/packages/interactables/trap_spikes",
+      "gameplay/packages/interactables/trap_spikes/animations",
+      "gameplay/packages/interactables/trap_spikes/materials",
+      "gameplay/packages/interactables/trap_spikes/model",
+      "gameplay/packages/interactables/trap_spikes/tests",
+      "gameplay/packages/items",
+      "gameplay/packages/items/item_capture",
+      "gameplay/packages/items/item_capture/animations",
+      "gameplay/packages/items/item_capture/materials",
+      "gameplay/packages/items/item_capture/model",
+      "gameplay/packages/items/item_capture/tests",
+      "gameplay/packages/items/item_flashlight",
+      "gameplay/packages/items/item_flashlight/animations",
+      "gameplay/packages/items/item_flashlight/materials",
+      "gameplay/packages/items/item_flashlight/model",
+      "gameplay/packages/items/item_flashlight/tests",
+      "gameplay/packages/items/item_heal_small",
+      "gameplay/packages/items/item_heal_small/animations",
+      "gameplay/packages/items/item_heal_small/materials",
+      "gameplay/packages/items/item_heal_small/model",
+      "gameplay/packages/items/item_heal_small/tests",
+      "gameplay/packages/items/item_music_box",
+      "gameplay/packages/items/item_music_box/animations",
+      "gameplay/packages/items/item_music_box/materials",
+      "gameplay/packages/items/item_music_box/model",
+      "gameplay/packages/items/item_music_box/tests",
+      "gameplay/packages/items/item_treasure",
+      "gameplay/packages/items/item_treasure/animations",
+      "gameplay/packages/items/item_treasure/materials",
+      "gameplay/packages/items/item_treasure/model",
+      "gameplay/packages/items/item_treasure/tests",
+      "gameplay/packages/monsters",
+      "gameplay/packages/monsters/monster_bat",
+      "gameplay/packages/monsters/monster_bat/animations",
+      "gameplay/packages/monsters/monster_bat/materials",
+      "gameplay/packages/monsters/monster_bat/model",
+      "gameplay/packages/monsters/monster_bat/tests",
+      "gameplay/packages/monsters/monster_cube",
+      "gameplay/packages/monsters/monster_cube/animations",
+      "gameplay/packages/monsters/monster_cube/materials",
+      "gameplay/packages/monsters/monster_cube/model",
+      "gameplay/packages/monsters/monster_cube/tests",
+      "gameplay/packages/monsters/monster_marmot",
+      "gameplay/packages/monsters/monster_marmot/animations",
+      "gameplay/packages/monsters/monster_marmot/materials",
+      "gameplay/packages/monsters/monster_marmot/model",
+      "gameplay/packages/monsters/monster_marmot/tests",
+      "gameplay/packages/monsters/monster_slime",
+      "gameplay/packages/monsters/monster_slime/animations",
+      "gameplay/packages/monsters/monster_slime/materials",
+      "gameplay/packages/monsters/monster_slime/model",
+      "gameplay/packages/monsters/monster_slime/tests",
+      "gameplay/packages/player",
+      "gameplay/packages/player/player_default",
+      "gameplay/packages/player/player_default/animations",
+      "gameplay/packages/player/player_default/materials",
+      "gameplay/packages/player/player_default/model",
+      "gameplay/packages/player/player_default/tests",
+      "gameplay/packages/ui",
+      "gameplay/packages/ui/ui_main",
+      "gameplay/packages/ui/ui_main/animations",
+      "gameplay/packages/ui/ui_main/materials",
+      "gameplay/packages/ui/ui_main/model",
+      "gameplay/packages/ui/ui_main/tests",
+      "gameplay/packages/weapons",
+      "gameplay/packages/weapons/weapon_ranged_sample",
+      "gameplay/packages/weapons/weapon_ranged_sample/animations",
+      "gameplay/packages/weapons/weapon_ranged_sample/materials",
+      "gameplay/packages/weapons/weapon_ranged_sample/model",
+      "gameplay/packages/weapons/weapon_ranged_sample/tests",
+      "gameplay/packages/weapons/weapon_shovel",
+      "gameplay/packages/weapons/weapon_shovel/animations",
+      "gameplay/packages/weapons/weapon_shovel/materials",
+      "gameplay/packages/weapons/weapon_shovel/model",
+      "gameplay/packages/weapons/weapon_shovel/tests",
+      "gameplay/systems",
+      "gameplay/systems/inventory_meta",
+      "gameplay/systems/match",
+      "gameplay/systems/round_setup",
+      "gameplay/systems/settlement",
+      "scripts",
+      "scripts/modules",
+      "tests",
+      "tools"
+    ],
+    "missingNativeDirectories": [],
+    "extraNativeDirectories": [],
+    "sourceOnlyTopLevel": [],
+    "nativeEditorTopLevel": [
+      ".creator",
+      ".demo_install_backups",
+      "ai-asset-generate-config.json",
+      "ai-pcg-generate-config.json",
+      "ai-topology-generate-config.json",
+      "project.json",
+      "scene.data",
+      "settings",
+      "world-config.json"
+    ],
+    "deploymentNotes": [
+      "art, gameplay, docs, tools, tests, dist and README.md follow the prior HTML canonical relative-path convention. Root .gitignore and requirements_qa.txt are synchronized repository and offline-QA metadata.",
+      "scripts/ is the necessary native deployment addition, generated from gameplay source. The editor runtime entry is scripts/modules/demo_entry.lua and its matching scene runtimeScripts copy.",
+      "dist/zaizai_surreal.lua is the default 47-module offline bootstrap bundle; it is preserved at the same source/native path but is not the active 52-module editor entry.",
+      "Native project.json, world-config.json, ai-*-generate-config.json, settings/, .creator/, scene.data and installation backups are editor-owned storage, not business module directory violations.",
+      "Formal model/main.glb, source.blend, animations and texture paths marked planned are future resource contracts, not missing delivered files."
+    ]
+  },
+  "htmlDirectoryComparison": {
+    "rootDisplayName": "仔仔超现实_项目骨架/",
+    "demoRootName": "仔仔搜打撤1.0",
+    "fixedPaths": [
+      {
+        "path": "README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "art/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "art/characters/README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "art/monsters/README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "art/visual_ui/README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/bootstrap.lua",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/registry.lua",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/registry_entries.json",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/package_factories.lua",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/core/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/adapters/zaizai/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/systems/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/systems/match/README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/systems/round_setup/README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/systems/inventory_meta/README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/systems/settlement/README.md",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/packages/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "docs/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "docs/change_requests/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "tools/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "tests/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      },
+      {
+        "path": "dist/",
+        "sourceExists": true,
+        "nativeExists": true,
+        "deployment": "canonical_runtime_copy"
+      }
+    ],
+    "templatePaths": [
+      {
+        "template": "gameplay/packages/player/<player_id>/",
+        "sourceMatches": [
+          "gameplay/packages/player/player_default"
+        ],
+        "nativeMatches": [
+          "gameplay/packages/player/player_default"
+        ],
+        "sameMatches": true
+      },
+      {
+        "template": "gameplay/packages/monsters/<monster_id>/",
+        "sourceMatches": [
+          "gameplay/packages/monsters/monster_bat",
+          "gameplay/packages/monsters/monster_cube",
+          "gameplay/packages/monsters/monster_marmot",
+          "gameplay/packages/monsters/monster_slime"
+        ],
+        "nativeMatches": [
+          "gameplay/packages/monsters/monster_bat",
+          "gameplay/packages/monsters/monster_cube",
+          "gameplay/packages/monsters/monster_marmot",
+          "gameplay/packages/monsters/monster_slime"
+        ],
+        "sameMatches": true
+      },
+      {
+        "template": "gameplay/packages/weapons/<weapon_id>/",
+        "sourceMatches": [
+          "gameplay/packages/weapons/weapon_ranged_sample",
+          "gameplay/packages/weapons/weapon_shovel"
+        ],
+        "nativeMatches": [
+          "gameplay/packages/weapons/weapon_ranged_sample",
+          "gameplay/packages/weapons/weapon_shovel"
+        ],
+        "sameMatches": true
+      },
+      {
+        "template": "gameplay/packages/items/<item_id>/",
+        "sourceMatches": [
+          "gameplay/packages/items/item_capture",
+          "gameplay/packages/items/item_flashlight",
+          "gameplay/packages/items/item_heal_small",
+          "gameplay/packages/items/item_music_box",
+          "gameplay/packages/items/item_treasure"
+        ],
+        "nativeMatches": [
+          "gameplay/packages/items/item_capture",
+          "gameplay/packages/items/item_flashlight",
+          "gameplay/packages/items/item_heal_small",
+          "gameplay/packages/items/item_music_box",
+          "gameplay/packages/items/item_treasure"
+        ],
+        "sameMatches": true
+      },
+      {
+        "template": "gameplay/packages/environment/<map_id>/",
+        "sourceMatches": [
+          "gameplay/packages/environment/map_demo",
+          "gameplay/packages/environment/map_tomb"
+        ],
+        "nativeMatches": [
+          "gameplay/packages/environment/map_demo",
+          "gameplay/packages/environment/map_tomb"
+        ],
+        "sameMatches": true
+      },
+      {
+        "template": "gameplay/packages/interactables/<id>/",
+        "sourceMatches": [
+          "gameplay/packages/interactables/chest_basic",
+          "gameplay/packages/interactables/gate_exit",
+          "gameplay/packages/interactables/trap_spikes"
+        ],
+        "nativeMatches": [
+          "gameplay/packages/interactables/chest_basic",
+          "gameplay/packages/interactables/gate_exit",
+          "gameplay/packages/interactables/trap_spikes"
+        ],
+        "sameMatches": true
+      }
+    ],
+    "templateNote": "<player_id>/<monster_id>/<weapon_id>/<item_id>/<map_id>/<id> are templates matched to actual entity folders, not literal missing directories."
+  },
+  "fileHashAlignment": {
+    "algorithm": "SHA-256",
+    "differences": [],
+    "files": [
+      {
+        "path": ".gitignore",
+        "sourceSha256": "ccd4be52fd06b28dba733779edc7b06b9ef5f8b7a4456a329071be16e9b38aac",
+        "nativeSha256": "ccd4be52fd06b28dba733779edc7b06b9ef5f8b7a4456a329071be16e9b38aac",
+        "status": "identical"
+      },
+      {
+        "path": "README.md",
+        "sourceSha256": "19a67aed5a2c8ca5179d83cd3552cea3548963cb7e64a9f374490470d94e7255",
+        "nativeSha256": "19a67aed5a2c8ca5179d83cd3552cea3548963cb7e64a9f374490470d94e7255",
+        "status": "identical"
+      },
+      {
+        "path": "art/characters/README.md",
+        "sourceSha256": "bbba27dd0e1875be23f924af376abd94e19fac15ffa3a535766fec623af058e5",
+        "nativeSha256": "bbba27dd0e1875be23f924af376abd94e19fac15ffa3a535766fec623af058e5",
+        "status": "identical"
+      },
+      {
+        "path": "art/monsters/README.md",
+        "sourceSha256": "033ef911f940b8943e828b28a1906cbaaa2db30ca2d5527f18e9ab8daf5a9f97",
+        "nativeSha256": "033ef911f940b8943e828b28a1906cbaaa2db30ca2d5527f18e9ab8daf5a9f97",
+        "status": "identical"
+      },
+      {
+        "path": "art/visual_ui/README.md",
+        "sourceSha256": "fe8ab81eae60e4ea3a453bd9c146330bf94d128d92f52db6cdd057c9a64efbd2",
+        "nativeSha256": "fe8ab81eae60e4ea3a453bd9c146330bf94d128d92f52db6cdd057c9a64efbd2",
+        "status": "identical"
+      },
+      {
+        "path": "dist/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "dist/zaizai_surreal.lua",
+        "sourceSha256": "5c6ad90edafc7109cc16fb0db657379984613f38afd27f3c8438f3d4a81cf896",
+        "nativeSha256": "5c6ad90edafc7109cc16fb0db657379984613f38afd27f3c8438f3d4a81cf896",
+        "status": "identical"
+      },
+      {
+        "path": "docs/change_requests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "docs/change_requests/demo_native_proxy.md",
+        "sourceSha256": "1c45d687bac4b99bf117fd35de506f0c7c2ff71d325a2784f357f1791b78daae",
+        "nativeSha256": "1c45d687bac4b99bf117fd35de506f0c7c2ff71d325a2784f357f1791b78daae",
+        "status": "identical"
+      },
+      {
+        "path": "docs/demo_scope.json",
+        "sourceSha256": "b50e90924e88bbb2fcea63c5970f56639436647e3e495ead030ce7e0903a9c96",
+        "nativeSha256": "b50e90924e88bbb2fcea63c5970f56639436647e3e495ead030ce7e0903a9c96",
+        "status": "identical"
+      },
+      {
+        "path": "docs/directory_contract.md",
+        "sourceSha256": "c2b7078c412db2da578e7a0938585215c1279d2212bfbe57adc11614f21022a5",
+        "nativeSha256": "c2b7078c412db2da578e7a0938585215c1279d2212bfbe57adc11614f21022a5",
+        "status": "identical"
+      },
+      {
+        "path": "docs/editor_entry_test_results.json",
+        "sourceSha256": "bfd9bdee38fb45fc42a9c64e25a6757d1e03f33da88b73bf1fea0d94b72206e2",
+        "nativeSha256": "bfd9bdee38fb45fc42a9c64e25a6757d1e03f33da88b73bf1fea0d94b72206e2",
+        "status": "identical"
+      },
+      {
+        "path": "docs/editor_seed_backup/project.json",
+        "sourceSha256": "3071aef5ea7e7830473feec52dcaf12adea670ed3ddda5ca755559ff99f25a7a",
+        "nativeSha256": "3071aef5ea7e7830473feec52dcaf12adea670ed3ddda5ca755559ff99f25a7a",
+        "status": "identical"
+      },
+      {
+        "path": "docs/editor_seed_backup/scene.data",
+        "sourceSha256": "5221023ded4702cc24d016139cfad100762b80e0a622d792fab5cce716158f66",
+        "nativeSha256": "5221023ded4702cc24d016139cfad100762b80e0a622d792fab5cce716158f66",
+        "status": "identical"
+      },
+      {
+        "path": "docs/editor_seed_backup/world-config.json",
+        "sourceSha256": "1628346205ed5054280a669faf107df11f7d3566f08a610fc79ccbbee2906c82",
+        "nativeSha256": "1628346205ed5054280a669faf107df11f7d3566f08a610fc79ccbbee2906c82",
+        "status": "identical"
+      },
+      {
+        "path": "docs/editor_seed_scene.json",
+        "sourceSha256": "b8ab9498dab0b2119471426185bf5e95e43700dfe40b635a76e1c35824f563f8",
+        "nativeSha256": "b8ab9498dab0b2119471426185bf5e95e43700dfe40b635a76e1c35824f563f8",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/editor_monster_inspector.png",
+        "sourceSha256": "c3674be6f07cde62ed5e581280cca3b870b2de434d64c4dddd0add5cf6532f9d",
+        "nativeSha256": "c3674be6f07cde62ed5e581280cca3b870b2de434d64c4dddd0add5cf6532f9d",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/editor_player_inspector.png",
+        "sourceSha256": "e8240531d460d913d2756c920e10dfd3e7498b2d55487307b66b308189b49583",
+        "nativeSha256": "e8240531d460d913d2756c920e10dfd3e7498b2d55487307b66b308189b49583",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/editor_qa_final.png",
+        "sourceSha256": "16a29dca91c2ca384cf5d880f57153dc0e0e7be0d3e3dd5b0f21fb8a0ac5104f",
+        "nativeSha256": "16a29dca91c2ca384cf5d880f57153dc0e0e7be0d3e3dd5b0f21fb8a0ac5104f",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/editor_qa_repeat.png",
+        "sourceSha256": "133b7f50361a22a1f3107c25d63c60e8adc7d3329ff38ae2f26a5ee38d331264",
+        "nativeSha256": "133b7f50361a22a1f3107c25d63c60e8adc7d3329ff38ae2f26a5ee38d331264",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/editor_qa_success.png",
+        "sourceSha256": "2ce0101238a89c029848c38ee217bdf312450a56b568557d6f6de5908c58cffe",
+        "nativeSha256": "2ce0101238a89c029848c38ee217bdf312450a56b568557d6f6de5908c58cffe",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/editor_restart_final.png",
+        "sourceSha256": "3b26d5a2cd263e009dfaa86405e098785f78b6a807d10793b1ad1b45a3b5d4a1",
+        "nativeSha256": "3b26d5a2cd263e009dfaa86405e098785f78b6a807d10793b1ad1b45a3b5d4a1",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/inspector_override_monster_70.png",
+        "sourceSha256": "e1c3e13b95239b60e3a4b720e8cd560e303f273622e131f43c3e0d837bd50c66",
+        "nativeSha256": "e1c3e13b95239b60e3a4b720e8cd560e303f273622e131f43c3e0d837bd50c66",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/inspector_override_player_90.png",
+        "sourceSha256": "b69eb3bdf240790d2c38bd8923e45dd2b66378296c4799677046aac7205cf45e",
+        "nativeSha256": "b69eb3bdf240790d2c38bd8923e45dd2b66378296c4799677046aac7205cf45e",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/manual_chest.png",
+        "sourceSha256": "c2328d2f1fc0255d93f409004c83cf14160c96f5b3c14e5a788bc1c45d1953d3",
+        "nativeSha256": "c2328d2f1fc0255d93f409004c83cf14160c96f5b3c14e5a788bc1c45d1953d3",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/manual_extraction.png",
+        "sourceSha256": "6d81cae141ed3cf6e9daa0686db0ce6a50fe64172a556506076889c3ce4d015b",
+        "nativeSha256": "6d81cae141ed3cf6e9daa0686db0ce6a50fe64172a556506076889c3ce4d015b",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/manual_inventory.png",
+        "sourceSha256": "eb5c38f544c51fdf1420d97dee0d577bcacfb920f9c6219fc7c59324a8c6a3ba",
+        "nativeSha256": "eb5c38f544c51fdf1420d97dee0d577bcacfb920f9c6219fc7c59324a8c6a3ba",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/manual_restart.png",
+        "sourceSha256": "e76976acc3dca500acd604589242298bf0dae8788e259c78f615d5ef3b2f7f4e",
+        "nativeSha256": "e76976acc3dca500acd604589242298bf0dae8788e259c78f615d5ef3b2f7f4e",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/restart_after_monster_death.png",
+        "sourceSha256": "25556478aed2ed42bff23330272a1f7f5cecc9256b76cd3e340b1afaa8a2f6b7",
+        "nativeSha256": "25556478aed2ed42bff23330272a1f7f5cecc9256b76cd3e340b1afaa8a2f6b7",
+        "status": "identical"
+      },
+      {
+        "path": "docs/evidence/runtime_attributes.png",
+        "sourceSha256": "d0c8584d7f6b1f9bd82644e6e0541d06a700f3c10d724e8183f31ce9e6ad0d9e",
+        "nativeSha256": "d0c8584d7f6b1f9bd82644e6e0541d06a700f3c10d724e8183f31ce9e6ad0d9e",
+        "status": "identical"
+      },
+      {
+        "path": "docs/package_contract.md",
+        "sourceSha256": "c80981fd64dd11287b8467347f5acbea8194206a18f59ae0f1fafba89a9acba0",
+        "nativeSha256": "c80981fd64dd11287b8467347f5acbea8194206a18f59ae0f1fafba89a9acba0",
+        "status": "identical"
+      },
+      {
+        "path": "docs/responsibility_plan.json",
+        "sourceSha256": "e5b551877dd6e1efdfb6c35bc87c33ee54c5038f3fcf1ad8414128676753b25c",
+        "nativeSha256": "e5b551877dd6e1efdfb6c35bc87c33ee54c5038f3fcf1ad8414128676753b25c",
+        "status": "identical"
+      },
+      {
+        "path": "docs/scaffold_verification.json",
+        "sourceSha256": "c1e83a3b1e1fecea4984254ee8dbcfe417eb2d5cd107a57f6a54719e9d26e5bf",
+        "nativeSha256": "c1e83a3b1e1fecea4984254ee8dbcfe417eb2d5cd107a57f6a54719e9d26e5bf",
+        "status": "identical"
+      },
+      {
+        "path": "docs/service_api.md",
+        "sourceSha256": "686bf2fcfcef1749d752cfeca4d67d9d512207efb83f5c88c093b4b29ebc6c8c",
+        "nativeSha256": "686bf2fcfcef1749d752cfeca4d67d9d512207efb83f5c88c093b4b29ebc6c8c",
+        "status": "identical"
+      },
+      {
+        "path": "docs/test_results.json",
+        "sourceSha256": "4c648e52dbbd413497d5e40fbbab0f9aebb19f1299523a640b956a4847da2b6b",
+        "nativeSha256": "4c648e52dbbd413497d5e40fbbab0f9aebb19f1299523a640b956a4847da2b6b",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/adapters/zaizai/README.md",
+        "sourceSha256": "29dc2e625f7d603f2d285cba7c82af6f6ac2a37ab8d153b720a476cce2371b55",
+        "nativeSha256": "29dc2e625f7d603f2d285cba7c82af6f6ac2a37ab8d153b720a476cce2371b55",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/adapters/zaizai/adapter.lua",
+        "sourceSha256": "6991a39686868bfcc2c4bfc777f46773e85db4593218ceee79f87a12218642ec",
+        "nativeSha256": "6991a39686868bfcc2c4bfc777f46773e85db4593218ceee79f87a12218642ec",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/adapters/zaizai/attributes_README.md",
+        "sourceSha256": "fd9f90842cc361d08d5a0d3c0b39968cb6aa7f29babc5864ab7e220d4dd8458f",
+        "nativeSha256": "fd9f90842cc361d08d5a0d3c0b39968cb6aa7f29babc5864ab7e220d4dd8458f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/adapters/zaizai/match_attributes.lua",
+        "sourceSha256": "1cdd9ff096cca3e4b7b998494e28c7d813b6f5e6cc0be696b69499e2720aa532",
+        "nativeSha256": "1cdd9ff096cca3e4b7b998494e28c7d813b6f5e6cc0be696b69499e2720aa532",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/adapters/zaizai/monster_attributes.lua",
+        "sourceSha256": "0965d72ab0b09694b8149ea75f3cb581e623484477c513e40ed4bb234155d693",
+        "nativeSha256": "0965d72ab0b09694b8149ea75f3cb581e623484477c513e40ed4bb234155d693",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/adapters/zaizai/player_attributes.lua",
+        "sourceSha256": "4699c02e081e4293d8fa55617ea7e1545f919663470699066ca46e7fdc7e05e1",
+        "nativeSha256": "4699c02e081e4293d8fa55617ea7e1545f919663470699066ca46e7fdc7e05e1",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/bootstrap.lua",
+        "sourceSha256": "e23c9461d3661d0420a8bd37e83e84ef8e427b2c21c441b8594c375773cd108e",
+        "nativeSha256": "e23c9461d3661d0420a8bd37e83e84ef8e427b2c21c441b8594c375773cd108e",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/README.md",
+        "sourceSha256": "f992238ba8346457a19b9a0b4eac1fd9fd825822339472ef41f3afa936a32a19",
+        "nativeSha256": "f992238ba8346457a19b9a0b4eac1fd9fd825822339472ef41f3afa936a32a19",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/base_controller.lua",
+        "sourceSha256": "c7d5e77bfdf4c30f6c0958cae2da9a727e2b6ddd9b111017d0b89b42c73deae6",
+        "nativeSha256": "c7d5e77bfdf4c30f6c0958cae2da9a727e2b6ddd9b111017d0b89b42c73deae6",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/config.lua",
+        "sourceSha256": "5fe70a0a0d256f121b7290691a70a43b4ea0f51c01030df7c3994c414e492047",
+        "nativeSha256": "5fe70a0a0d256f121b7290691a70a43b4ea0f51c01030df7c3994c414e492047",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/service_api.lua",
+        "sourceSha256": "51666b3e524a03fadcb2951dcd00fe9958a634ec933fb13ab4fc8b4bf0fa9217",
+        "nativeSha256": "51666b3e524a03fadcb2951dcd00fe9958a634ec933fb13ab4fc8b4bf0fa9217",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/service_contracts.json",
+        "sourceSha256": "c7c3f16f390f86ded2694594c6fcb646d9d2464d00ef9448f542da1c04c87036",
+        "nativeSha256": "c7c3f16f390f86ded2694594c6fcb646d9d2464d00ef9448f542da1c04c87036",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/service_contracts.lua",
+        "sourceSha256": "f38e4b5392befafb0c2137efbac46f3f058397a906dfdb10e574fb3b43fc5b6c",
+        "nativeSha256": "f38e4b5392befafb0c2137efbac46f3f058397a906dfdb10e574fb3b43fc5b6c",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/services.lua",
+        "sourceSha256": "19955ee2c278e9482e1a8a1eb1aec8af3e42a16e3dcca1250aabfdeae91fdd6a",
+        "nativeSha256": "19955ee2c278e9482e1a8a1eb1aec8af3e42a16e3dcca1250aabfdeae91fdd6a",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/spatial.lua",
+        "sourceSha256": "e1e03751357fdf0df90ffc9ff8a4f6085f194f216547d56ccf68c10fd2291731",
+        "nativeSha256": "e1e03751357fdf0df90ffc9ff8a4f6085f194f216547d56ccf68c10fd2291731",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/core/state.lua",
+        "sourceSha256": "fc7c06320e7adfaf4f55aa8d6ebd71bc9e8d71c558898d19ae5a76c39716a679",
+        "nativeSha256": "fc7c06320e7adfaf4f55aa8d6ebd71bc9e8d71c558898d19ae5a76c39716a679",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/demo.lua",
+        "sourceSha256": "08f63512281d8841fe57052ab8710354e292e2aa14b9ad3181f41414cad4deeb",
+        "nativeSha256": "08f63512281d8841fe57052ab8710354e292e2aa14b9ad3181f41414cad4deeb",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/package_factories.lua",
+        "sourceSha256": "3ad1f50268da2e75c534d1af1ecabe60cb523f4cc87e0c151b958aeee2be3aec",
+        "nativeSha256": "3ad1f50268da2e75c534d1af1ecabe60cb523f4cc87e0c151b958aeee2be3aec",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/README.md",
+        "sourceSha256": "960c8fb58250ada25beeb84e28d3309859bd9a3b96690ba679c3f48f9575979f",
+        "nativeSha256": "960c8fb58250ada25beeb84e28d3309859bd9a3b96690ba679c3f48f9575979f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/controller.lua",
+        "sourceSha256": "2a6bb95ec7ac3bc3f9b7c7e8e4ed2b88ce0ab6ae07b313995fa7ad2b02706181",
+        "nativeSha256": "2a6bb95ec7ac3bc3f9b7c7e8e4ed2b88ce0ab6ae07b313995fa7ad2b02706181",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/definition.lua",
+        "sourceSha256": "586b040bf5179c787fb2032c8b81872ef1914a56c74a2f55b60ebe0cfcbedf4f",
+        "nativeSha256": "586b040bf5179c787fb2032c8b81872ef1914a56c74a2f55b60ebe0cfcbedf4f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/manifest.json",
+        "sourceSha256": "b8b8590609a808f9ded4cc8ae1e065a1d5fe1e32a5261faa193838ef2d358be8",
+        "nativeSha256": "b8b8590609a808f9ded4cc8ae1e065a1d5fe1e32a5261faa193838ef2d358be8",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/model/native_proxy.json",
+        "sourceSha256": "790618034f50759c08cc2746464690f2a8a0fc53cb5ab98537838ff37530edff",
+        "nativeSha256": "790618034f50759c08cc2746464690f2a8a0fc53cb5ab98537838ff37530edff",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_demo/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/README.md",
+        "sourceSha256": "eacfe64d5e00977d57c165b9f2285a58a02aae70aecb3fc5b69cadf87a039371",
+        "nativeSha256": "eacfe64d5e00977d57c165b9f2285a58a02aae70aecb3fc5b69cadf87a039371",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/controller.lua",
+        "sourceSha256": "5c444d72dfdc6d5b8a6d3356cc43c19083e6a79db143d4653ad9341cc1a03f0a",
+        "nativeSha256": "5c444d72dfdc6d5b8a6d3356cc43c19083e6a79db143d4653ad9341cc1a03f0a",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/definition.lua",
+        "sourceSha256": "7cbb01618a9c5fe23e49887481c60a972441258ad59385d7cddacc67a14d2513",
+        "nativeSha256": "7cbb01618a9c5fe23e49887481c60a972441258ad59385d7cddacc67a14d2513",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/manifest.json",
+        "sourceSha256": "a71bb497a5ef59207fd69ff72fd84a37c10eb9d8cc4c1c0f14985f0227de4ad7",
+        "nativeSha256": "a71bb497a5ef59207fd69ff72fd84a37c10eb9d8cc4c1c0f14985f0227de4ad7",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/environment/map_tomb/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/README.md",
+        "sourceSha256": "dba1359c0cefa7498e4ba84df0c00fe3f2edc83260a95af04637e0e4a670a814",
+        "nativeSha256": "dba1359c0cefa7498e4ba84df0c00fe3f2edc83260a95af04637e0e4a670a814",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/controller.lua",
+        "sourceSha256": "6e5b9ba2be2db1187b1f58b0c39cf0e87e0991be1aa4ea8861dc6548533ff1cb",
+        "nativeSha256": "6e5b9ba2be2db1187b1f58b0c39cf0e87e0991be1aa4ea8861dc6548533ff1cb",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/definition.lua",
+        "sourceSha256": "d559e0d223d10deb4b96e45fad790fa44f3c808f06ab5591db375635a1e2692f",
+        "nativeSha256": "d559e0d223d10deb4b96e45fad790fa44f3c808f06ab5591db375635a1e2692f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/manifest.json",
+        "sourceSha256": "a5856d2df22de4cb3cf05ee1cf6baa9eddba741832272ce86d486ff57633c594",
+        "nativeSha256": "a5856d2df22de4cb3cf05ee1cf6baa9eddba741832272ce86d486ff57633c594",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/chest_basic/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/README.md",
+        "sourceSha256": "e6615b51a2f4b3558da599f4060f5bdf66da15e9dc4fba076b751c5c18718191",
+        "nativeSha256": "e6615b51a2f4b3558da599f4060f5bdf66da15e9dc4fba076b751c5c18718191",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/controller.lua",
+        "sourceSha256": "e0d5ba998e4232265e64780c29aad064e63fd1ecc218b2146afae8fcd8b668e5",
+        "nativeSha256": "e0d5ba998e4232265e64780c29aad064e63fd1ecc218b2146afae8fcd8b668e5",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/definition.lua",
+        "sourceSha256": "01978a9ec2b609adc91b70e5a3495a8509c8be0ff780362673e8dc1c4761b3a6",
+        "nativeSha256": "01978a9ec2b609adc91b70e5a3495a8509c8be0ff780362673e8dc1c4761b3a6",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/manifest.json",
+        "sourceSha256": "9474ac9b9ac46a9b011b462a95c22314ee2db8fedbd206424f91383a8584733c",
+        "nativeSha256": "9474ac9b9ac46a9b011b462a95c22314ee2db8fedbd206424f91383a8584733c",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/gate_exit/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/README.md",
+        "sourceSha256": "2338781bf230c242ce666ff22385eaebae762fd7cf82df7602ef6af35b347cdb",
+        "nativeSha256": "2338781bf230c242ce666ff22385eaebae762fd7cf82df7602ef6af35b347cdb",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/controller.lua",
+        "sourceSha256": "5828ca4849fab28a62c7d14ee40b93849dd01b8af2d6b3d2cb2a519cec1613d0",
+        "nativeSha256": "5828ca4849fab28a62c7d14ee40b93849dd01b8af2d6b3d2cb2a519cec1613d0",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/definition.lua",
+        "sourceSha256": "ba86365ffb2e8de2cc1c33166a082510fa71fc37a2c644405b64ff47d9ee0055",
+        "nativeSha256": "ba86365ffb2e8de2cc1c33166a082510fa71fc37a2c644405b64ff47d9ee0055",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/manifest.json",
+        "sourceSha256": "62c711ca94844349275a83b1ce44054a0426df0771e614dc0afe1af425938b73",
+        "nativeSha256": "62c711ca94844349275a83b1ce44054a0426df0771e614dc0afe1af425938b73",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/interactables/trap_spikes/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/README.md",
+        "sourceSha256": "2004c30ffaf192fd83fd346e5f9cf4eebf4d377f623a656d232ada6ebf73a9bc",
+        "nativeSha256": "2004c30ffaf192fd83fd346e5f9cf4eebf4d377f623a656d232ada6ebf73a9bc",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/controller.lua",
+        "sourceSha256": "35cd4c6449a61b64a76ae7200b786201eecec54a66236aec516312d7e9964e2b",
+        "nativeSha256": "35cd4c6449a61b64a76ae7200b786201eecec54a66236aec516312d7e9964e2b",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/definition.lua",
+        "sourceSha256": "1be5baa243fabe68696e39ae483d656471d427f9684fcd605e67ec8c23224b9b",
+        "nativeSha256": "1be5baa243fabe68696e39ae483d656471d427f9684fcd605e67ec8c23224b9b",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/manifest.json",
+        "sourceSha256": "b5f5a137ec6295c7d9e94985aaa4c5797ea29725d942e435612f8f9dd8c7fb3f",
+        "nativeSha256": "b5f5a137ec6295c7d9e94985aaa4c5797ea29725d942e435612f8f9dd8c7fb3f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_capture/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/README.md",
+        "sourceSha256": "b7023b23181bf547ce840d8d2e915a3ac020b26f31cdaab17520a81a9290a84c",
+        "nativeSha256": "b7023b23181bf547ce840d8d2e915a3ac020b26f31cdaab17520a81a9290a84c",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/controller.lua",
+        "sourceSha256": "dffada70fa303dbead0190f033ffb0eadca52cc7c538d006e667903f29121cec",
+        "nativeSha256": "dffada70fa303dbead0190f033ffb0eadca52cc7c538d006e667903f29121cec",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/definition.lua",
+        "sourceSha256": "e364b5633722346ae5af55596636870fce6c0e7412cf52fca3cdc25158067526",
+        "nativeSha256": "e364b5633722346ae5af55596636870fce6c0e7412cf52fca3cdc25158067526",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/manifest.json",
+        "sourceSha256": "5c395c8dbae7576fe38f13295f979010edb24be3c16a1156ca75efcc26eeccd7",
+        "nativeSha256": "5c395c8dbae7576fe38f13295f979010edb24be3c16a1156ca75efcc26eeccd7",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_flashlight/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/README.md",
+        "sourceSha256": "d48931b0fbcc474bfba868fa46c045ce803f644eb11e2186588807a2dcbd3f27",
+        "nativeSha256": "d48931b0fbcc474bfba868fa46c045ce803f644eb11e2186588807a2dcbd3f27",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/controller.lua",
+        "sourceSha256": "93bc84cf40acf0ca34963e772fa3d1607346edacdce98f09e7ca62bd0db052ab",
+        "nativeSha256": "93bc84cf40acf0ca34963e772fa3d1607346edacdce98f09e7ca62bd0db052ab",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/definition.lua",
+        "sourceSha256": "a27eac36cb9a94333d74bb8f17d23e42356feec86b97058374049cb898b940c6",
+        "nativeSha256": "a27eac36cb9a94333d74bb8f17d23e42356feec86b97058374049cb898b940c6",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/manifest.json",
+        "sourceSha256": "3428f3beb0a1d0c98bdff8cea7ffbbc107d2fe43a19b2ece15f224d775d00a9b",
+        "nativeSha256": "3428f3beb0a1d0c98bdff8cea7ffbbc107d2fe43a19b2ece15f224d775d00a9b",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_heal_small/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/README.md",
+        "sourceSha256": "0cb2a6d9c7154990610d47b127e6b5500b4a314df681ba842105b496937b04d3",
+        "nativeSha256": "0cb2a6d9c7154990610d47b127e6b5500b4a314df681ba842105b496937b04d3",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/controller.lua",
+        "sourceSha256": "359af2cb863da891393c28de18f42c306cd3cba0c1376d7dfae0cadfcda7461b",
+        "nativeSha256": "359af2cb863da891393c28de18f42c306cd3cba0c1376d7dfae0cadfcda7461b",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/definition.lua",
+        "sourceSha256": "790b9039db6c02c48a0be300ec01e61ae7eaf507c726b8f9cd7c3979a763ab7c",
+        "nativeSha256": "790b9039db6c02c48a0be300ec01e61ae7eaf507c726b8f9cd7c3979a763ab7c",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/manifest.json",
+        "sourceSha256": "39cd825c6ffffcd7c8e0892f23daf240e9cc5b29e6e9fb7b5d4b2b01095afcbb",
+        "nativeSha256": "39cd825c6ffffcd7c8e0892f23daf240e9cc5b29e6e9fb7b5d4b2b01095afcbb",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_music_box/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/README.md",
+        "sourceSha256": "dfb9676a4822c29b4af7c7a1c0a0b2b6787e4fc5a95e48246691d83c11178191",
+        "nativeSha256": "dfb9676a4822c29b4af7c7a1c0a0b2b6787e4fc5a95e48246691d83c11178191",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/controller.lua",
+        "sourceSha256": "a6b84e90bd2ed2015dcfd336269a47c5cc1503c3c84256e2593341ac9fb1599b",
+        "nativeSha256": "a6b84e90bd2ed2015dcfd336269a47c5cc1503c3c84256e2593341ac9fb1599b",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/definition.lua",
+        "sourceSha256": "65110ca238b67176c5dbcfeae33568570ce8d27be660d23a2b4c22390140b009",
+        "nativeSha256": "65110ca238b67176c5dbcfeae33568570ce8d27be660d23a2b4c22390140b009",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/manifest.json",
+        "sourceSha256": "acfa54dc1ab5f2c7eb0e69cc4204860c07fd095531d4996229419e7121414038",
+        "nativeSha256": "acfa54dc1ab5f2c7eb0e69cc4204860c07fd095531d4996229419e7121414038",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/items/item_treasure/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/README.md",
+        "sourceSha256": "4eae5a427345c84366ef78ffa5cbe49e0da62503265d131a5dbb0720c8ace4fd",
+        "nativeSha256": "4eae5a427345c84366ef78ffa5cbe49e0da62503265d131a5dbb0720c8ace4fd",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/controller.lua",
+        "sourceSha256": "b2e33986e7dd9e6188f17032d6726d623619247b90a8a4d55608962644756138",
+        "nativeSha256": "b2e33986e7dd9e6188f17032d6726d623619247b90a8a4d55608962644756138",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/definition.lua",
+        "sourceSha256": "1c3eacbf87fed045f04fe71bb55662da4a46cf5f2bc3f0c9d07115f946222ad0",
+        "nativeSha256": "1c3eacbf87fed045f04fe71bb55662da4a46cf5f2bc3f0c9d07115f946222ad0",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/manifest.json",
+        "sourceSha256": "cd89cd21c0fe3c15c88f90bc65d742fe5c0662f5f9c06176004f85c4fb9de6fc",
+        "nativeSha256": "cd89cd21c0fe3c15c88f90bc65d742fe5c0662f5f9c06176004f85c4fb9de6fc",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_bat/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/README.md",
+        "sourceSha256": "07318ff746cff13f2653e869369393b85e9ef2f8575ca545827757d4c4ed661f",
+        "nativeSha256": "07318ff746cff13f2653e869369393b85e9ef2f8575ca545827757d4c4ed661f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/controller.lua",
+        "sourceSha256": "738c0dd927c8adb8706d937e73da2e77c1bdeb924c29269f60d6d82146d41d71",
+        "nativeSha256": "738c0dd927c8adb8706d937e73da2e77c1bdeb924c29269f60d6d82146d41d71",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/definition.lua",
+        "sourceSha256": "c0933ec1e1bb5d7963514b50c3aeacb657c959441ee26bbc1ac18386182724f7",
+        "nativeSha256": "c0933ec1e1bb5d7963514b50c3aeacb657c959441ee26bbc1ac18386182724f7",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/manifest.json",
+        "sourceSha256": "09f3e3bd90cb6a03d8ac181ba53744b29c750ed67aeac8f4459538eb4b74bf36",
+        "nativeSha256": "09f3e3bd90cb6a03d8ac181ba53744b29c750ed67aeac8f4459538eb4b74bf36",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/model/native_proxy.json",
+        "sourceSha256": "2808f501c8f2249b3bd4e6dcfc760fd3dd7e9b91a6ccf8b996c077ae63a7cf79",
+        "nativeSha256": "2808f501c8f2249b3bd4e6dcfc760fd3dd7e9b91a6ccf8b996c077ae63a7cf79",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_cube/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/README.md",
+        "sourceSha256": "925b3b4b6cc82584073ef0f1dd8035ce1b96b7e3debb8da24b959c0ae8a98c6f",
+        "nativeSha256": "925b3b4b6cc82584073ef0f1dd8035ce1b96b7e3debb8da24b959c0ae8a98c6f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/controller.lua",
+        "sourceSha256": "94b47eed0a6c7342f33e5d32a5fb95c9d1d6b4d25c9aaa0c003ccc34a930e2d2",
+        "nativeSha256": "94b47eed0a6c7342f33e5d32a5fb95c9d1d6b4d25c9aaa0c003ccc34a930e2d2",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/definition.lua",
+        "sourceSha256": "79f9608bd8bd802b6d16afcb3d9f4886eb763c76829fd7e900cd411fa29b11f8",
+        "nativeSha256": "79f9608bd8bd802b6d16afcb3d9f4886eb763c76829fd7e900cd411fa29b11f8",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/manifest.json",
+        "sourceSha256": "e11cbe0733a32eafa6c21fcc115bf03fd1d1cea932dc237bae25662af30704bb",
+        "nativeSha256": "e11cbe0733a32eafa6c21fcc115bf03fd1d1cea932dc237bae25662af30704bb",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_marmot/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/README.md",
+        "sourceSha256": "f7145ec409c97a2e63992673683bcf848af3fa0734e52b097ace2446b92a1ab1",
+        "nativeSha256": "f7145ec409c97a2e63992673683bcf848af3fa0734e52b097ace2446b92a1ab1",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/controller.lua",
+        "sourceSha256": "96e51863094588e81f0d219006cec039fcd2a9f01fdcdcb5ae36b15925f9ba2b",
+        "nativeSha256": "96e51863094588e81f0d219006cec039fcd2a9f01fdcdcb5ae36b15925f9ba2b",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/definition.lua",
+        "sourceSha256": "d198f5db5a991e9904fb955787fa262b7191f1ef0e56687437f97259e115a706",
+        "nativeSha256": "d198f5db5a991e9904fb955787fa262b7191f1ef0e56687437f97259e115a706",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/manifest.json",
+        "sourceSha256": "f1cfbba4c008c262910d2d0913e31d86843737428fbc39d70b4b0485a7e9eedf",
+        "nativeSha256": "f1cfbba4c008c262910d2d0913e31d86843737428fbc39d70b4b0485a7e9eedf",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/monsters/monster_slime/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/README.md",
+        "sourceSha256": "60fdb455114c58c1e59462b2da95f168a33854828e673e71df1ec00aeaf00708",
+        "nativeSha256": "60fdb455114c58c1e59462b2da95f168a33854828e673e71df1ec00aeaf00708",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/controller.lua",
+        "sourceSha256": "291c2200d4409d547f83d0c1d85d44f3bf14e94c0479224c8f8100eee64a9318",
+        "nativeSha256": "291c2200d4409d547f83d0c1d85d44f3bf14e94c0479224c8f8100eee64a9318",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/definition.lua",
+        "sourceSha256": "72529222f69a2b9a33506fca30b1280637b4628fa5b770eaafcf2d299b2aba13",
+        "nativeSha256": "72529222f69a2b9a33506fca30b1280637b4628fa5b770eaafcf2d299b2aba13",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/manifest.json",
+        "sourceSha256": "e5560b248c35722a41ffa9d37fc11f1a3e5631e3f4813813315a16892523c548",
+        "nativeSha256": "e5560b248c35722a41ffa9d37fc11f1a3e5631e3f4813813315a16892523c548",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/player/player_default/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/README.md",
+        "sourceSha256": "917c1227584b0ffe2aca09049be9fd7ab83479ca4210dac2c11e90167cbde6dd",
+        "nativeSha256": "917c1227584b0ffe2aca09049be9fd7ab83479ca4210dac2c11e90167cbde6dd",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/controller.lua",
+        "sourceSha256": "26180b9f9de3cd3a667ed11ac11046c72f9d864b9f5d31759a17c2db95740f5f",
+        "nativeSha256": "26180b9f9de3cd3a667ed11ac11046c72f9d864b9f5d31759a17c2db95740f5f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/definition.lua",
+        "sourceSha256": "a48098ec93236fc75f2d81298f78dd1a3c7829ce871680e540886c047c6fadd9",
+        "nativeSha256": "a48098ec93236fc75f2d81298f78dd1a3c7829ce871680e540886c047c6fadd9",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/manifest.json",
+        "sourceSha256": "6793525f36b38c3778ba7eb59d33f6e32a2be1e0f6671101932b4746592035e5",
+        "nativeSha256": "6793525f36b38c3778ba7eb59d33f6e32a2be1e0f6671101932b4746592035e5",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/ui/ui_main/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/README.md",
+        "sourceSha256": "1f3d7df6b96db80c80ec215e5540acbc1a8aa731bffed75307946e97ce008a65",
+        "nativeSha256": "1f3d7df6b96db80c80ec215e5540acbc1a8aa731bffed75307946e97ce008a65",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/controller.lua",
+        "sourceSha256": "3f65ea1f1414c0d5d54ad3775505101000b96c60055a9e3e0bd1dd1897d8bb36",
+        "nativeSha256": "3f65ea1f1414c0d5d54ad3775505101000b96c60055a9e3e0bd1dd1897d8bb36",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/definition.lua",
+        "sourceSha256": "8d11deb1b7e0d315dccfb1fa52573a3efe4b2282cb2591609fa946157b3215cb",
+        "nativeSha256": "8d11deb1b7e0d315dccfb1fa52573a3efe4b2282cb2591609fa946157b3215cb",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/manifest.json",
+        "sourceSha256": "686a9c9c671bccec018f841799af92f76a1b0b1ec69ae8a7c8fde6b757aa15ff",
+        "nativeSha256": "686a9c9c671bccec018f841799af92f76a1b0b1ec69ae8a7c8fde6b757aa15ff",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_ranged_sample/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/README.md",
+        "sourceSha256": "34d023ef16f08def5885e2db7154de69ee6079b0ac2e40cb0cb4bc0ba9d0821f",
+        "nativeSha256": "34d023ef16f08def5885e2db7154de69ee6079b0ac2e40cb0cb4bc0ba9d0821f",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/animations/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/controller.lua",
+        "sourceSha256": "fa0f8af65af885c55d7f339575053fa92e6e306020d1fd5f2a5168fc020c8e6c",
+        "nativeSha256": "fa0f8af65af885c55d7f339575053fa92e6e306020d1fd5f2a5168fc020c8e6c",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/definition.lua",
+        "sourceSha256": "88ecf0e472146b79cf7f009ca477942625a52fb904a109a604e70a58dbc6303e",
+        "nativeSha256": "88ecf0e472146b79cf7f009ca477942625a52fb904a109a604e70a58dbc6303e",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/manifest.json",
+        "sourceSha256": "50e95710600bbfd435debd086ecd0fc768216d6754ef22d9a37d96e5fd0d0dc2",
+        "nativeSha256": "50e95710600bbfd435debd086ecd0fc768216d6754ef22d9a37d96e5fd0d0dc2",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/materials/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/model/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/packages/weapons/weapon_shovel/tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/registry.lua",
+        "sourceSha256": "cfbfe334bc7784c80b78383157b673df51cc03f0e4574edf765ccb2bc4c84f45",
+        "nativeSha256": "cfbfe334bc7784c80b78383157b673df51cc03f0e4574edf765ccb2bc4c84f45",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/registry_entries.json",
+        "sourceSha256": "8487c360e5a132ac4ea44f0bf33681b2fe5e0c8ea431553b8800ea6a9e199353",
+        "nativeSha256": "8487c360e5a132ac4ea44f0bf33681b2fe5e0c8ea431553b8800ea6a9e199353",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/inventory_meta/README.md",
+        "sourceSha256": "429dd9f298e0422b7398b0acc31da394036bc262b02dae14f75853a4f27228c1",
+        "nativeSha256": "429dd9f298e0422b7398b0acc31da394036bc262b02dae14f75853a4f27228c1",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/inventory_meta/controller.lua",
+        "sourceSha256": "7788dad8dc32feb718abce376c1613e4078c92215fe331a96300e19969b49849",
+        "nativeSha256": "7788dad8dc32feb718abce376c1613e4078c92215fe331a96300e19969b49849",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/match/README.md",
+        "sourceSha256": "d49e33f74fe006ac2050b00fa9dc1372a24edbe2690cc8cba81b7cb463469b7a",
+        "nativeSha256": "d49e33f74fe006ac2050b00fa9dc1372a24edbe2690cc8cba81b7cb463469b7a",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/match/controller.lua",
+        "sourceSha256": "7a24f59c3f906ec8fcbb08fd916d50cf0c3a7b45294c7195b8ca9e2449802304",
+        "nativeSha256": "7a24f59c3f906ec8fcbb08fd916d50cf0c3a7b45294c7195b8ca9e2449802304",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/round_setup/README.md",
+        "sourceSha256": "46d0fff7881ddf3596cfbfef9292776ca35fef66c5a1141142fcacd366e66729",
+        "nativeSha256": "46d0fff7881ddf3596cfbfef9292776ca35fef66c5a1141142fcacd366e66729",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/round_setup/controller.lua",
+        "sourceSha256": "1e058e35817ceaba6fc42856ccb4908601edd84388237b9118fae0a37fb77fd2",
+        "nativeSha256": "1e058e35817ceaba6fc42856ccb4908601edd84388237b9118fae0a37fb77fd2",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/settlement/README.md",
+        "sourceSha256": "b5554597839e70de35b631a107c88b4f6c2400c04bdc2d8e9df677eedf6418e8",
+        "nativeSha256": "b5554597839e70de35b631a107c88b4f6c2400c04bdc2d8e9df677eedf6418e8",
+        "status": "identical"
+      },
+      {
+        "path": "gameplay/systems/settlement/controller.lua",
+        "sourceSha256": "752ba51d3aa01100c281a48cc53fe9e88257fbd69d2b8214c436b4efc8b153d0",
+        "nativeSha256": "752ba51d3aa01100c281a48cc53fe9e88257fbd69d2b8214c436b4efc8b153d0",
+        "status": "identical"
+      },
+      {
+        "path": "requirements_qa.txt",
+        "sourceSha256": "aeabef732b99fcbc90d9272778d25ad9d79d7892e66038ad300c11395fa99dd4",
+        "nativeSha256": "aeabef732b99fcbc90d9272778d25ad9d79d7892e66038ad300c11395fa99dd4",
+        "status": "identical"
+      },
+      {
+        "path": "scripts/modules/demo_entry.lua",
+        "sourceSha256": "05fe3263270fec9505d711dc700c165f4e34037ccabd77c819beee9a09be06e5",
+        "nativeSha256": "05fe3263270fec9505d711dc700c165f4e34037ccabd77c819beee9a09be06e5",
+        "status": "identical"
+      },
+      {
+        "path": "scripts/modules/match_attributes.lua",
+        "sourceSha256": "1cdd9ff096cca3e4b7b998494e28c7d813b6f5e6cc0be696b69499e2720aa532",
+        "nativeSha256": "1cdd9ff096cca3e4b7b998494e28c7d813b6f5e6cc0be696b69499e2720aa532",
+        "status": "identical"
+      },
+      {
+        "path": "scripts/modules/monster_attributes.lua",
+        "sourceSha256": "0965d72ab0b09694b8149ea75f3cb581e623484477c513e40ed4bb234155d693",
+        "nativeSha256": "0965d72ab0b09694b8149ea75f3cb581e623484477c513e40ed4bb234155d693",
+        "status": "identical"
+      },
+      {
+        "path": "scripts/modules/player_attributes.lua",
+        "sourceSha256": "4699c02e081e4293d8fa55617ea7e1545f919663470699066ca46e7fdc7e05e1",
+        "nativeSha256": "4699c02e081e4293d8fa55617ea7e1545f919663470699066ca46e7fdc7e05e1",
+        "status": "identical"
+      },
+      {
+        "path": "tests/.gitkeep",
+        "sourceSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "nativeSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "status": "identical"
+      },
+      {
+        "path": "tests/smoke_lua_bundle.py",
+        "sourceSha256": "43da4fe487823f6895206abfa00d9c34510e87cdac8c60fc99c1ee530034ad3b",
+        "nativeSha256": "43da4fe487823f6895206abfa00d9c34510e87cdac8c60fc99c1ee530034ad3b",
+        "status": "identical"
+      },
+      {
+        "path": "tests/test_demo_runtime.py",
+        "sourceSha256": "bb3948330467ab21bdaa21cdf5af01a427968ae986bd1102c583721dbbb16c29",
+        "nativeSha256": "bb3948330467ab21bdaa21cdf5af01a427968ae986bd1102c583721dbbb16c29",
+        "status": "identical"
+      },
+      {
+        "path": "tests/test_editor_entry.py",
+        "sourceSha256": "83ac30350e069ce04a3a97b8ee2c5100a04413fc05858e62a6477d8d850cf687",
+        "nativeSha256": "83ac30350e069ce04a3a97b8ee2c5100a04413fc05858e62a6477d8d850cf687",
+        "status": "identical"
+      },
+      {
+        "path": "tests/test_package_contract.py",
+        "sourceSha256": "a61d46868823d6d99269cefcaa29805ca36c734ac3f3ee3dd63ce2c28aaf6dc7",
+        "nativeSha256": "a61d46868823d6d99269cefcaa29805ca36c734ac3f3ee3dd63ce2c28aaf6dc7",
+        "status": "identical"
+      },
+      {
+        "path": "tools/build_editor_bundle.py",
+        "sourceSha256": "2abc0c2652e17de52ac224045b4c340071f8aa9a9b612b9c868fe39d46b587b9",
+        "nativeSha256": "2abc0c2652e17de52ac224045b4c340071f8aa9a9b612b9c868fe39d46b587b9",
+        "status": "identical"
+      },
+      {
+        "path": "tools/bundle_lua.py",
+        "sourceSha256": "846ec95eabf508f2f2a5a49cc8ccde1f1abd5cf294193011a10a4ed0666ef8a0",
+        "nativeSha256": "846ec95eabf508f2f2a5a49cc8ccde1f1abd5cf294193011a10a4ed0666ef8a0",
+        "status": "identical"
+      },
+      {
+        "path": "tools/install_editor_demo.py",
+        "sourceSha256": "acc2454a5006f48e803407133712f4915844b1a061018ab0413d0d6737cdb62c",
+        "nativeSha256": "acc2454a5006f48e803407133712f4915844b1a061018ab0413d0d6737cdb62c",
+        "status": "identical"
+      },
+      {
+        "path": "tools/project_layout.py",
+        "sourceSha256": "e5ac7e3c2158a84bb12ba0f8307acc13b3b08abbca0ebc8b2c8f1859726a505f",
+        "nativeSha256": "e5ac7e3c2158a84bb12ba0f8307acc13b3b08abbca0ebc8b2c8f1859726a505f",
+        "status": "identical"
+      },
+      {
+        "path": "tools/sync_registry.py",
+        "sourceSha256": "b22b2a4dbc86f7f599d427f1879a0ffef93802186ed67888dcb1c81ca072ecf4",
+        "nativeSha256": "b22b2a4dbc86f7f599d427f1879a0ffef93802186ed67888dcb1c81ca072ecf4",
+        "status": "identical"
+      },
+      {
+        "path": "tools/validate_packages.py",
+        "sourceSha256": "d30c8d5dd8a03a6dd6eb04e378fb88e95b5a531d3b2e56f853d17374c9d8d5bf",
+        "nativeSha256": "d30c8d5dd8a03a6dd6eb04e378fb88e95b5a531d3b2e56f853d17374c9d8d5bf",
+        "status": "identical"
+      }
+    ]
+  },
+  "luaModules": {
+    "bundleEntry": "gameplay.demo",
+    "sourceWrapper": "scripts/modules/demo_entry.lua",
+    "nativeWrapper": "scripts/modules/demo_entry.lua",
+    "runtimeLoader": "Private ProjectRequire resolves static dotted module IDs. Editor-specific APIs remain in gameplay/adapters/zaizai.",
+    "modules": [
+      {
+        "module": "gameplay.adapters.zaizai.adapter",
+        "sourcePath": "gameplay/adapters/zaizai/adapter.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.bootstrap",
+        "sourcePath": "gameplay/bootstrap.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.core.base_controller",
+        "sourcePath": "gameplay/core/base_controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.core.config",
+        "sourcePath": "gameplay/core/config.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.core.service_api",
+        "sourcePath": "gameplay/core/service_api.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.core.service_contracts",
+        "sourcePath": "gameplay/core/service_contracts.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.core.services",
+        "sourcePath": "gameplay/core/services.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.core.spatial",
+        "sourcePath": "gameplay/core/spatial.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.core.state",
+        "sourcePath": "gameplay/core/state.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.demo",
+        "sourcePath": "gameplay/demo.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.package_factories",
+        "sourcePath": "gameplay/package_factories.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.environment.map_demo.controller",
+        "sourcePath": "gameplay/packages/environment/map_demo/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.environment.map_demo.definition",
+        "sourcePath": "gameplay/packages/environment/map_demo/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.environment.map_tomb.controller",
+        "sourcePath": "gameplay/packages/environment/map_tomb/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.environment.map_tomb.definition",
+        "sourcePath": "gameplay/packages/environment/map_tomb/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.interactables.chest_basic.controller",
+        "sourcePath": "gameplay/packages/interactables/chest_basic/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.interactables.chest_basic.definition",
+        "sourcePath": "gameplay/packages/interactables/chest_basic/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.interactables.gate_exit.controller",
+        "sourcePath": "gameplay/packages/interactables/gate_exit/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.interactables.gate_exit.definition",
+        "sourcePath": "gameplay/packages/interactables/gate_exit/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.interactables.trap_spikes.controller",
+        "sourcePath": "gameplay/packages/interactables/trap_spikes/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.interactables.trap_spikes.definition",
+        "sourcePath": "gameplay/packages/interactables/trap_spikes/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_capture.controller",
+        "sourcePath": "gameplay/packages/items/item_capture/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_capture.definition",
+        "sourcePath": "gameplay/packages/items/item_capture/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_flashlight.controller",
+        "sourcePath": "gameplay/packages/items/item_flashlight/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_flashlight.definition",
+        "sourcePath": "gameplay/packages/items/item_flashlight/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_heal_small.controller",
+        "sourcePath": "gameplay/packages/items/item_heal_small/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_heal_small.definition",
+        "sourcePath": "gameplay/packages/items/item_heal_small/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_music_box.controller",
+        "sourcePath": "gameplay/packages/items/item_music_box/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_music_box.definition",
+        "sourcePath": "gameplay/packages/items/item_music_box/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_treasure.controller",
+        "sourcePath": "gameplay/packages/items/item_treasure/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.items.item_treasure.definition",
+        "sourcePath": "gameplay/packages/items/item_treasure/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_bat.controller",
+        "sourcePath": "gameplay/packages/monsters/monster_bat/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_bat.definition",
+        "sourcePath": "gameplay/packages/monsters/monster_bat/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_cube.controller",
+        "sourcePath": "gameplay/packages/monsters/monster_cube/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_cube.definition",
+        "sourcePath": "gameplay/packages/monsters/monster_cube/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_marmot.controller",
+        "sourcePath": "gameplay/packages/monsters/monster_marmot/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_marmot.definition",
+        "sourcePath": "gameplay/packages/monsters/monster_marmot/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_slime.controller",
+        "sourcePath": "gameplay/packages/monsters/monster_slime/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.monsters.monster_slime.definition",
+        "sourcePath": "gameplay/packages/monsters/monster_slime/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.player.player_default.controller",
+        "sourcePath": "gameplay/packages/player/player_default/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.player.player_default.definition",
+        "sourcePath": "gameplay/packages/player/player_default/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.ui.ui_main.controller",
+        "sourcePath": "gameplay/packages/ui/ui_main/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.ui.ui_main.definition",
+        "sourcePath": "gameplay/packages/ui/ui_main/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.weapons.weapon_ranged_sample.controller",
+        "sourcePath": "gameplay/packages/weapons/weapon_ranged_sample/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.weapons.weapon_ranged_sample.definition",
+        "sourcePath": "gameplay/packages/weapons/weapon_ranged_sample/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.weapons.weapon_shovel.controller",
+        "sourcePath": "gameplay/packages/weapons/weapon_shovel/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.packages.weapons.weapon_shovel.definition",
+        "sourcePath": "gameplay/packages/weapons/weapon_shovel/definition.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.registry",
+        "sourcePath": "gameplay/registry.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.systems.inventory_meta.controller",
+        "sourcePath": "gameplay/systems/inventory_meta/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.systems.match.controller",
+        "sourcePath": "gameplay/systems/match/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.systems.round_setup.controller",
+        "sourcePath": "gameplay/systems/round_setup/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      },
+      {
+        "module": "gameplay.systems.settlement.controller",
+        "sourcePath": "gameplay/systems/settlement/controller.lua",
+        "sourceFileExists": true,
+        "nativeFileExists": true,
+        "sourceWrapperMatchesSource": true,
+        "nativeWrapperMatchesNative": true,
+        "nativeWrapperMatchesCurrentSource": true
+      }
+    ],
+    "staticReferences": [
+      {
+        "source": "gameplay/adapters/zaizai/adapter.lua",
+        "line": 2,
+        "module": "gameplay.core.state",
+        "target": "gameplay/core/state.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/adapters/zaizai/adapter.lua",
+        "line": 3,
+        "module": "gameplay.core.services",
+        "target": "gameplay/core/services.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/adapters/zaizai/adapter.lua",
+        "line": 4,
+        "module": "gameplay.core.spatial",
+        "target": "gameplay/core/spatial.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/adapters/zaizai/adapter.lua",
+        "line": 5,
+        "module": "gameplay.core.service_api",
+        "target": "gameplay/core/service_api.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/bootstrap.lua",
+        "line": 1,
+        "module": "gameplay.core.config",
+        "target": "gameplay/core/config.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/bootstrap.lua",
+        "line": 2,
+        "module": "gameplay.registry",
+        "target": "gameplay/registry.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/bootstrap.lua",
+        "line": 3,
+        "module": "gameplay.package_factories",
+        "target": "gameplay/package_factories.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/bootstrap.lua",
+        "line": 4,
+        "module": "gameplay.core.service_contracts",
+        "target": "gameplay/core/service_contracts.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/bootstrap.lua",
+        "line": 5,
+        "module": "gameplay.core.service_api",
+        "target": "gameplay/core/service_api.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/bootstrap.lua",
+        "line": 6,
+        "module": "gameplay.adapters.zaizai.adapter",
+        "target": "gameplay/adapters/zaizai/adapter.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 2,
+        "module": "gameplay.core.config",
+        "target": "gameplay/core/config.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 3,
+        "module": "gameplay.registry",
+        "target": "gameplay/registry.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 4,
+        "module": "gameplay.package_factories",
+        "target": "gameplay/package_factories.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 5,
+        "module": "gameplay.adapters.zaizai.adapter",
+        "target": "gameplay/adapters/zaizai/adapter.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 6,
+        "module": "gameplay.bootstrap",
+        "target": "gameplay/bootstrap.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 7,
+        "module": "gameplay.packages.environment.map_demo.definition",
+        "target": "gameplay/packages/environment/map_demo/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 8,
+        "module": "gameplay.systems.match.controller",
+        "target": "gameplay/systems/match/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 9,
+        "module": "gameplay.systems.round_setup.controller",
+        "target": "gameplay/systems/round_setup/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 10,
+        "module": "gameplay.systems.settlement.controller",
+        "target": "gameplay/systems/settlement/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 11,
+        "module": "gameplay.systems.inventory_meta.controller",
+        "target": "gameplay/systems/inventory_meta/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 12,
+        "module": "gameplay.packages.ui.ui_main.controller",
+        "target": "gameplay/packages/ui/ui_main/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/demo.lua",
+        "line": 13,
+        "module": "gameplay.core.spatial",
+        "target": "gameplay/core/spatial.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 4,
+        "module": "gameplay.packages.interactables.chest_basic.definition",
+        "target": "gameplay/packages/interactables/chest_basic/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 5,
+        "module": "gameplay.packages.interactables.chest_basic.controller",
+        "target": "gameplay/packages/interactables/chest_basic/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 8,
+        "module": "gameplay.packages.interactables.gate_exit.definition",
+        "target": "gameplay/packages/interactables/gate_exit/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 9,
+        "module": "gameplay.packages.interactables.gate_exit.controller",
+        "target": "gameplay/packages/interactables/gate_exit/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 12,
+        "module": "gameplay.packages.items.item_capture.definition",
+        "target": "gameplay/packages/items/item_capture/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 13,
+        "module": "gameplay.packages.items.item_capture.controller",
+        "target": "gameplay/packages/items/item_capture/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 16,
+        "module": "gameplay.packages.items.item_flashlight.definition",
+        "target": "gameplay/packages/items/item_flashlight/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 17,
+        "module": "gameplay.packages.items.item_flashlight.controller",
+        "target": "gameplay/packages/items/item_flashlight/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 20,
+        "module": "gameplay.packages.items.item_heal_small.definition",
+        "target": "gameplay/packages/items/item_heal_small/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 21,
+        "module": "gameplay.packages.items.item_heal_small.controller",
+        "target": "gameplay/packages/items/item_heal_small/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 24,
+        "module": "gameplay.packages.items.item_music_box.definition",
+        "target": "gameplay/packages/items/item_music_box/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 25,
+        "module": "gameplay.packages.items.item_music_box.controller",
+        "target": "gameplay/packages/items/item_music_box/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 28,
+        "module": "gameplay.packages.items.item_treasure.definition",
+        "target": "gameplay/packages/items/item_treasure/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 29,
+        "module": "gameplay.packages.items.item_treasure.controller",
+        "target": "gameplay/packages/items/item_treasure/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 32,
+        "module": "gameplay.packages.environment.map_demo.definition",
+        "target": "gameplay/packages/environment/map_demo/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 33,
+        "module": "gameplay.packages.environment.map_demo.controller",
+        "target": "gameplay/packages/environment/map_demo/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 36,
+        "module": "gameplay.packages.environment.map_tomb.definition",
+        "target": "gameplay/packages/environment/map_tomb/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 37,
+        "module": "gameplay.packages.environment.map_tomb.controller",
+        "target": "gameplay/packages/environment/map_tomb/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 40,
+        "module": "gameplay.packages.monsters.monster_bat.definition",
+        "target": "gameplay/packages/monsters/monster_bat/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 41,
+        "module": "gameplay.packages.monsters.monster_bat.controller",
+        "target": "gameplay/packages/monsters/monster_bat/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 44,
+        "module": "gameplay.packages.monsters.monster_cube.definition",
+        "target": "gameplay/packages/monsters/monster_cube/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 45,
+        "module": "gameplay.packages.monsters.monster_cube.controller",
+        "target": "gameplay/packages/monsters/monster_cube/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 48,
+        "module": "gameplay.packages.monsters.monster_marmot.definition",
+        "target": "gameplay/packages/monsters/monster_marmot/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 49,
+        "module": "gameplay.packages.monsters.monster_marmot.controller",
+        "target": "gameplay/packages/monsters/monster_marmot/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 52,
+        "module": "gameplay.packages.monsters.monster_slime.definition",
+        "target": "gameplay/packages/monsters/monster_slime/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 53,
+        "module": "gameplay.packages.monsters.monster_slime.controller",
+        "target": "gameplay/packages/monsters/monster_slime/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 56,
+        "module": "gameplay.packages.player.player_default.definition",
+        "target": "gameplay/packages/player/player_default/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 57,
+        "module": "gameplay.packages.player.player_default.controller",
+        "target": "gameplay/packages/player/player_default/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 60,
+        "module": "gameplay.packages.interactables.trap_spikes.definition",
+        "target": "gameplay/packages/interactables/trap_spikes/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 61,
+        "module": "gameplay.packages.interactables.trap_spikes.controller",
+        "target": "gameplay/packages/interactables/trap_spikes/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 64,
+        "module": "gameplay.packages.ui.ui_main.definition",
+        "target": "gameplay/packages/ui/ui_main/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 65,
+        "module": "gameplay.packages.ui.ui_main.controller",
+        "target": "gameplay/packages/ui/ui_main/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 68,
+        "module": "gameplay.packages.weapons.weapon_ranged_sample.definition",
+        "target": "gameplay/packages/weapons/weapon_ranged_sample/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 69,
+        "module": "gameplay.packages.weapons.weapon_ranged_sample.controller",
+        "target": "gameplay/packages/weapons/weapon_ranged_sample/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 72,
+        "module": "gameplay.packages.weapons.weapon_shovel.definition",
+        "target": "gameplay/packages/weapons/weapon_shovel/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/package_factories.lua",
+        "line": 73,
+        "module": "gameplay.packages.weapons.weapon_shovel.controller",
+        "target": "gameplay/packages/weapons/weapon_shovel/controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/environment/map_demo/controller.lua",
+        "line": 1,
+        "module": "gameplay.packages.environment.map_demo.definition",
+        "target": "gameplay/packages/environment/map_demo/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/environment/map_tomb/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/environment/map_tomb/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.environment.map_tomb.definition",
+        "target": "gameplay/packages/environment/map_tomb/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/interactables/chest_basic/controller.lua",
+        "line": 2,
+        "module": "gameplay.packages.interactables.chest_basic.definition",
+        "target": "gameplay/packages/interactables/chest_basic/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/interactables/gate_exit/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/interactables/gate_exit/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.interactables.gate_exit.definition",
+        "target": "gameplay/packages/interactables/gate_exit/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/interactables/trap_spikes/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/interactables/trap_spikes/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.interactables.trap_spikes.definition",
+        "target": "gameplay/packages/interactables/trap_spikes/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_capture/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_capture/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.items.item_capture.definition",
+        "target": "gameplay/packages/items/item_capture/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_flashlight/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_flashlight/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.items.item_flashlight.definition",
+        "target": "gameplay/packages/items/item_flashlight/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_heal_small/controller.lua",
+        "line": 2,
+        "module": "gameplay.packages.items.item_heal_small.definition",
+        "target": "gameplay/packages/items/item_heal_small/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_music_box/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_music_box/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.items.item_music_box.definition",
+        "target": "gameplay/packages/items/item_music_box/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_treasure/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/items/item_treasure/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.items.item_treasure.definition",
+        "target": "gameplay/packages/items/item_treasure/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/monsters/monster_bat/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/monsters/monster_bat/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.monsters.monster_bat.definition",
+        "target": "gameplay/packages/monsters/monster_bat/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/monsters/monster_cube/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.monsters.monster_cube.definition",
+        "target": "gameplay/packages/monsters/monster_cube/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/monsters/monster_marmot/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/monsters/monster_marmot/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.monsters.monster_marmot.definition",
+        "target": "gameplay/packages/monsters/monster_marmot/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/monsters/monster_slime/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/monsters/monster_slime/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.monsters.monster_slime.definition",
+        "target": "gameplay/packages/monsters/monster_slime/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/player/player_default/controller.lua",
+        "line": 2,
+        "module": "gameplay.packages.player.player_default.definition",
+        "target": "gameplay/packages/player/player_default/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/weapons/weapon_ranged_sample/controller.lua",
+        "line": 2,
+        "module": "gameplay.core.base_controller",
+        "target": "gameplay/core/base_controller.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/weapons/weapon_ranged_sample/controller.lua",
+        "line": 3,
+        "module": "gameplay.packages.weapons.weapon_ranged_sample.definition",
+        "target": "gameplay/packages/weapons/weapon_ranged_sample/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      },
+      {
+        "source": "gameplay/packages/weapons/weapon_shovel/controller.lua",
+        "line": 2,
+        "module": "gameplay.packages.weapons.weapon_shovel.definition",
+        "target": "gameplay/packages/weapons/weapon_shovel/definition.lua",
+        "sourceExists": true,
+        "nativeExists": true
+      }
+    ],
+    "sourceContract": {
+      "ok": true,
+      "mode": "contract",
+      "counts": {
+        "packages": 18,
+        "resources": 20,
+        "clips": 42,
+        "luaFiles": 55,
+        "staticImports": 86
+      },
+      "errors": [],
+      "scope": "Only directory, manifest, static Lua imports and generated registry contracts are checked. This does not parse GLB/Blender files, prove SDK compatibility, or verify gameplay in the editor."
+    },
+    "nativeContract": {
+      "ok": true,
+      "mode": "contract",
+      "counts": {
+        "packages": 18,
+        "resources": 20,
+        "clips": 42,
+        "luaFiles": 55,
+        "staticImports": 86
+      },
+      "errors": [],
+      "scope": "Only directory, manifest, static Lua imports and generated registry contracts are checked. This does not parse GLB/Blender files, prove SDK compatibility, or verify gameplay in the editor."
+    },
+    "offlineDist": {
+      "path": "dist/zaizai_surreal.lua",
+      "sourceModuleCount": 47,
+      "nativeModuleCount": 47,
+      "hashesIdentical": true,
+      "role": "default gameplay.bootstrap bundle for offline checks; not the editor active entry"
+    }
+  },
+  "sceneBindings": {
+    "sceneSha256": "7686230db293ab29535902ae3399419cd0098201e49ca992b299dcee81791993",
+    "zipMembers": [
+      "SerializePcgData.json"
+    ],
+    "nativeNodeCount": 22,
+    "entryUuid": "b680ca44-9e0d-4880-9820-65899787da8d",
+    "entryBoundNodes": [
+      "demo_root"
+    ],
+    "allBindings": [
+      {
+        "node": "demo_root",
+        "scriptId": "b680ca44-9e0d-4880-9820-65899787da8d",
+        "scriptType": 1,
+        "paramsJson": "{}",
+        "runtimeScriptExists": true,
+        "referencePath": "modules/demo_entry.lua"
+      },
+      {
+        "node": "demo_root",
+        "scriptId": "b6a67278-5cf1-4f71-89c4-925ebcdd41a4",
+        "scriptType": 1,
+        "paramsJson": "{\"matchRoundDurationSec\":600,\"matchExtractionHoldSec\":3}",
+        "runtimeScriptExists": true,
+        "referencePath": "modules/match_attributes.lua"
+      },
+      {
+        "node": "monster_cube",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "scriptType": 1,
+        "paramsJson": "{\"monsterMaxHp\":60,\"monsterPatrolSpeedMps\":1,\"monsterChaseSpeedMps\":3,\"monsterPatrolWaitSec\":0.6,\"monsterArriveDistanceM\":0.25,\"monsterPathRefreshSec\":0.4,\"monsterPathFailureRetrySec\":0.6,\"monsterPatrolUnreachableSkipSec\":2,\"monsterLeashRadiusM\":15,\"monsterHurtPauseSec\":0.25,\"monsterSenseRangeM\":7,\"monsterFullAngleDeg\":100,\"monsterLoseSightGraceSec\":1.2,\"monsterSearchSec\":4,\"monsterDamageHp\":25,\"monsterWindupSec\":0.55,\"monsterActiveSec\":0.25,\"monsterRecoverySec\":0.7,\"monsterCooldownSec\":2,\"monsterAttackRangeM\":3.5,\"monsterAttackArcDeg\":100}",
+        "runtimeScriptExists": true,
+        "referencePath": "modules/monster_attributes.lua"
+      },
+      {
+        "node": "player_default",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "scriptType": 1,
+        "paramsJson": "{\"playerMaxHp\":100,\"playerStartHp\":100,\"playerWalkSpeedMps\":3.2,\"playerSprintSpeedMps\":5,\"playerCrouchSpeedMps\":1.6,\"playerJumpHeightM\":0.8,\"playerColliderRadiusM\":0.35,\"playerColliderHeightM\":1.8,\"playerColliderCenterY_M\":0.9,\"playerSpawnProtectionSec\":3,\"playerHitInvulnerabilitySec\":0.2,\"playerInteractionDistanceM\":2.2,\"playerBagSlots\":12}",
+        "runtimeScriptExists": true,
+        "referencePath": "modules/player_attributes.lua"
+      }
+    ],
+    "profileScripts": [
+      {
+        "script": "player_attributes",
+        "uuid": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "expectedDeclarationCount": 13,
+        "declarationCount": 13,
+        "bindings": [
+          {
+            "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+            "scriptType": 1,
+            "paramsJson": "{\"playerMaxHp\":100,\"playerStartHp\":100,\"playerWalkSpeedMps\":3.2,\"playerSprintSpeedMps\":5,\"playerCrouchSpeedMps\":1.6,\"playerJumpHeightM\":0.8,\"playerColliderRadiusM\":0.35,\"playerColliderHeightM\":1.8,\"playerColliderCenterY_M\":0.9,\"playerSpawnProtectionSec\":3,\"playerHitInvulnerabilitySec\":0.2,\"playerInteractionDistanceM\":2.2,\"playerBagSlots\":12}"
+          }
+        ],
+        "canonicalEqualsSourceWrapper": true,
+        "sourceWrapperEqualsNativeFile": true,
+        "nativeFileEqualsSceneEmbedded": true,
+        "canonicalSha256": "4699c02e081e4293d8fa55617ea7e1545f919663470699066ca46e7fdc7e05e1",
+        "sceneEmbeddedSha256": "4699c02e081e4293d8fa55617ea7e1545f919663470699066ca46e7fdc7e05e1"
+      },
+      {
+        "script": "monster_attributes",
+        "uuid": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "expectedDeclarationCount": 21,
+        "declarationCount": 21,
+        "bindings": [
+          {
+            "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+            "scriptType": 1,
+            "paramsJson": "{\"monsterMaxHp\":60,\"monsterPatrolSpeedMps\":1,\"monsterChaseSpeedMps\":3,\"monsterPatrolWaitSec\":0.6,\"monsterArriveDistanceM\":0.25,\"monsterPathRefreshSec\":0.4,\"monsterPathFailureRetrySec\":0.6,\"monsterPatrolUnreachableSkipSec\":2,\"monsterLeashRadiusM\":15,\"monsterHurtPauseSec\":0.25,\"monsterSenseRangeM\":7,\"monsterFullAngleDeg\":100,\"monsterLoseSightGraceSec\":1.2,\"monsterSearchSec\":4,\"monsterDamageHp\":25,\"monsterWindupSec\":0.55,\"monsterActiveSec\":0.25,\"monsterRecoverySec\":0.7,\"monsterCooldownSec\":2,\"monsterAttackRangeM\":3.5,\"monsterAttackArcDeg\":100}"
+          }
+        ],
+        "canonicalEqualsSourceWrapper": true,
+        "sourceWrapperEqualsNativeFile": true,
+        "nativeFileEqualsSceneEmbedded": true,
+        "canonicalSha256": "0965d72ab0b09694b8149ea75f3cb581e623484477c513e40ed4bb234155d693",
+        "sceneEmbeddedSha256": "0965d72ab0b09694b8149ea75f3cb581e623484477c513e40ed4bb234155d693"
+      },
+      {
+        "script": "match_attributes",
+        "uuid": "b6a67278-5cf1-4f71-89c4-925ebcdd41a4",
+        "sceneNode": "demo_root",
+        "expectedDeclarationCount": 2,
+        "declarationCount": 2,
+        "bindings": [
+          {
+            "scriptId": "b6a67278-5cf1-4f71-89c4-925ebcdd41a4",
+            "scriptType": 1,
+            "paramsJson": "{\"matchRoundDurationSec\":600,\"matchExtractionHoldSec\":3}"
+          }
+        ],
+        "canonicalEqualsSourceWrapper": true,
+        "sourceWrapperEqualsNativeFile": true,
+        "nativeFileEqualsSceneEmbedded": true,
+        "canonicalSha256": "1cdd9ff096cca3e4b7b998494e28c7d813b6f5e6cc0be696b69499e2720aa532",
+        "sceneEmbeddedSha256": "1cdd9ff096cca3e4b7b998494e28c7d813b6f5e6cc0be696b69499e2720aa532"
+      }
+    ],
+    "inspectorDefaults": [
+      {
+        "name": "playerMaxHp",
+        "label": "玩家最大血量（HP）",
+        "type": "number",
+        "default": 100,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 100
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerStartHp",
+        "label": "玩家出生血量（HP）",
+        "type": "number",
+        "default": 100,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 100
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerWalkSpeedMps",
+        "label": "行走速度（米/秒）",
+        "type": "number",
+        "default": 3.2,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 3.2
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerSprintSpeedMps",
+        "label": "奔跑速度（米/秒）",
+        "type": "number",
+        "default": 5,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 5
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerCrouchSpeedMps",
+        "label": "蹲行速度（米/秒）",
+        "type": "number",
+        "default": 1.6,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 1.6
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerJumpHeightM",
+        "label": "跳跃高度（米）",
+        "type": "number",
+        "default": 0.8,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.8
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerColliderRadiusM",
+        "label": "碰撞半径（米）",
+        "type": "number",
+        "default": 0.35,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.35
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerColliderHeightM",
+        "label": "碰撞高度（米）",
+        "type": "number",
+        "default": 1.8,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 1.8
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerColliderCenterY_M",
+        "label": "碰撞中心Y（米）",
+        "type": "number",
+        "default": 0.9,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.9
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerSpawnProtectionSec",
+        "label": "出生保护时间（秒）",
+        "type": "number",
+        "default": 3,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 3
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerHitInvulnerabilitySec",
+        "label": "受击保护间隔（秒）",
+        "type": "number",
+        "default": 0.2,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.2
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerInteractionDistanceM",
+        "label": "最大交互距离（米）",
+        "type": "number",
+        "default": 2.2,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 2.2
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "playerBagSlots",
+        "label": "局内背包格数",
+        "type": "number",
+        "default": 12,
+        "script": "player_attributes",
+        "scriptId": "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+        "sceneNode": "player_default",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 12
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterMaxHp",
+        "label": "怪物最大血量（HP）",
+        "type": "number",
+        "default": 60,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 60
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterPatrolSpeedMps",
+        "label": "巡逻速度（米/秒）",
+        "type": "number",
+        "default": 1,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 1
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterChaseSpeedMps",
+        "label": "追逐速度（米/秒）",
+        "type": "number",
+        "default": 3,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 3
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterPatrolWaitSec",
+        "label": "巡逻点停留（秒）",
+        "type": "number",
+        "default": 0.6,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.6
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterArriveDistanceM",
+        "label": "路点到达距离（米）",
+        "type": "number",
+        "default": 0.25,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.25
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterPathRefreshSec",
+        "label": "路径刷新间隔（秒）",
+        "type": "number",
+        "default": 0.4,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.4
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterPathFailureRetrySec",
+        "label": "无路径重试间隔（秒）",
+        "type": "number",
+        "default": 0.6,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.6
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterPatrolUnreachableSkipSec",
+        "label": "不可达巡逻点跳过时间（秒）",
+        "type": "number",
+        "default": 2,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 2
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterLeashRadiusM",
+        "label": "出生点活动半径（米）",
+        "type": "number",
+        "default": 15,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 15
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterHurtPauseSec",
+        "label": "受击暂停（秒）",
+        "type": "number",
+        "default": 0.25,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.25
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterSenseRangeM",
+        "label": "视野距离（米）",
+        "type": "number",
+        "default": 7,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 7
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterFullAngleDeg",
+        "label": "完整视野角（度）",
+        "type": "number",
+        "default": 100,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 100
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterLoseSightGraceSec",
+        "label": "失视宽限（秒）",
+        "type": "number",
+        "default": 1.2,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 1.2
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterSearchSec",
+        "label": "失视搜索时间（秒）",
+        "type": "number",
+        "default": 4,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 4
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterDamageHp",
+        "label": "单次攻击伤害（HP）",
+        "type": "number",
+        "default": 25,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 25
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterWindupSec",
+        "label": "攻击前摇（秒）",
+        "type": "number",
+        "default": 0.55,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.55
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterActiveSec",
+        "label": "攻击有效窗口（秒）",
+        "type": "number",
+        "default": 0.25,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.25
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterRecoverySec",
+        "label": "攻击恢复（秒）",
+        "type": "number",
+        "default": 0.7,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 0.7
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterCooldownSec",
+        "label": "攻击开始间隔（秒）",
+        "type": "number",
+        "default": 2,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 2
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterAttackRangeM",
+        "label": "攻击距离（米）",
+        "type": "number",
+        "default": 3.5,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 3.5
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "monsterAttackArcDeg",
+        "label": "攻击完整角度（度）",
+        "type": "number",
+        "default": 100,
+        "script": "monster_attributes",
+        "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+        "sceneNode": "monster_cube",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 100
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "matchRoundDurationSec",
+        "label": "比赛总时长（秒）",
+        "type": "number",
+        "default": 600,
+        "script": "match_attributes",
+        "scriptId": "b6a67278-5cf1-4f71-89c4-925ebcdd41a4",
+        "sceneNode": "demo_root",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 600
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      },
+      {
+        "name": "matchExtractionHoldSec",
+        "label": "撤离持续时间（秒）",
+        "type": "number",
+        "default": 3,
+        "script": "match_attributes",
+        "scriptId": "b6a67278-5cf1-4f71-89c4-925ebcdd41a4",
+        "sceneNode": "demo_root",
+        "sceneDefaultAnnotationMatches": true,
+        "sceneParameterOverrides": [
+          {
+            "explicitlySet": true,
+            "value": 3
+          }
+        ],
+        "defaultSource": "script annotation and GetProfile fallback; empty paramsJson has no explicit override",
+        "runtimeReadbackVerifiedByThisAudit": false
+      }
+    ],
+    "defaultsCaveat": "36 annotation defaults, scene parameter overrides and script references are statically confirmed. This audit does not itself verify injected globals, GetProfile runtime readback or Inspector visual display; real-editor readback evidence is recorded in the separate final QA documents.",
+    "sceneMoveMaxSpeed": 3.2,
+    "sceneJumpMaxHeight": 0.8,
+    "officialScriptsUnchangedFromSeed": true,
+    "resourceRefsEqualSeed": false
+  },
+  "requiredFinalAction": "Copy only this newly refreshed docs/directory_alignment.json into the matching native docs path, then verify its hash matches. The canonical comparison excludes this report itself and no native scene or configuration was modified by the audit."
+}

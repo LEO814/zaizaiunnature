@@ -1,0 +1,33 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "gate_exit",
+  "type": "interactable",
+  "packageId": "PKG-SCENE",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.interactables.gate_exit.definition",
+  "controllerModule": "gameplay.packages.interactables.gate_exit.controller",
+  "resources": [
+    {
+      "id": "asset_gate_exit",
+      "path": "gameplay/packages/interactables/gate_exit/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_gate_exit_activate",
+      "name": "gate_exit_activate",
+      "role": "activate",
+      "resourceId": "asset_gate_exit"
+    }
+  ],
+  "requiredServices": [
+    "Interaction",
+    "Inventory",
+    "Combat",
+    "Session",
+    "Assets"
+  ],
+  "dependencies": []
+}

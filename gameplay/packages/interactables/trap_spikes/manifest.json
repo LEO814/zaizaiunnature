@@ -1,0 +1,45 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "trap_spikes",
+  "type": "interactable",
+  "packageId": "PKG-SCENE",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.interactables.trap_spikes.definition",
+  "controllerModule": "gameplay.packages.interactables.trap_spikes.controller",
+  "resources": [
+    {
+      "id": "asset_trap_spikes",
+      "path": "gameplay/packages/interactables/trap_spikes/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_trap_spikes_warning",
+      "name": "trap_spikes_warning",
+      "role": "warning",
+      "resourceId": "asset_trap_spikes"
+    },
+    {
+      "id": "clip_trap_spikes_activate",
+      "name": "trap_spikes_activate",
+      "role": "activate",
+      "resourceId": "asset_trap_spikes"
+    },
+    {
+      "id": "clip_trap_spikes_reset",
+      "name": "trap_spikes_reset",
+      "role": "reset",
+      "resourceId": "asset_trap_spikes"
+    }
+  ],
+  "requiredServices": [
+    "Interaction",
+    "Inventory",
+    "Combat",
+    "Session",
+    "Assets"
+  ],
+  "dependencies": []
+}

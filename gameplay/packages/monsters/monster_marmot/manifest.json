@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "monster_marmot",
+  "type": "monster",
+  "packageId": "PKG-MONSTER",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.monsters.monster_marmot.definition",
+  "controllerModule": "gameplay.packages.monsters.monster_marmot.controller",
+  "resources": [
+    {
+      "id": "asset_monster_marmot",
+      "path": "gameplay/packages/monsters/monster_marmot/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_monster_marmot_idle",
+      "name": "monster_marmot_idle",
+      "role": "idle",
+      "resourceId": "asset_monster_marmot"
+    },
+    {
+      "id": "clip_monster_marmot_patrol",
+      "name": "monster_marmot_patrol",
+      "role": "patrol",
+      "resourceId": "asset_monster_marmot"
+    },
+    {
+      "id": "clip_monster_marmot_chase",
+      "name": "monster_marmot_chase",
+      "role": "chase",
+      "resourceId": "asset_monster_marmot"
+    },
+    {
+      "id": "clip_monster_marmot_attack",
+      "name": "monster_marmot_attack",
+      "role": "attack",
+      "resourceId": "asset_monster_marmot"
+    },
+    {
+      "id": "clip_monster_marmot_hurt",
+      "name": "monster_marmot_hurt",
+      "role": "hurt",
+      "resourceId": "asset_monster_marmot"
+    },
+    {
+      "id": "clip_monster_marmot_death",
+      "name": "monster_marmot_death",
+      "role": "death",
+      "resourceId": "asset_monster_marmot"
+    },
+    {
+      "id": "clip_monster_marmot_special",
+      "name": "monster_marmot_special",
+      "role": "special",
+      "resourceId": "asset_monster_marmot"
+    }
+  ],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Movement",
+    "Navigation",
+    "Inventory",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

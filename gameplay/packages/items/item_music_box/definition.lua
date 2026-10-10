@@ -1,0 +1,26 @@
+-- Read-only object definition. Runtime HP/ammo/AI state belongs to instances.
+return {
+  ["schemaVersion"] = "0.2.0",
+  ["id"] = "item_music_box",
+  ["displayName"] = "音乐盒",
+  ["gate"] = "G2",
+  ["assetId"] = "asset_item_music_box",
+  ["weightKg"] = 0.6,
+  ["maxStack"] = 2,
+  ["sellValue"] = 80,
+  ["equipmentSlot"] = "none",
+  ["castSec"] = 0.6,
+  ["cooldownSec"] = 5,
+  ["consumePolicy"] = "on_effect_commit",
+  ["cancelOnDamage"] = true,
+  ["cancelOnMoveBeyondM"] = 0.4,
+  ["useClipId"] = "clip_item_music_box_use",
+  ["effect"] = {
+    ["kind"] = "area_control",
+    ["rangeM"] = 5,
+    ["durationSec"] = 8,
+    ["requireLineOfSight"] = true,
+    ["targetBehaviorRuleId"] = "slime_contact_enrage",
+  },
+  ["type"] = "item",
+}

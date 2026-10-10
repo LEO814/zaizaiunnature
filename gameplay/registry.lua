@@ -1,0 +1,594 @@
+-- Generated from package manifests. Do not edit.
+return {
+  ["schemaVersion"] = "0.2.0",
+  ["entries"] = {
+    {
+      ["id"] = "chest_basic",
+      ["packageId"] = "PKG-SCENE",
+      ["type"] = "interactable",
+      ["definitionModule"] = "gameplay.packages.interactables.chest_basic.definition",
+      ["controllerModule"] = "gameplay.packages.interactables.chest_basic.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_chest_basic",
+          ["path"] = "gameplay/packages/interactables/chest_basic/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_chest_basic_open",
+          ["name"] = "chest_basic_open",
+          ["role"] = "open",
+          ["resourceId"] = "asset_chest_basic",
+        },
+        {
+          ["id"] = "clip_chest_basic_close",
+          ["name"] = "chest_basic_close",
+          ["role"] = "close",
+          ["resourceId"] = "asset_chest_basic",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/interactables/chest_basic/manifest.json",
+    },
+    {
+      ["id"] = "gate_exit",
+      ["packageId"] = "PKG-SCENE",
+      ["type"] = "interactable",
+      ["definitionModule"] = "gameplay.packages.interactables.gate_exit.definition",
+      ["controllerModule"] = "gameplay.packages.interactables.gate_exit.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_gate_exit",
+          ["path"] = "gameplay/packages/interactables/gate_exit/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_gate_exit_activate",
+          ["name"] = "gate_exit_activate",
+          ["role"] = "activate",
+          ["resourceId"] = "asset_gate_exit",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/interactables/gate_exit/manifest.json",
+    },
+    {
+      ["id"] = "item_capture",
+      ["packageId"] = "PKG-TOOL",
+      ["type"] = "item",
+      ["definitionModule"] = "gameplay.packages.items.item_capture.definition",
+      ["controllerModule"] = "gameplay.packages.items.item_capture.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_item_capture",
+          ["path"] = "gameplay/packages/items/item_capture/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_item_capture_use",
+          ["name"] = "item_capture_use",
+          ["role"] = "use",
+          ["resourceId"] = "asset_item_capture",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/items/item_capture/manifest.json",
+    },
+    {
+      ["id"] = "item_flashlight",
+      ["packageId"] = "PKG-TOOL",
+      ["type"] = "item",
+      ["definitionModule"] = "gameplay.packages.items.item_flashlight.definition",
+      ["controllerModule"] = "gameplay.packages.items.item_flashlight.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_item_flashlight",
+          ["path"] = "gameplay/packages/items/item_flashlight/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_item_flashlight_use",
+          ["name"] = "item_flashlight_use",
+          ["role"] = "use",
+          ["resourceId"] = "asset_item_flashlight",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/items/item_flashlight/manifest.json",
+    },
+    {
+      ["id"] = "item_heal_small",
+      ["packageId"] = "PKG-TOOL",
+      ["type"] = "item",
+      ["definitionModule"] = "gameplay.packages.items.item_heal_small.definition",
+      ["controllerModule"] = "gameplay.packages.items.item_heal_small.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_item_heal_small",
+          ["path"] = "gameplay/packages/items/item_heal_small/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_item_heal_small_use",
+          ["name"] = "item_heal_small_use",
+          ["role"] = "use",
+          ["resourceId"] = "asset_item_heal_small",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/items/item_heal_small/manifest.json",
+    },
+    {
+      ["id"] = "item_music_box",
+      ["packageId"] = "PKG-TOOL",
+      ["type"] = "item",
+      ["definitionModule"] = "gameplay.packages.items.item_music_box.definition",
+      ["controllerModule"] = "gameplay.packages.items.item_music_box.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_item_music_box",
+          ["path"] = "gameplay/packages/items/item_music_box/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_item_music_box_use",
+          ["name"] = "item_music_box_use",
+          ["role"] = "use",
+          ["resourceId"] = "asset_item_music_box",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/items/item_music_box/manifest.json",
+    },
+    {
+      ["id"] = "item_treasure",
+      ["packageId"] = "PKG-TOOL",
+      ["type"] = "item",
+      ["definitionModule"] = "gameplay.packages.items.item_treasure.definition",
+      ["controllerModule"] = "gameplay.packages.items.item_treasure.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_item_treasure",
+          ["path"] = "gameplay/packages/items/item_treasure/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+      },
+      ["manifestPath"] = "gameplay/packages/items/item_treasure/manifest.json",
+    },
+    {
+      ["id"] = "map_demo",
+      ["packageId"] = "PKG-SCENE",
+      ["type"] = "environment",
+      ["definitionModule"] = "gameplay.packages.environment.map_demo.definition",
+      ["controllerModule"] = "gameplay.packages.environment.map_demo.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_map_demo",
+          ["path"] = "gameplay/packages/environment/map_demo/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+      },
+      ["manifestPath"] = "gameplay/packages/environment/map_demo/manifest.json",
+    },
+    {
+      ["id"] = "map_tomb",
+      ["packageId"] = "PKG-SCENE",
+      ["type"] = "environment",
+      ["definitionModule"] = "gameplay.packages.environment.map_tomb.definition",
+      ["controllerModule"] = "gameplay.packages.environment.map_tomb.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_map_tomb",
+          ["path"] = "gameplay/packages/environment/map_tomb/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+      },
+      ["manifestPath"] = "gameplay/packages/environment/map_tomb/manifest.json",
+    },
+    {
+      ["id"] = "monster_bat",
+      ["packageId"] = "PKG-MONSTER",
+      ["type"] = "monster",
+      ["definitionModule"] = "gameplay.packages.monsters.monster_bat.definition",
+      ["controllerModule"] = "gameplay.packages.monsters.monster_bat.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_monster_bat",
+          ["path"] = "gameplay/packages/monsters/monster_bat/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_monster_bat_idle",
+          ["name"] = "monster_bat_idle",
+          ["role"] = "idle",
+          ["resourceId"] = "asset_monster_bat",
+        },
+        {
+          ["id"] = "clip_monster_bat_patrol",
+          ["name"] = "monster_bat_patrol",
+          ["role"] = "patrol",
+          ["resourceId"] = "asset_monster_bat",
+        },
+        {
+          ["id"] = "clip_monster_bat_chase",
+          ["name"] = "monster_bat_chase",
+          ["role"] = "chase",
+          ["resourceId"] = "asset_monster_bat",
+        },
+        {
+          ["id"] = "clip_monster_bat_attack",
+          ["name"] = "monster_bat_attack",
+          ["role"] = "attack",
+          ["resourceId"] = "asset_monster_bat",
+        },
+        {
+          ["id"] = "clip_monster_bat_hurt",
+          ["name"] = "monster_bat_hurt",
+          ["role"] = "hurt",
+          ["resourceId"] = "asset_monster_bat",
+        },
+        {
+          ["id"] = "clip_monster_bat_death",
+          ["name"] = "monster_bat_death",
+          ["role"] = "death",
+          ["resourceId"] = "asset_monster_bat",
+        },
+        {
+          ["id"] = "clip_monster_bat_special",
+          ["name"] = "monster_bat_special",
+          ["role"] = "special",
+          ["resourceId"] = "asset_monster_bat",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/monsters/monster_bat/manifest.json",
+    },
+    {
+      ["id"] = "monster_cube",
+      ["packageId"] = "PKG-MONSTER",
+      ["type"] = "monster",
+      ["definitionModule"] = "gameplay.packages.monsters.monster_cube.definition",
+      ["controllerModule"] = "gameplay.packages.monsters.monster_cube.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_monster_cube",
+          ["path"] = "gameplay/packages/monsters/monster_cube/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+      },
+      ["manifestPath"] = "gameplay/packages/monsters/monster_cube/manifest.json",
+    },
+    {
+      ["id"] = "monster_marmot",
+      ["packageId"] = "PKG-MONSTER",
+      ["type"] = "monster",
+      ["definitionModule"] = "gameplay.packages.monsters.monster_marmot.definition",
+      ["controllerModule"] = "gameplay.packages.monsters.monster_marmot.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_monster_marmot",
+          ["path"] = "gameplay/packages/monsters/monster_marmot/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_monster_marmot_idle",
+          ["name"] = "monster_marmot_idle",
+          ["role"] = "idle",
+          ["resourceId"] = "asset_monster_marmot",
+        },
+        {
+          ["id"] = "clip_monster_marmot_patrol",
+          ["name"] = "monster_marmot_patrol",
+          ["role"] = "patrol",
+          ["resourceId"] = "asset_monster_marmot",
+        },
+        {
+          ["id"] = "clip_monster_marmot_chase",
+          ["name"] = "monster_marmot_chase",
+          ["role"] = "chase",
+          ["resourceId"] = "asset_monster_marmot",
+        },
+        {
+          ["id"] = "clip_monster_marmot_attack",
+          ["name"] = "monster_marmot_attack",
+          ["role"] = "attack",
+          ["resourceId"] = "asset_monster_marmot",
+        },
+        {
+          ["id"] = "clip_monster_marmot_hurt",
+          ["name"] = "monster_marmot_hurt",
+          ["role"] = "hurt",
+          ["resourceId"] = "asset_monster_marmot",
+        },
+        {
+          ["id"] = "clip_monster_marmot_death",
+          ["name"] = "monster_marmot_death",
+          ["role"] = "death",
+          ["resourceId"] = "asset_monster_marmot",
+        },
+        {
+          ["id"] = "clip_monster_marmot_special",
+          ["name"] = "monster_marmot_special",
+          ["role"] = "special",
+          ["resourceId"] = "asset_monster_marmot",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/monsters/monster_marmot/manifest.json",
+    },
+    {
+      ["id"] = "monster_slime",
+      ["packageId"] = "PKG-MONSTER",
+      ["type"] = "monster",
+      ["definitionModule"] = "gameplay.packages.monsters.monster_slime.definition",
+      ["controllerModule"] = "gameplay.packages.monsters.monster_slime.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_monster_slime",
+          ["path"] = "gameplay/packages/monsters/monster_slime/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_monster_slime_idle",
+          ["name"] = "monster_slime_idle",
+          ["role"] = "idle",
+          ["resourceId"] = "asset_monster_slime",
+        },
+        {
+          ["id"] = "clip_monster_slime_patrol",
+          ["name"] = "monster_slime_patrol",
+          ["role"] = "patrol",
+          ["resourceId"] = "asset_monster_slime",
+        },
+        {
+          ["id"] = "clip_monster_slime_chase",
+          ["name"] = "monster_slime_chase",
+          ["role"] = "chase",
+          ["resourceId"] = "asset_monster_slime",
+        },
+        {
+          ["id"] = "clip_monster_slime_attack",
+          ["name"] = "monster_slime_attack",
+          ["role"] = "attack",
+          ["resourceId"] = "asset_monster_slime",
+        },
+        {
+          ["id"] = "clip_monster_slime_hurt",
+          ["name"] = "monster_slime_hurt",
+          ["role"] = "hurt",
+          ["resourceId"] = "asset_monster_slime",
+        },
+        {
+          ["id"] = "clip_monster_slime_death",
+          ["name"] = "monster_slime_death",
+          ["role"] = "death",
+          ["resourceId"] = "asset_monster_slime",
+        },
+        {
+          ["id"] = "clip_monster_slime_special",
+          ["name"] = "monster_slime_special",
+          ["role"] = "special",
+          ["resourceId"] = "asset_monster_slime",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/monsters/monster_slime/manifest.json",
+    },
+    {
+      ["id"] = "player_default",
+      ["packageId"] = "PKG-PLAYER",
+      ["type"] = "player",
+      ["definitionModule"] = "gameplay.packages.player.player_default.definition",
+      ["controllerModule"] = "gameplay.packages.player.player_default.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_player_default",
+          ["path"] = "gameplay/packages/player/player_default/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_player_default_idle",
+          ["name"] = "player_default_idle",
+          ["role"] = "idle",
+          ["resourceId"] = "asset_player_default",
+        },
+        {
+          ["id"] = "clip_player_default_walk",
+          ["name"] = "player_default_walk",
+          ["role"] = "walk",
+          ["resourceId"] = "asset_player_default",
+        },
+        {
+          ["id"] = "clip_player_default_run",
+          ["name"] = "player_default_run",
+          ["role"] = "run",
+          ["resourceId"] = "asset_player_default",
+        },
+        {
+          ["id"] = "clip_player_default_attack",
+          ["name"] = "player_default_attack",
+          ["role"] = "attack",
+          ["resourceId"] = "asset_player_default",
+        },
+        {
+          ["id"] = "clip_player_default_use",
+          ["name"] = "player_default_use",
+          ["role"] = "use",
+          ["resourceId"] = "asset_player_default",
+        },
+        {
+          ["id"] = "clip_player_default_hurt",
+          ["name"] = "player_default_hurt",
+          ["role"] = "hurt",
+          ["resourceId"] = "asset_player_default",
+        },
+        {
+          ["id"] = "clip_player_default_death",
+          ["name"] = "player_default_death",
+          ["role"] = "death",
+          ["resourceId"] = "asset_player_default",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/player/player_default/manifest.json",
+    },
+    {
+      ["id"] = "trap_spikes",
+      ["packageId"] = "PKG-SCENE",
+      ["type"] = "interactable",
+      ["definitionModule"] = "gameplay.packages.interactables.trap_spikes.definition",
+      ["controllerModule"] = "gameplay.packages.interactables.trap_spikes.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_trap_spikes",
+          ["path"] = "gameplay/packages/interactables/trap_spikes/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_trap_spikes_warning",
+          ["name"] = "trap_spikes_warning",
+          ["role"] = "warning",
+          ["resourceId"] = "asset_trap_spikes",
+        },
+        {
+          ["id"] = "clip_trap_spikes_activate",
+          ["name"] = "trap_spikes_activate",
+          ["role"] = "activate",
+          ["resourceId"] = "asset_trap_spikes",
+        },
+        {
+          ["id"] = "clip_trap_spikes_reset",
+          ["name"] = "trap_spikes_reset",
+          ["role"] = "reset",
+          ["resourceId"] = "asset_trap_spikes",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/interactables/trap_spikes/manifest.json",
+    },
+    {
+      ["id"] = "ui_main",
+      ["packageId"] = "PKG-INVENTORY",
+      ["type"] = "ui",
+      ["definitionModule"] = "gameplay.packages.ui.ui_main.definition",
+      ["controllerModule"] = "gameplay.packages.ui.ui_main.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_ui_main_atlas",
+          ["path"] = "gameplay/packages/ui/ui_main/materials/ui_atlas.png",
+          ["kind"] = "ui_texture",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+      },
+      ["manifestPath"] = "gameplay/packages/ui/ui_main/manifest.json",
+    },
+    {
+      ["id"] = "weapon_ranged_sample",
+      ["packageId"] = "PKG-TOOL",
+      ["type"] = "weapon",
+      ["definitionModule"] = "gameplay.packages.weapons.weapon_ranged_sample.definition",
+      ["controllerModule"] = "gameplay.packages.weapons.weapon_ranged_sample.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_weapon_ranged_sample",
+          ["path"] = "gameplay/packages/weapons/weapon_ranged_sample/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+        {
+          ["id"] = "anim_weapon_ranged_sample_player",
+          ["path"] = "gameplay/packages/weapons/weapon_ranged_sample/animations/player_actions.glb",
+          ["kind"] = "animation",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_weapon_ranged_sample_idle",
+          ["name"] = "weapon_ranged_sample_idle",
+          ["role"] = "idle",
+          ["resourceId"] = "anim_weapon_ranged_sample_player",
+        },
+        {
+          ["id"] = "clip_weapon_ranged_sample_attack",
+          ["name"] = "weapon_ranged_sample_attack",
+          ["role"] = "attack",
+          ["resourceId"] = "anim_weapon_ranged_sample_player",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/weapons/weapon_ranged_sample/manifest.json",
+    },
+    {
+      ["id"] = "weapon_shovel",
+      ["packageId"] = "PKG-TOOL",
+      ["type"] = "weapon",
+      ["definitionModule"] = "gameplay.packages.weapons.weapon_shovel.definition",
+      ["controllerModule"] = "gameplay.packages.weapons.weapon_shovel.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_weapon_shovel",
+          ["path"] = "gameplay/packages/weapons/weapon_shovel/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "planned",
+        },
+        {
+          ["id"] = "anim_weapon_shovel_player",
+          ["path"] = "gameplay/packages/weapons/weapon_shovel/animations/player_actions.glb",
+          ["kind"] = "animation",
+          ["status"] = "planned",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_weapon_shovel_idle",
+          ["name"] = "weapon_shovel_idle",
+          ["role"] = "idle",
+          ["resourceId"] = "anim_weapon_shovel_player",
+        },
+        {
+          ["id"] = "clip_weapon_shovel_attack",
+          ["name"] = "weapon_shovel_attack",
+          ["role"] = "attack",
+          ["resourceId"] = "anim_weapon_shovel_player",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/weapons/weapon_shovel/manifest.json",
+    },
+  },
+}

@@ -1,0 +1,366 @@
+{
+  "project": "仔仔搜打撤1.0",
+  "recordedDate": "2026-10-09",
+  "stage": "offline_lua_integration_and_contract",
+  "ok": true,
+  "summary": {
+    "integrationCases": 13,
+    "integrationAssertions": 301,
+    "bundleChecks": 10,
+    "contractTests": 22
+  },
+  "scope": "纯Lua 5.1的真实公共状态及对象控制器集成、目录/引用契约与加载检查；SDK空间/视觉操作以替身注入。实际地图Spatial几何和路径检查通过。本记录不代表编辑器预览、模型导入、UI渲染、多人、仓库、商店或持久化验收。",
+  "commands": [
+    "python -B tests/test_demo_runtime.py --json",
+    "python -B tests/smoke_lua_bundle.py --json",
+    "python -B -m unittest discover -s tests -p test_package_contract.py -v"
+  ],
+  "integration": {
+    "ok": true,
+    "runtime": {
+      "package": "lupa",
+      "version": "2.6",
+      "module": "lupa.lua51"
+    },
+    "testsRun": 13,
+    "assertions": 301,
+    "checks": [
+      {
+        "name": "test_attack_losing_sight_does_not_hit_hidden_player",
+        "passed": true
+      },
+      {
+        "name": "test_authored_four_rooms_spawns_and_routes_are_reachable",
+        "passed": true
+      },
+      {
+        "name": "test_chest_reopen_and_atomic_inventory_failures",
+        "passed": true
+      },
+      {
+        "name": "test_complete_search_fight_extract_restart",
+        "passed": true
+      },
+      {
+        "name": "test_damage_window_dedup_and_independent_los",
+        "passed": true
+      },
+      {
+        "name": "test_death_beats_timeout_and_extraction_same_frame",
+        "passed": true
+      },
+      {
+        "name": "test_full_health_and_unowned_item_never_consume",
+        "passed": true
+      },
+      {
+        "name": "test_heal_movement_and_damage_cancel_without_consumption",
+        "passed": true
+      },
+      {
+        "name": "test_leaving_or_damage_cancels_extraction",
+        "passed": true
+      },
+      {
+        "name": "test_monster_patrol_uses_real_path_and_movement",
+        "passed": true
+      },
+      {
+        "name": "test_player_behind_fov_and_wall_prevent_attacks",
+        "passed": true
+      },
+      {
+        "name": "test_returned_snapshots_are_not_writable_authority",
+        "passed": true
+      },
+      {
+        "name": "test_timeout_beats_due_extraction",
+        "passed": true
+      }
+    ],
+    "scope": "Real Lua state/services, match/settlement and player/monster/shovel/heal/chest/inventory controllers; native transform/detection/visual SDK doubles only. Authored Spatial math/path is real. No editor preview, import, UI rendering, multiplayer, warehouse, shop or persistence acceptance."
+  },
+  "bundleSmoke": {
+    "ok": true,
+    "runtime": {
+      "package": "lupa",
+      "version": "2.6",
+      "module": "lupa.lua51",
+      "implementation": "Lua 5.1",
+      "luaVersion": [
+        5,
+        1
+      ]
+    },
+    "bundle": {
+      "path": "dist/zaizai_surreal.lua",
+      "moduleCount": 47,
+      "sha256": "5c6ad90edafc7109cc16fb0db657379984613f38afd27f3c8438f3d4a81cf896"
+    },
+    "declaredMethodCount": 34,
+    "implementedDemoConstructors": 7,
+    "futureTemplateControllers": 11,
+    "checks": [
+      {
+        "name": "bundle_loads_bootstrap",
+        "passed": true,
+        "detail": "Bootstrap.create is a Lua function"
+      },
+      {
+        "name": "default_adapter_rejected",
+        "passed": true,
+        "detail": "ADAPTER_NOT_READY"
+      },
+      {
+        "name": "empty_service_tables_rejected",
+        "passed": true,
+        "detail": "ADAPTER_NOT_READY"
+      },
+      {
+        "name": "declared_methods_allow_scaffold_binding",
+        "passed": true,
+        "detail": "34 inert method doubles"
+      },
+      {
+        "name": "definition_identity_matches_manifest",
+        "passed": true,
+        "detail": "18 definition IDs and types match registry entries"
+      },
+      {
+        "name": "clip_sources_match_owned_runtime_resources",
+        "passed": true,
+        "detail": "Every clip identifies its package's runtime model/animation/scene chunk"
+      },
+      {
+        "name": "future_templates_refuse_gameplay_start",
+        "passed": true,
+        "detail": "11 future controllers return NOT_IMPLEMENTED"
+      },
+      {
+        "name": "disposed_future_templates_refuse_restart",
+        "passed": true,
+        "detail": "11 future controllers return DISPOSED"
+      },
+      {
+        "name": "implemented_demo_controllers_classified_separately",
+        "passed": true,
+        "detail": "7 implemented constructors; use real Demo integration tests"
+      },
+      {
+        "name": "unknown_entity_rejected",
+        "passed": true,
+        "detail": "UNKNOWN_ENTITY"
+      }
+    ],
+    "entities": [
+      {
+        "id": "chest_basic",
+        "start": "DEMO_IMPLEMENTED",
+        "afterDispose": "NOT_EXERCISED_HERE",
+        "kind": "demo"
+      },
+      {
+        "id": "gate_exit",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "item_capture",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "item_flashlight",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "item_heal_small",
+        "start": "DEMO_IMPLEMENTED",
+        "afterDispose": "NOT_EXERCISED_HERE",
+        "kind": "demo"
+      },
+      {
+        "id": "item_music_box",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "item_treasure",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "map_demo",
+        "start": "DEMO_IMPLEMENTED",
+        "afterDispose": "NOT_EXERCISED_HERE",
+        "kind": "demo"
+      },
+      {
+        "id": "map_tomb",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "monster_bat",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "monster_cube",
+        "start": "DEMO_IMPLEMENTED",
+        "afterDispose": "NOT_EXERCISED_HERE",
+        "kind": "demo"
+      },
+      {
+        "id": "monster_marmot",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "monster_slime",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "player_default",
+        "start": "DEMO_IMPLEMENTED",
+        "afterDispose": "NOT_EXERCISED_HERE",
+        "kind": "demo"
+      },
+      {
+        "id": "trap_spikes",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "ui_main",
+        "start": "DEMO_IMPLEMENTED",
+        "afterDispose": "NOT_EXERCISED_HERE",
+        "kind": "demo"
+      },
+      {
+        "id": "weapon_ranged_sample",
+        "start": "NOT_IMPLEMENTED",
+        "afterDispose": "DISPOSED",
+        "kind": "future_template"
+      },
+      {
+        "id": "weapon_shovel",
+        "start": "DEMO_IMPLEMENTED",
+        "afterDispose": "NOT_EXERCISED_HERE",
+        "kind": "demo"
+      }
+    ],
+    "scope": "Lua syntax, static module closure, bootstrap service checks and future-template NOT_IMPLEMENTED lifecycle responses. Implemented Demo constructors are classified separately and exercised by tests/test_demo_runtime.py; native UI/SDK start is not called by inert doubles. No model import, SDK compatibility or preview acceptance.",
+    "documentation": "https://pypi.org/project/lupa/2.6/"
+  },
+  "contract": {
+    "ok": true,
+    "testsRun": 22,
+    "checks": [
+      {
+        "name": "test_additional_resource_locations_and_clip_binding",
+        "passed": true
+      },
+      {
+        "name": "test_business_package_cannot_import_editor_adapter",
+        "passed": true
+      },
+      {
+        "name": "test_clip_requires_owned_runtime_resource",
+        "passed": true
+      },
+      {
+        "name": "test_core_cannot_import_business_package",
+        "passed": true
+      },
+      {
+        "name": "test_cross_package_import_requires_dependency",
+        "passed": true
+      },
+      {
+        "name": "test_dangling_and_self_dependencies",
+        "passed": true
+      },
+      {
+        "name": "test_declared_delivered_resource_requires_file",
+        "passed": true
+      },
+      {
+        "name": "test_delivery_rejects_planned_content",
+        "passed": true
+      },
+      {
+        "name": "test_duplicate_resource_and_clip_id",
+        "passed": true
+      },
+      {
+        "name": "test_dynamic_require_rejected_comments_and_strings_ignored",
+        "passed": true
+      },
+      {
+        "name": "test_factories_drift",
+        "passed": true
+      },
+      {
+        "name": "test_missing_module",
+        "passed": true
+      },
+      {
+        "name": "test_missing_package_readme_and_directory",
+        "passed": true
+      },
+      {
+        "name": "test_missing_static_require",
+        "passed": true
+      },
+      {
+        "name": "test_other_package_controller_forbidden_despite_dependency",
+        "passed": true
+      },
+      {
+        "name": "test_planned_contract_passes_without_models",
+        "passed": true
+      },
+      {
+        "name": "test_registry_json_and_lua_drift",
+        "passed": true
+      },
+      {
+        "name": "test_resource_traversal_and_wrong_module",
+        "passed": true
+      },
+      {
+        "name": "test_schema_id_and_type_mismatch",
+        "passed": true
+      },
+      {
+        "name": "test_service_lua_must_match_json",
+        "passed": true
+      },
+      {
+        "name": "test_symlink_escape_is_rejected",
+        "passed": true
+      },
+      {
+        "name": "test_unknown_service_is_rejected",
+        "passed": true
+      }
+    ]
+  },
+  "resolvedFinding": {
+    "description": "原方块怪物出生点与sight_cover重叠。业务负责人已移到(8,0.6,8)。测试增加了出生点、4房间路径与逐段碰撞检查。",
+    "status": "resolved_and_retested"
+  }
+}

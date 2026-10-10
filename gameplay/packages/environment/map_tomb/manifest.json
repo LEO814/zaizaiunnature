@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "map_tomb",
+  "type": "environment",
+  "packageId": "PKG-SCENE",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.environment.map_tomb.definition",
+  "controllerModule": "gameplay.packages.environment.map_tomb.controller",
+  "resources": [
+    {
+      "id": "asset_map_tomb",
+      "path": "gameplay/packages/environment/map_tomb/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [],
+  "requiredServices": [
+    "Navigation",
+    "Movement",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": [
+    "chest_basic",
+    "trap_spikes",
+    "gate_exit"
+  ]
+}

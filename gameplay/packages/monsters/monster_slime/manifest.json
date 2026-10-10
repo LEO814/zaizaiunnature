@@ -1,0 +1,71 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "monster_slime",
+  "type": "monster",
+  "packageId": "PKG-MONSTER",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.monsters.monster_slime.definition",
+  "controllerModule": "gameplay.packages.monsters.monster_slime.controller",
+  "resources": [
+    {
+      "id": "asset_monster_slime",
+      "path": "gameplay/packages/monsters/monster_slime/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_monster_slime_idle",
+      "name": "monster_slime_idle",
+      "role": "idle",
+      "resourceId": "asset_monster_slime"
+    },
+    {
+      "id": "clip_monster_slime_patrol",
+      "name": "monster_slime_patrol",
+      "role": "patrol",
+      "resourceId": "asset_monster_slime"
+    },
+    {
+      "id": "clip_monster_slime_chase",
+      "name": "monster_slime_chase",
+      "role": "chase",
+      "resourceId": "asset_monster_slime"
+    },
+    {
+      "id": "clip_monster_slime_attack",
+      "name": "monster_slime_attack",
+      "role": "attack",
+      "resourceId": "asset_monster_slime"
+    },
+    {
+      "id": "clip_monster_slime_hurt",
+      "name": "monster_slime_hurt",
+      "role": "hurt",
+      "resourceId": "asset_monster_slime"
+    },
+    {
+      "id": "clip_monster_slime_death",
+      "name": "monster_slime_death",
+      "role": "death",
+      "resourceId": "asset_monster_slime"
+    },
+    {
+      "id": "clip_monster_slime_special",
+      "name": "monster_slime_special",
+      "role": "special",
+      "resourceId": "asset_monster_slime"
+    }
+  ],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Movement",
+    "Navigation",
+    "Inventory",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

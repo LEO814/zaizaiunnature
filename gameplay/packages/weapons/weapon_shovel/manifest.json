@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "weapon_shovel",
+  "type": "weapon",
+  "packageId": "PKG-TOOL",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.weapons.weapon_shovel.definition",
+  "controllerModule": "gameplay.packages.weapons.weapon_shovel.controller",
+  "resources": [
+    {
+      "id": "asset_weapon_shovel",
+      "path": "gameplay/packages/weapons/weapon_shovel/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    },
+    {
+      "id": "anim_weapon_shovel_player",
+      "path": "gameplay/packages/weapons/weapon_shovel/animations/player_actions.glb",
+      "kind": "animation",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_weapon_shovel_idle",
+      "name": "weapon_shovel_idle",
+      "role": "idle",
+      "resourceId": "anim_weapon_shovel_player"
+    },
+    {
+      "id": "clip_weapon_shovel_attack",
+      "name": "weapon_shovel_attack",
+      "role": "attack",
+      "resourceId": "anim_weapon_shovel_player"
+    }
+  ],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Inventory",
+    "Interaction",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

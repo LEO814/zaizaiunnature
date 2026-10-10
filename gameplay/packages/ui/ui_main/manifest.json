@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "ui_main",
+  "type": "ui",
+  "packageId": "PKG-INVENTORY",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.ui.ui_main.definition",
+  "controllerModule": "gameplay.packages.ui.ui_main.controller",
+  "resources": [
+    {
+      "id": "asset_ui_main_atlas",
+      "path": "gameplay/packages/ui/ui_main/materials/ui_atlas.png",
+      "kind": "ui_texture",
+      "status": "planned"
+    }
+  ],
+  "clips": [],
+  "requiredServices": [
+    "UI",
+    "Inventory",
+    "Characters",
+    "Interaction",
+    "Session"
+  ],
+  "dependencies": [
+    "player_default"
+  ]
+}

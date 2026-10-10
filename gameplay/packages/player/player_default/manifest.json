@@ -1,0 +1,69 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "player_default",
+  "type": "player",
+  "packageId": "PKG-PLAYER",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.player.player_default.definition",
+  "controllerModule": "gameplay.packages.player.player_default.controller",
+  "resources": [
+    {
+      "id": "asset_player_default",
+      "path": "gameplay/packages/player/player_default/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [
+    {
+      "id": "clip_player_default_idle",
+      "name": "player_default_idle",
+      "role": "idle",
+      "resourceId": "asset_player_default"
+    },
+    {
+      "id": "clip_player_default_walk",
+      "name": "player_default_walk",
+      "role": "walk",
+      "resourceId": "asset_player_default"
+    },
+    {
+      "id": "clip_player_default_run",
+      "name": "player_default_run",
+      "role": "run",
+      "resourceId": "asset_player_default"
+    },
+    {
+      "id": "clip_player_default_attack",
+      "name": "player_default_attack",
+      "role": "attack",
+      "resourceId": "asset_player_default"
+    },
+    {
+      "id": "clip_player_default_use",
+      "name": "player_default_use",
+      "role": "use",
+      "resourceId": "asset_player_default"
+    },
+    {
+      "id": "clip_player_default_hurt",
+      "name": "player_default_hurt",
+      "role": "hurt",
+      "resourceId": "asset_player_default"
+    },
+    {
+      "id": "clip_player_default_death",
+      "name": "player_default_death",
+      "role": "death",
+      "resourceId": "asset_player_default"
+    }
+  ],
+  "requiredServices": [
+    "Characters",
+    "Movement",
+    "Inventory",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

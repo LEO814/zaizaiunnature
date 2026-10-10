@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "0.2.0",
+  "id": "item_treasure",
+  "type": "item",
+  "packageId": "PKG-TOOL",
+  "status": "planned",
+  "definitionModule": "gameplay.packages.items.item_treasure.definition",
+  "controllerModule": "gameplay.packages.items.item_treasure.controller",
+  "resources": [
+    {
+      "id": "asset_item_treasure",
+      "path": "gameplay/packages/items/item_treasure/model/main.glb",
+      "kind": "model",
+      "status": "planned"
+    }
+  ],
+  "clips": [],
+  "requiredServices": [
+    "Characters",
+    "Combat",
+    "Inventory",
+    "Interaction",
+    "Assets",
+    "Session"
+  ],
+  "dependencies": []
+}

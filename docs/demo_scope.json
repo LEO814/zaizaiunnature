@@ -1,0 +1,198 @@
+{
+  "projectName": "仔仔搜打撤1.0",
+  "projectId": "project_wv4fb1w4",
+  "sourceFramework": "职责0.3.0 / 目录与Lua接口0.2.0",
+  "mode": "local_single_player_native_proxy",
+  "editorStorage": "/Users/bytedance/Library/Application Support/AI World Creator/projects/project_wv4fb1w4",
+  "status": "partial_native_acceptance_passed",
+  "statusDescription": "最新入口属性启动次序修复后，恢复默认100/60、保存并重新打开，最终原生QA17项通过、带出280（run_2:result），与此前两轮各17项的历史记录独立；入口专项52模块/Lua5.1及5.4共18项92断言通过。手动A/D移动/UI开箱拾取/背包/满血拒绝、3秒撤离310价值、单次重开及死亡怪物复活已验证。Inspector70/90实机抽样与默认速度/胶囊组件回读通过；自然手动战斗、四房完整遍历及胶囊物理尺寸独立测量仍待专项验收，正式美术/多人/长期经济尚未完成。",
+  "implementedCodeScope": [
+    "local_round_start",
+    "four_room_native_whitebox",
+    "player_attributes",
+    "monster_cube_ai",
+    "shovel_attack",
+    "medicine_cast",
+    "chest_inventory_transfer",
+    "local_bag_ui",
+    "extraction_and_local_settlement"
+  ],
+  "pendingScope": [
+    "online_matchmaking",
+    "pre_round_bag",
+    "warehouse",
+    "shop",
+    "persistence",
+    "multiplayer",
+    "match_audio_system",
+    "formal_art_models_rigs_animations"
+  ],
+  "validation": {
+    "editorPreview": "passed_final_current_entry_17_native_checks_after_restore_save_reopen_plus_historical_qa_and_manual_subset",
+    "naturalPlaythrough": "passed_manual_move_pickup_extract_subset",
+    "restartRegression": "passed_manual_button_and_dead_monster_respawn",
+    "offline": "passed_13_integration_cases_301_assertions_10_bundle_smokes_22_contract_tests",
+    "note": "Current generated entry passed a separate Lua5.1/Lua5.4 startup regression: 52 modules, 18 tests, 92 assertions. After restoring defaults, saving and reopening the editor project, the final current-entry native QA passed 17 checks and extracted value280 (run_2:result), recorded separately from earlier QA sessions. Manual A/D/UI pickup/extraction/restart and Inspector HP70/90 samples remain documented. Natural manual combat, all-room traversal, input/focus boundaries and independently measured collider dimensions remain outside acceptance; no formal art/multiplayer/persistence acceptance.",
+    "attributePhysicalReadback": "passed_default_speed_and_collider_component_readback_dimensions_not_independently_measured",
+    "nativeAutomatedQA": {
+      "status": "passed",
+      "passedCount": 17,
+      "lootValue": 280,
+      "terminalReason": "extraction",
+      "resultId": "run_2:result",
+      "evidence": "docs/evidence/editor_qa_success.png",
+      "coveredFeatures": [
+        "initial_player_and_monster_hp",
+        "monster_patrol",
+        "front_vs_rear_fov",
+        "chest_inventory_transfer",
+        "full_health_heal_rejection",
+        "medicine_cast_heal_single_consumption",
+        "shovel_damage_monster_kill",
+        "three_second_extraction",
+        "duplicate_settlement_idempotency"
+      ],
+      "navigationMethod": "native_Teleport_test_point_positioning",
+      "limits": "Uses native Teleport test-point positioning. Does not prove natural manual monster combat, all-room traversal, all input/focus branches, formal art, multiplayer or persistence.",
+      "repeatCount": 2,
+      "repeat": {
+        "status": "passed",
+        "passedCount": 17,
+        "lootValue": 280,
+        "terminalReason": "extraction",
+        "resultId": "run_3:result",
+        "evidence": "docs/evidence/editor_qa_repeat.png",
+        "stage": "historical_before_profile_startup_fix"
+      },
+      "stage": "historical_before_profile_startup_fix"
+    },
+    "offlineEvidence": "docs/test_results.json",
+    "manualAcceptance": {
+      "status": "passed_defined_subset",
+      "movementInputs": [
+        "A",
+        "D"
+      ],
+      "coveredFeatures": [
+        "native_actor_movement_to_chest_and_back_to_extraction",
+        "ui_open_chest_and_take_all",
+        "ui_read_bag",
+        "full_health_heal_rejection_keeps_two_medicines",
+        "three_second_extraction",
+        "single_click_result_restart",
+        "dead_monster_respawn_after_restart"
+      ],
+      "lootValue": 310,
+      "terminalReason": "extraction",
+      "resultId": "run_1:result",
+      "restartState": {
+        "playerHp": 100,
+        "monsterHp": 60,
+        "bagUsedSlots": 0,
+        "bagCapacity": 12,
+        "timerReset": true,
+        "spawnReset": true
+      },
+      "evidence": [
+        "docs/evidence/manual_chest.png",
+        "docs/evidence/manual_inventory.png",
+        "docs/evidence/manual_extraction.png",
+        "docs/evidence/manual_restart.png",
+        "docs/evidence/restart_after_monster_death.png"
+      ],
+      "limits": "Manual combat and complete four-room traversal are not covered; combat remains covered by native automated QA and offline integration."
+    },
+    "runtimeAttributeReadback": {
+      "status": "passed_default_values",
+      "speedReadbackMps": 3.2000000476837,
+      "colliderMapped": true,
+      "colliderComponentReadback": "passed",
+      "independentPhysicalDimensionMeasurement": "pending",
+      "customInspectorEffectAcceptance": "passed_monster_hp_70_and_player_start_hp_90_samples_only",
+      "dynamicJumpHeight": "requires_scene_configuration_sync",
+      "evidence": "docs/evidence/runtime_attributes.png",
+      "otherInspectorFieldsAndCombinations": "offline_validation_only_not_individually_native_accepted"
+    },
+    "pendingNativeChecks": [
+      "natural_manual_monster_combat",
+      "full_four_room_natural_traversal",
+      "manual_player_death_and_timeout",
+      "all_hotkeys_and_modal_focus_boundaries",
+      "independent_collider_physical_dimensions",
+      "all_declared_geometry_matches_native_scene"
+    ],
+    "inspectorNativeSamples": {
+      "status": "passed_two_samples",
+      "monsterMaxHp": {
+        "value": 70,
+        "observedHudHp": 70,
+        "evidence": "docs/evidence/inspector_override_monster_70.png"
+      },
+      "playerStartHp": {
+        "value": 90,
+        "observedHudHp": 90,
+        "observedHudMaxHp": 100,
+        "evidence": "docs/evidence/inspector_override_player_90.png"
+      },
+      "restoredDefaults": {
+        "playerStartHp": 100,
+        "monsterMaxHp": 60,
+        "savedInEditor": true
+      },
+      "limits": "Only the two HP overrides were sampled natively. Other fields/combinations retain offline validation; no claim of every Inspector effect being natively accepted."
+    },
+    "startupInitialization": {
+      "codeStatus": "implemented",
+      "behavior": "Native Start creates a pending instance; Update waits for player, monster and match GetProfile scripts before initializing. Missing profiles after 120 initialization attempts produce an explicit error rather than silent default fallback.",
+      "nativeSamples": "passed_monster_70_and_player_90",
+      "offlineStartupRegression": "passed_18_tests_92_assertions_lua51_lua54",
+      "finalRestoredDefaultNativeQA": "passed_17_checks_after_save_reopen_current_entry",
+      "offlineStartupRegressionEvidence": "docs/editor_entry_test_results.json",
+      "finalRestoredDefaultNativeQAEvidence": "docs/evidence/editor_qa_final.png"
+    },
+    "nativeAutomatedQAFinal": {
+      "status": "passed",
+      "stage": "current_entry_after_profile_startup_fix_restore_defaults_save_reopen",
+      "passedCount": 17,
+      "lootValue": 280,
+      "terminalReason": "extraction",
+      "resultId": "run_2:result",
+      "defaultPlayerStartHp": 100,
+      "defaultMonsterMaxHp": 60,
+      "evidence": "docs/evidence/editor_qa_final.png",
+      "restartAfterFinalQA": {
+        "status": "passed_single_click",
+        "playerHp": 100,
+        "monsterHp": 60,
+        "bagUsedSlots": 0,
+        "phase": "EXPLORE",
+        "evidence": "docs/evidence/editor_restart_final.png"
+      },
+      "coveredFeatures": [
+        "initial_player_and_monster_hp",
+        "monster_patrol",
+        "front_vs_rear_fov",
+        "chest_inventory_transfer",
+        "full_health_heal_rejection",
+        "medicine_cast_heal_single_consumption",
+        "shovel_damage_monster_kill",
+        "three_second_extraction",
+        "duplicate_settlement_idempotency"
+      ],
+      "navigationMethod": "native_Teleport_test_point_positioning",
+      "limits": "This final QA uses the latest entry in a separately reopened preview session; its resultId is local to that session and is not merged with earlier runs. It does not prove natural manual combat, full four-room traversal, formal art, multiplayer or persistence."
+    },
+    "editorEntryStartupRegression": {
+      "status": "passed",
+      "moduleCount": 52,
+      "runtimes": [
+        "Lua5.1",
+        "Lua5.4"
+      ],
+      "testsRun": 18,
+      "luaAssertions": 92,
+      "evidence": "docs/editor_entry_test_results.json",
+      "scope": "Real generated entry and canonical Demo/Adapter/services/controllers with SDK object doubles; deferred Start, all-three-profile readiness, explicit failure/timeout, Inspector propagation and cleanup. Native rendering/serialization not inferred from these offline tests."
+    }
+  }
+}
