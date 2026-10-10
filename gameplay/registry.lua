@@ -285,6 +285,60 @@ return {
       ["manifestPath"] = "gameplay/packages/monsters/monster_cube/manifest.json",
     },
     {
+      ["id"] = "monster_inkwave",
+      ["packageId"] = "PKG-MONSTER",
+      ["type"] = "monster",
+      ["definitionModule"] = "gameplay.packages.monsters.monster_inkwave.definition",
+      ["controllerModule"] = "gameplay.packages.monsters.monster_inkwave.controller",
+      ["resources"] = {
+        {
+          ["id"] = "asset_monster_inkwave",
+          ["path"] = "gameplay/packages/monsters/monster_inkwave/model/main.glb",
+          ["kind"] = "model",
+          ["status"] = "delivered",
+        },
+      },
+      ["clips"] = {
+        {
+          ["id"] = "clip_monster_inkwave_idle",
+          ["name"] = "idle",
+          ["role"] = "idle",
+          ["resourceId"] = "asset_monster_inkwave",
+        },
+        {
+          ["id"] = "clip_monster_inkwave_patrol",
+          ["name"] = "patrol",
+          ["role"] = "patrol",
+          ["resourceId"] = "asset_monster_inkwave",
+        },
+        {
+          ["id"] = "clip_monster_inkwave_chase",
+          ["name"] = "chase",
+          ["role"] = "chase",
+          ["resourceId"] = "asset_monster_inkwave",
+        },
+        {
+          ["id"] = "clip_monster_inkwave_attack",
+          ["name"] = "attack",
+          ["role"] = "attack",
+          ["resourceId"] = "asset_monster_inkwave",
+        },
+        {
+          ["id"] = "clip_monster_inkwave_hit",
+          ["name"] = "hit",
+          ["role"] = "hit",
+          ["resourceId"] = "asset_monster_inkwave",
+        },
+        {
+          ["id"] = "clip_monster_inkwave_death",
+          ["name"] = "death",
+          ["role"] = "death",
+          ["resourceId"] = "asset_monster_inkwave",
+        },
+      },
+      ["manifestPath"] = "gameplay/packages/monsters/monster_inkwave/manifest.json",
+    },
+    {
       ["id"] = "monster_marmot",
       ["packageId"] = "PKG-MONSTER",
       ["type"] = "monster",

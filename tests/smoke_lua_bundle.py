@@ -22,12 +22,13 @@ from bundle_lua import bundle  # noqa: E402
 SCOPE = (
     "Lua syntax, static module closure, bootstrap service checks and future-template "
     "NOT_IMPLEMENTED lifecycle responses. Implemented Demo constructors are classified "
-    "separately and exercised by tests/test_demo_runtime.py; native UI/SDK start is not "
+    "separately and exercised by tests/test_demo_runtime.py / test_inkwave_monster.py; "
+    "INKWAVE startup rejects missing authority, methods and position. Native UI/SDK start is not "
     "called by inert doubles. No model import, SDK compatibility or preview acceptance."
 )
 
 DEMO_CONTROLLERS = {
-    "player_default", "monster_cube", "weapon_shovel", "item_heal_small",
+    "player_default", "monster_cube", "monster_inkwave", "weapon_shovel", "item_heal_small",
     "chest_basic", "map_demo", "ui_main",
 }
 
@@ -57,11 +58,11 @@ record("empty_service_tables_rejected", empty_error)
 
 -- These methods are deliberately inert test doubles, not gameplay services.
 local service_doubles = {}
-local operation_count = 0
+local operation_count, service_call_count = 0, 0
 for name, operations in pairs(Api.operations) do
   service_doubles[name] = {}
   for _, operation in ipairs(operations) do
-    service_doubles[name][operation] = function() return false, "TEST_DOUBLE_ONLY" end
+    service_doubles[name][operation] = function() service_call_count=service_call_count+1;return false, "TEST_DOUBLE_ONLY" end
     operation_count = operation_count + 1
   end
 end
@@ -106,6 +107,27 @@ record("clip_sources_match_owned_runtime_resources", "Every clip identifies its 
 record("future_templates_refuse_gameplay_start", tostring(planned_count) .. " future controllers return NOT_IMPLEMENTED")
 record("disposed_future_templates_refuse_restart", tostring(planned_count) .. " future controllers return DISPOSED")
 record("implemented_demo_controllers_classified_separately",tostring(demo_count).." implemented constructors; use real Demo integration tests")
+
+-- The new monster is a real service-driven controller, not a future shell.
+-- Exercise its explicit rejection boundary without pretending inert methods
+-- provide world state, navigation, combat, rendering or editor SDK behavior.
+local monster = assert(ready_context:new_entity("monster_inkwave",{id="smoke_inkwave_missing_state"}))
+local calls_before=service_call_count
+local started, reason=monster:start()
+assert(started==false and reason=="MISSING_SESSION_STATE" and service_call_count==calls_before)
+record("inkwave_requires_public_session_authority",reason)
+ready_context.state={run_id="smoke_inkwave",clock=0,phase="EXPLORE"}
+local old_find_path=service_doubles.Navigation.find_path;service_doubles.Navigation.find_path=nil
+started,reason=monster:start()
+assert(started==false and reason=="MISSING_METHOD:Navigation.find_path" and service_call_count==calls_before)
+service_doubles.Navigation.find_path=old_find_path
+record("inkwave_revalidates_required_public_methods",reason)
+started,reason=monster:start()
+assert(started==false and reason=="POSITION_UNAVAILABLE" and monster.started==false)
+record("inkwave_inert_world_does_not_claim_gameplay_started",reason)
+monster:dispose();started,reason=monster:start()
+assert(started==false and reason=="DISPOSED")
+record("disposed_inkwave_refuses_restart",reason)
 
 local unknown, unknown_code = ready_context:new_entity("unknown_entity", {id="smoke_unknown"})
 assert(unknown == nil and unknown_code == "UNKNOWN_ENTITY")

@@ -1,0 +1,72 @@
+{
+  "blender": "5.2.2 LTS",
+  "glbSHA256": "8fe3a3194c04ff9f8dff56e5a5008e972b8d709720b4e92c0293b704b6d029e0",
+  "glbBytes": 7382108,
+  "importSuccess": true,
+  "rigBones": 87,
+  "runtimeMeshObjects": 12,
+  "skinnedMeshObjects": 4,
+  "clipNames": [
+    "attack",
+    "chase",
+    "death",
+    "hit",
+    "idle",
+    "patrol"
+  ],
+  "animationOrder": [
+    "idle",
+    "patrol",
+    "chase",
+    "attack",
+    "hit",
+    "death"
+  ],
+  "defaultClip": "idle",
+  "muzzlePresent": true,
+  "noPreviewObjectsInGLB": true,
+  "actions": [
+    {
+      "name": "attack",
+      "frameRange": [
+        0.0,
+        45.0
+      ]
+    },
+    {
+      "name": "chase",
+      "frameRange": [
+        0.0,
+        23.999998092651367
+      ]
+    },
+    {
+      "name": "death",
+      "frameRange": [
+        0.0,
+        42.0
+      ]
+    },
+    {
+      "name": "hit",
+      "frameRange": [
+        0.0,
+        21.0
+      ]
+    },
+    {
+      "name": "idle",
+      "frameRange": [
+        0.0,
+        108.00000762939453
+      ]
+    },
+    {
+      "name": "patrol",
+      "frameRange": [
+        0.0,
+        36.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "testsRun": 12,
+  "assertions": 177,
+  "checks": [
+    {
+      "name": "test_actual_glb_sampling_and_import_axis_scale",
+      "passed": true
+    },
+    {
+      "name": "test_attack_active_feedback_preserves_clip_clock_and_reset_stops_effects",
+      "passed": true
+    },
+    {
+      "name": "test_audio_setdata_failure_is_not_reported_success",
+      "passed": true
+    },
+    {
+      "name": "test_death_reset_restores_root_pose_before_idle",
+      "passed": true
+    },
+    {
+      "name": "test_dispose_restores_disabled_native_animation_and_destroys_owned_resources",
+      "passed": true
+    },
+    {
+      "name": "test_hurt_and_frozen_finished_clock_cancel_transient_weapon_fx",
+      "passed": true
+    },
+    {
+      "name": "test_inspector_attack_window_retimes_baked_pose_without_early_shot",
+      "passed": true
+    },
+    {
+      "name": "test_logic_root_is_never_overwritten_and_hit_flash_restores_material",
+      "passed": true
+    },
+    {
+      "name": "test_missing_required_joint_fails_loudly",
+      "passed": true
+    },
+    {
+      "name": "test_preplayed_native_death_cannot_become_the_bind_pose",
+      "passed": true
+    },
+    {
+      "name": "test_skin_and_world_pose_diagnostics_are_observations_only",
+      "passed": true
+    },
+    {
+      "name": "test_typed_audio_upload_and_fixed_voice_particle_budget",
+      "passed": true
+    }
+  ],
+  "runtime": "lupa.lua51",
+  "scope": "Real GLB-derived curves, decoder and presentation Lua; strict Unity boundary doubles only. No rendered or audible native acceptance."
+}

@@ -1,0 +1,88 @@
+{
+  "status": "PASS",
+  "clips": [
+    {
+      "id": "shoot_a",
+      "frames": 3021,
+      "duration_sec": 0.13700680272108842,
+      "peak": 0.5451826532792139,
+      "rms": 0.05600920304420412,
+      "mu_law_snr_db_vs_pcm16": 37.46510823523578
+    },
+    {
+      "id": "shoot_b",
+      "frames": 3021,
+      "duration_sec": 0.13700680272108842,
+      "peak": 0.5007171849726859,
+      "rms": 0.054568927407800005,
+      "mu_law_snr_db_vs_pcm16": 37.06982961213693
+    },
+    {
+      "id": "shoot_c",
+      "frames": 3021,
+      "duration_sec": 0.13700680272108842,
+      "peak": 0.5705130161442915,
+      "rms": 0.055172554472786045,
+      "mu_law_snr_db_vs_pcm16": 37.63521187270961
+    },
+    {
+      "id": "hit",
+      "frames": 2514,
+      "duration_sec": 0.11401360544217687,
+      "peak": 0.4424268318735313,
+      "rms": 0.06625419583007164,
+      "mu_law_snr_db_vs_pcm16": 37.427673955681996
+    },
+    {
+      "id": "hurt",
+      "frames": 4741,
+      "duration_sec": 0.21501133786848073,
+      "peak": 0.42008728293710135,
+      "rms": 0.08241346600232423,
+      "mu_law_snr_db_vs_pcm16": 37.11638701687433
+    },
+    {
+      "id": "death",
+      "frames": 12106,
+      "duration_sec": 0.5490249433106575,
+      "peak": 0.6051820429090243,
+      "rms": 0.05835126706587196,
+      "mu_law_snr_db_vs_pcm16": 37.65470850756495
+    },
+    {
+      "id": "step",
+      "frames": 1742,
+      "duration_sec": 0.07900226757369615,
+      "peak": 0.0739768669698172,
+      "rms": 0.014626325542010012,
+      "mu_law_snr_db_vs_pcm16": 36.3043260031801
+    },
+    {
+      "id": "step_ink",
+      "frames": 2316,
+      "duration_sec": 0.10503401360544218,
+      "peak": 0.0674153874324778,
+      "rms": 0.010897792093860171,
+      "mu_law_snr_db_vs_pcm16": 35.45225376991397
+    }
+  ],
+  "lua_runtimes": [
+    {
+      "runtime": "Lua 5.1",
+      "samples_checked": 32482,
+      "chunked_decoder": true,
+      "one_shot_decoder": true,
+      "missing_clip_rejected": true
+    },
+    {
+      "runtime": "Lua 5.4",
+      "samples_checked": 32482,
+      "chunked_decoder": true,
+      "one_shot_decoder": true,
+      "missing_clip_rejected": true
+    }
+  ],
+  "bank_lua_bytes": 46003,
+  "editor_audio_playback_verified": false,
+  "scope": "Offline waveform validation and real Lua PCM decoding; native AudioClip/AudioSource playback must be verified by integration."
+}

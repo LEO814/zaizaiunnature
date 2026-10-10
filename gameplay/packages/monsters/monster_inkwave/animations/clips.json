@@ -1,0 +1,68 @@
+{
+  "fps": 30,
+  "rootMotion": false,
+  "clips": [
+    {
+      "name": "idle",
+      "duration": 3.6,
+      "tracks": 262,
+      "loop": true,
+      "fps": 30
+    },
+    {
+      "name": "patrol",
+      "duration": 1.2,
+      "tracks": 261,
+      "loop": true,
+      "fps": 30
+    },
+    {
+      "name": "chase",
+      "duration": 0.8,
+      "tracks": 262,
+      "loop": true,
+      "fps": 30
+    },
+    {
+      "name": "attack",
+      "duration": 1.5,
+      "tracks": 266,
+      "loop": false,
+      "fps": 30
+    },
+    {
+      "name": "hit",
+      "duration": 0.7,
+      "tracks": 262,
+      "loop": false,
+      "fps": 30
+    },
+    {
+      "name": "death",
+      "duration": 1.4,
+      "tracks": 264,
+      "loop": false,
+      "fps": 30
+    }
+  ],
+  "events": {
+    "attack": [
+      {
+        "time": 0.55,
+        "event": "muzzle_shot"
+      }
+    ],
+    "hit": [
+      {
+        "time": 0,
+        "event": "hurt"
+      }
+    ],
+    "death": [
+      {
+        "time": 0,
+        "event": "death"
+      }
+    ]
+  }
+}

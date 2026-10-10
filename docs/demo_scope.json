@@ -2,15 +2,15 @@
   "projectName": "仔仔搜打撤1.0",
   "projectId": "project_wv4fb1w4",
   "sourceFramework": "职责0.3.0 / 目录与Lua接口0.2.0",
-  "mode": "local_single_player_native_proxy",
+  "mode": "local_single_player_native_inkwave",
   "editorStorage": "/Users/bytedance/Library/Application Support/AI World Creator/projects/project_wv4fb1w4",
   "status": "partial_native_acceptance_passed",
-  "statusDescription": "最新入口属性启动次序修复后，恢复默认100/60、保存并重新打开，最终原生QA17项通过、带出280（run_2:result），与此前两轮各17项的历史记录独立；入口专项52模块/Lua5.1及5.4共18项92断言通过。手动A/D移动/UI开箱拾取/背包/满血拒绝、3秒撤离310价值、单次重开及死亡怪物复活已验证。Inspector70/90实机抽样与默认速度/胶囊组件回读通过；自然手动战斗、四房完整遍历及胶囊物理尺寸独立测量仍待专项验收，正式美术/多人/长期经济尚未完成。",
+  "statusDescription": "当前墨潮巡猎者真实GLB接入与22项原生验收通过；Blender简化27952三角/87骨骼/6动作，4个蒙皮renderer共348骨骼引用。自然进房观察直立追逐及玩家死亡；死亡怪物重开100/60、空背包通过。下方17项内容保留此前方块历史基线。",
   "implementedCodeScope": [
     "local_round_start",
     "four_room_native_whitebox",
     "player_attributes",
-    "monster_cube_ai",
+    "monster_inkwave_ai_rig_audio_fx",
     "shovel_attack",
     "medicine_cast",
     "chest_inventory_transfer",
@@ -25,7 +25,7 @@
     "persistence",
     "multiplayer",
     "match_audio_system",
-    "formal_art_models_rigs_animations"
+    "remaining_formal_art_models_rigs_animations"
   ],
   "validation": {
     "editorPreview": "passed_final_current_entry_17_native_checks_after_restore_save_reopen_plus_historical_qa_and_manual_subset",
@@ -193,6 +193,14 @@
       "luaAssertions": 92,
       "evidence": "docs/editor_entry_test_results.json",
       "scope": "Real generated entry and canonical Demo/Adapter/services/controllers with SDK object doubles; deferred Start, all-three-profile readiness, explicit failure/timeout, Inspector propagation and cleanup. Native rendering/serialization not inferred from these offline tests."
+    },
+    "historicalBlockDemoBaseline": true,
+    "inkwaveNativeAcceptance": {
+      "status": "passed",
+      "count": 22,
+      "evidence": "docs/inkwave_native_acceptance.json"
     }
-  }
+  },
+  "currentMonster": "monster_inkwave",
+  "currentAcceptance": "docs/inkwave_native_acceptance.json"
 }

@@ -1,18 +1,28 @@
-# 仔仔搜打撤1.0 · 原生四房 Demo
+# 仔仔搜打撤1.0 · 原生四房 Demo 与墨潮怪物
 
-本项目用编辑器原生角色与方块代理实现“出生 → 探索 → 开箱入包 → 战斗/用药 → 撤离或失败 → 结算 → 重开”小闭环。最新入口修复属性启动次序后，恢复默认参数、保存并重新打开项目的原生自动QA再次通过17项，带出价值280；此前两轮记录也各17项通过。另已手动完成A/D移动、UI开箱拾取、背包查看、返回绿区并读条3秒撤离，带出价值310。单次点击重开及死亡怪物复活已验证；完整项目尚未完成。
+本项目实现“出生 → 探索 → 开箱入包 → 战斗/用药 → 撤离或失败 → 结算 → 重开”的本地单玩家四房闭环。本次将原方块测试对象接为 INKWAVE 独立怪物“墨潮巡猎者”，包含真实骨架、shooter 武器、六组烘焙动作及本项目规则下的 Lua AI。接入和验收记录见 [INKWAVE 接入说明](docs/inkwave_integration.md)。
 
-本 Demo 使用本地单玩家流程、四间连通房间、一只方块怪物、铲、药品、藏品、宝箱与撤离点。原生颜色、缩放和开箱反馈属于占位表现；正式角色/怪物/武器道具美术、骨骼、蒙皮和动画未交付，所有未来模型 manifest 保持 planned。
+下方既有17项原生验收及280/310带出价值是**此前方块 Demo 的历史基线**，不能当作新模型验收。新增模型的 Blender 简化、真实导入和预览结果单独记录；其他规划模型仍为 planned，多人、仓库、商店和持久化仍未交付。
+
+## 墨潮怪物：当前交付与验收
+
+Blender 实际简化由 38,710 降至 27,952 三角面（减少 27.8%），最终 GLB 为 7.04 MiB，保留 87 根骨骼、武器、材质及 idle/patrol/chase/attack/hit/death 六动作。资产库“墨潮巡猎者_定稿”已真实上传并挂入当前场景，其他节点与比赛配置保留。
+
+[最终编辑器验收](docs/inkwave_native_acceptance.json)：22 项全部通过，含 4 个真实蒙皮网格、87 根共用骨骼的 348 次 renderer 引用、直立巡逻、视野背后不索敌、25HP 攻击、用药、两次铲击击杀和3秒撤离带出280。死亡后单次重开恢复100/60HP、空背包；另行自然 WASD 进入怪物房，观察直立追逐及玩家死亡结算。声音加载与播放事件通过，未独立听测每条音效。
+
+- [Blender 源文件](gameplay/packages/monsters/monster_inkwave/model/source.blend) / [导入 GLB](gameplay/packages/monsters/monster_inkwave/model/main.glb)
+- [原生22项结果](docs/evidence/inkwave_native_22_pass.png) / [蒙皮及朝向实测](docs/evidence/inkwave_imported_skin_diagnostics.png) / [最终场景模型](docs/evidence/inkwave_final_editor_model.png)
+- 离线 AI/表现/真实生成入口共44场景、515断言通过；原核心13场景301断言、22项交付契约、新14项bundle smoke通过。离线检查与实际编辑器验收分别记录。
 
 ## Git 仓库与项目恢复
 
-GitHub 私有仓库：[LEO814/zaizaiunnature](https://github.com/LEO814/zaizaiunnature)。
+GitHub 公开仓库：[LEO814/zaizaiunnature](https://github.com/LEO814/zaizaiunnature)。
 
 仓库根同时保存规范源码与当前编辑器项目：`scene.data`、`project.json`、`world-config.json`、`settings/` 和三个 AI 生成配置来自已保存的原生项目。`art/`、`gameplay/`、`docs/`、`tools/`、`tests/`、`dist/`、`scripts/` 保留原目录约定；生成的 Lua 包一并提交，空的规划目录通过 `.gitkeep` 保留。Python 缓存、编辑器运行缓存和旧安装备份不进入 Git，安装器依赖的 `docs/editor_seed_backup/` 保留。
 
-克隆后优先使用仓库中的当前 `scene.data`，不要默认执行安装器重建场景。项目恢复步骤、AI agent 入口和多人 Git 协作规则见[Git 协作与编辑器恢复说明](docs/git_restore.md)。下方验收记录对应当前 Demo，不代表跨机器恢复已经实测。
+克隆后优先使用仓库中的当前 `scene.data`，不要默认执行安装器重建场景。项目恢复步骤、AI agent 入口和多人 Git 协作规则见[Git 协作与编辑器恢复说明](docs/git_restore.md)。下方17项记录保留此前方块 Demo 基线；墨潮模型以本页当前22项记录为准。跨机器恢复尚未实测。
 
-## Demo 范围与默认参数
+## 四房 Demo 历史基线与默认参数
 
 | 功能 | 当前代码与默认设定 | 实际验收 |
 |---|---|---|
@@ -34,7 +44,7 @@ GitHub 私有仓库：[LEO814/zaizaiunnature](https://github.com/LEO814/zaizaiun
 | WASD | 使用原生角色移动 |
 | Shift / Ctrl | 请求冲刺 / 蹲行速度；行走默认速度已实际回读，冲刺/蹲行手感另验 |
 | E / 交互 | 靠近宝箱打开；靠近绿色撤离区域发起撤离 |
-| F / 铲击 | 面向可命中的方块怪物，按铲攻击时间线提交命中 |
+| F / 铲击 | 面向可命中的怪物，按铲攻击时间线提交命中 |
 | B / 背包 | 打开/关闭局内背包 |
 | H / 用药 | 尝试使用背包中的药品 |
 | Esc / 关闭 | 关闭面板并恢复世界输入 |
@@ -51,10 +61,10 @@ GitHub 私有仓库：[LEO814/zaizaiunnature](https://github.com/LEO814/zaizaiun
 | 挂接节点 | 规范源码 | 固定 UUID | 配置输出 |
 |---|---|---|---|
 | player_default | gameplay/adapters/zaizai/player_attributes.lua | ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee | player、interaction、inventory 片段 |
-| monster_cube | gameplay/adapters/zaizai/monster_attributes.lua | 63480fdf-d72b-48cc-9a5a-583a92702ea9 | 怪物属性、移动、sense、attacks 片段 |
+| monster_inkwave_actor | gameplay/adapters/zaizai/monster_attributes.lua | 63480fdf-d72b-48cc-9a5a-583a92702ea9 | 怪物属性、移动、sense、attacks 片段 |
 | demo_root | gameplay/adapters/zaizai/match_attributes.lua | b6a67278-5cf1-4f71-89c4-925ebcdd41a4 | roundDurationSec、extractionHoldSec |
 
-选中节点的逻辑属性面板调整数值，重新启动预览时入口读取 GetProfile，做白名单和组合规则校验，再形成运行 config / definitions。怪物 controller、公共 Characters/Combat 和 Adapter 共用 context.definitions.monster_cube；运行 HP/目标/冷却不写回静态定义，局内“重新开始”沿用本次预览已读取的配置。
+选中节点的逻辑属性面板调整数值，重新启动预览时入口读取 GetProfile，做白名单和组合规则校验，再形成运行 config / definitions。怪物 controller、公共 Characters/Combat 和 Adapter 共用 context.definitions.monster_inkwave；运行 HP/目标/冷却不写回静态定义，局内“重新开始”沿用本次预览已读取的配置。
 
 原生父入口 Start 可能先于三个属性子脚本初始化。现已改为 Start 只创建待启动实例，首次及后续 Update 等待 player / monster / match 三份 GetProfile 全部就绪后才初始化赛局；属性读取累计120次尝试仍失败时明确报错，不静默用默认值掩盖缺失脚本。
 
@@ -70,7 +80,8 @@ gameplay/core/                         程序：权威HP/库存/局次与公共�
 gameplay/adapters/zaizai/               程序：SDK映射与Inspector属性
 gameplay/systems/                      程序：开局/生成/背包/结算
 gameplay/packages/                     策划：角色/怪物/武器道具/宝箱完整Lua
-  monsters/monster_cube/               原生方块AI，未来正式模型planned
+  monsters/monster_cube/               保留的旧方块回归测试包
+  monsters/monster_inkwave/             独立模型、动作、Lua与专属音效
   environment/map_demo/                同一地图定义供几何与导航读取
   ui/ui_main/                          程序：共享占位界面
 art/                                  美术：三个专题设定，正式设定仍待交付
