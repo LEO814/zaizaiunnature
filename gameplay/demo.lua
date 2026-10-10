@@ -39,7 +39,7 @@ function Demo:start()
  local U=CS.UnityEngine
  if not CS.DouyinActorService.GetLocalActor()then self.pending=true;return false end
  local p,pe=profile(U.GameObject.Find('player_default'),'player_attributes.lua')
- local m,me=profile(U.GameObject.Find('monster_cube'),'monster_attributes.lua')
+ local m,me=profile(U.GameObject.Find('monster_inkwave_actor'),'monster_attributes.lua')
  local session,se=profile(self.host,'match_attributes.lua')
  if not p or not m or not session then
   self.pending=true;self.profile_attempts=(self.profile_attempts or 0)+1
@@ -47,14 +47,14 @@ function Demo:start()
   return false
  end
  self.inspector_profiles_ready=true
- local config=copy(Config);config.projectName='仔仔搜打撤1.0';config.state='native_whitebox_demo'
+ local config=copy(Config);config.projectName='仔仔搜打撤1.0';config.state='inkwave_monster_demo'
  local definitions={};for id,factory in pairs(Factories)do definitions[id]=copy(factory.definition)end
  merge_numbers(config.player,p.player,{maxHp={1,500},startHp={1,500},walkSpeedMps={.1,12},sprintSpeedMps={.1,15},crouchSpeedMps={.1,8},jumpHeightM={0,3},colliderRadiusM={.1,1},colliderHeightM={.5,3},colliderCenterY_M={0,2},spawnProtectionSec={0,15},hitInvulnerabilitySec={0,3}})
  config.player.startHp=math.min(config.player.maxHp,config.player.startHp)
  config.player.colliderHeightM=math.max(config.player.colliderHeightM,2*config.player.colliderRadiusM)
  merge_numbers(config.inventory,p.inventory,{bagSlots={1,48}});config.inventory.bagSlots=math.floor(config.inventory.bagSlots)
  merge_numbers(config.interaction,p.interaction,{maxDistanceM={.5,5}})
- local d=definitions.monster_cube
+ local d=definitions.monster_inkwave
  merge_numbers(d,m,{maxHp={1,10000},patrolSpeedMps={.1,15},chaseSpeedMps={.1,20},patrolWaitSec={0,10},arriveDistanceM={.05,2},pathRefreshSec={.05,5},pathFailureRetrySec={.05,10},patrolUnreachableSkipSec={.1,30},leashRadiusM={1,100},hurtPauseSec={0,5}})
  merge_numbers(d.sense,m.sense,{rangeM={.1,50},fullAngleDeg={1,360},loseSightGraceSec={0,10},searchSec={0,30}})
  merge_numbers(d.attacks[1],m.attacks and m.attacks[1],{damageHp={0,1000},windupSec={0,10},activeSec={.05,5},recoverySec={0,10},cooldownSec={.05,30},rangeM={.1,15},arcDeg={1,360}})
@@ -64,6 +64,7 @@ function Demo:start()
  self.adapter=Adapter.new({host=self.host,config=config,definitions=definitions,map=Map,registry=Registry})
  local ctx=Bootstrap.create(self.adapter);ctx.config=config;ctx.definitions=definitions;ctx.state=self.adapter.state;ctx.demo=self;ctx.map_entity_id='map_demo'
  function ctx:next_request_id(prefix)self.request_sequence=(self.request_sequence or 0)+1;return self.state.run_id..':'..prefix..':'..self.request_sequence end
+ ctx.monster_instance_id='monster_inkwave_1';ctx.monster_entity_id='monster_inkwave'
  self.context=ctx;self.match=Match.new(ctx);self.settlement=Settlement.new(ctx)
  local proxy=U.GameObject.Find('player_default');if proxy then
   local renderer=proxy:GetComponent(typeof(U.Renderer));if renderer then renderer.enabled=false end
@@ -107,7 +108,7 @@ function Demo:dispatch(action,item)
  end
  if action=='use_item'then local result=self.bag:use_item(item);self:message(result);if result.ok then self:close_view()end;return result end
  if s.ui_view then s.toast='请先关闭面板';return end
- if action=='attack'then return self:message(self.objects.shovel:use({target_instance_id='monster_cube_1'}))end
+ if action=='attack'then return self:message(self.objects.shovel:use({target_instance_id='monster_inkwave_1'}))end
  if action=='heal'then
   local bag=self.bag:read_bag().data.bag
   for _,entry in ipairs(bag.items)do if entry.entity_id=='item_heal_small'then return self:message(self.bag:use_item(entry.id))end end
@@ -125,12 +126,12 @@ function Demo:make_vision()
  self.vision.positionCount=39;self.next_vision_at=0
 end
 function Demo:update_vision()
- local s=self.context.state;if s.clock<(self.next_vision_at or 0)then return end;self.next_vision_at=s.clock+.12;local monster=s.entities.monster_cube_1
- self.vision.enabled=monster and monster.alive and self.definitions.monster_cube.sense.showDebugCone
+ local s=self.context.state;if s.clock<(self.next_vision_at or 0)then return end;self.next_vision_at=s.clock+.12;local monster=s.entities.monster_inkwave_1
+ self.vision.enabled=monster and monster.alive and self.definitions.monster_inkwave.sense.showDebugCone
  if not self.vision.enabled then return end
- local p=self.adapter:position('monster_cube_1');local f=self.adapter:forward('monster_cube_1');local sense=self.definitions.monster_cube.sense
+ local p=self.adapter:position('monster_inkwave_1');local f=self.adapter:forward('monster_inkwave_1');local sense=self.definitions.monster_inkwave.sense
  local yaw=atan2(f.x,f.z);local half=sense.fullAngleDeg*.5*math.pi/180
- local U=self.adapter.U;local detected=self.adapter:sense({user_instance_id='monster_cube_1',target_instance_id='player_local',mode='perception'}).data.visible
+ local U=self.adapter.U;local detected=self.adapter:sense({user_instance_id='monster_inkwave_1',target_instance_id='player_local',mode='perception'}).data.visible
  local color=detected and U.Color(1,.17,.08,1)or U.Color(1,.69,.12,1);self.vision.startColor=color;self.vision.endColor=color
  self.vision:SetPosition(0,U.Vector3(p.x,.06,p.z))
  for i=0,36 do
@@ -174,12 +175,12 @@ function Demo:start_qa()
  if self.qa then return end
  if self.context.state.phase~='FINISHED'then self.context.services.Session:try_finish(self:request('qa_reset',{terminal_reason='quit'}))end
  -- Start only through the normal match flow; no HP/inventory mutation in the test driver.
- self:begin_round();self.qa_results={};self.qa_summary='自动验收：重开局，检查实际运行服务';self.qa={stage=1,t=0,elapsed=0,last=self.adapter:position('monster_cube_1')}
+ self:begin_round();self.qa_results={};self.qa_summary='自动验收：重开局，检查实际运行服务';self.qa={stage=1,t=0,elapsed=0,last=self.adapter:position('monster_inkwave_1')}
  self:log('QA START native actor teleports are test navigation only')
 end
 function Demo:qa_stage(stage)self.qa.stage=stage;self.qa.t=0;self.qa.frame=self.frame end
 function Demo:qa_combat_position(attempt)
- local pos=self.adapter:position('monster_cube_1');local f=self.adapter:forward('monster_cube_1');local base=atan2(f.x,f.z)+(attempt or 0)*math.pi/6
+ local pos=self.adapter:position('monster_inkwave_1');local f=self.adapter:forward('monster_inkwave_1');local base=atan2(f.x,f.z)+(attempt or 0)*math.pi/6
  for i=0,11 do
   local a=base+i*math.pi/6;local p={x=pos.x+math.sin(a)*1.6,y=.1,z=pos.z+math.cos(a)*1.6}
   if p.x>Map.bounds.min_x+.65 and p.x<Map.bounds.max_x-.65 and p.z>Map.bounds.min_z+.65 and p.z<Map.bounds.max_z-.65 and not Spatial.blocked(p,p,Map.walls,.65)and not Spatial.blocked(p,pos,Map.walls,0)then
@@ -189,17 +190,22 @@ function Demo:qa_combat_position(attempt)
  return false
 end
 function Demo:qa_face_monster()
- local pos=self.adapter:position('player_local');local target=self.adapter:position('monster_cube_1');local U=self.adapter.U
+ local pos=self.adapter:position('player_local');local target=self.adapter:position('monster_inkwave_1');local U=self.adapter.U
  self.adapter:actor().gameObject.transform.rotation=U.Quaternion.LookRotation(U.Vector3(target.x-pos.x,0,target.z-pos.z))
 end
 function Demo:update_qa(dt)
  local q=self.qa;if not q then return end;q.t=q.t+dt;q.elapsed=q.elapsed+dt
- local s=self.context.state;local p=s.entities.player_local;local m=s.entities.monster_cube_1
+ local s=self.context.state;local p=s.entities.player_local;local m=s.entities.monster_inkwave_1
  if (self.frame or 0)-(q.frame or 0)<2 then return end
  if q.elapsed>65 then self:qa_check('全过程限时',false,'stage '..q.stage);return end
  if q.stage==1 and q.t>1.2 then
+  local view=self.adapter.inkwave and self.adapter.inkwave:status()
+  if not self:qa_check('GLB骨骼曲线绑定并实际更新',view and view.ready and view.changed_bone_frames>0,view and view.changed_bone_frames)then return end
+  if not self:qa_check('导入蒙皮保留真实骨骼绑定',view.skin_diagnostics_available and view.skin_count>0 and view.skin_bone_count>=87,'skins='..view.skin_count..' bones='..view.skin_bone_count)then return end
+  if not self:qa_check('死亡默认姿态不污染巡逻站姿',(view.head_foot_height_m or 0)>.5,view.head_foot_height_m)then return end
+  if not self:qa_check('八条怪物音效完成AudioClip上传',view.audio_clips_ready==8,view.audio_clips_ready)then return end
   if not self:qa_check('初始角色100HP与怪物60HP',p.hp==100 and m.hp==60)then return end
-  if not self:qa_check('方块怪物巡逻位移',Spatial.distance(q.last,self.adapter:position('monster_cube_1'))>.1)then return end
+  if not self:qa_check('墨潮怪物巡逻位移',Spatial.distance(q.last,self.adapter:position('monster_inkwave_1'))>.1)then return end
   self:teleport({x=1,y=.1,z=-2});self:qa_stage(2)
  elseif q.stage==2 and q.t>.4 then
   local r=self:dispatch('interact');if not self:qa_check('打开宝箱',r and r.ok,r and r.reason)then return end
@@ -210,12 +216,12 @@ function Demo:update_qa(dt)
   local r2=self:dispatch('heal');if not self:qa_check('满血用药拒绝',r2 and not r2.ok and r2.reason=='FULL_HEALTH')then return end
   self:qa_stage(3)
  elseif q.stage==3 and s.clock>3.4 then
-  local pos=self.adapter:position('monster_cube_1');local f=self.adapter:forward('monster_cube_1')
+  local pos=self.adapter:position('monster_inkwave_1');local f=self.adapter:forward('monster_inkwave_1')
   self:teleport({x=pos.x-f.x*1.8,y=.1,z=pos.z-f.z*1.8});self:qa_stage(4)
  elseif q.stage==4 and q.t>.1 then
-  local sense=self.adapter:sense({user_instance_id='monster_cube_1',target_instance_id='player_local',mode='perception'})
+  local sense=self.adapter:sense({user_instance_id='monster_inkwave_1',target_instance_id='player_local',mode='perception'})
   if not self:qa_check('视野背后不索敌',sense.data.angular_valid==false and sense.data.visible==false)then return end
-  local pos=self.adapter:position('monster_cube_1');local f=self.adapter:forward('monster_cube_1')
+  local pos=self.adapter:position('monster_inkwave_1');local f=self.adapter:forward('monster_inkwave_1')
   self:teleport({x=pos.x+f.x*1.8,y=.1,z=pos.z+f.z*1.8},{x=-f.x,z=-f.z});self:qa_stage(5)
  elseif q.stage==5 and p.hp<100 then
   if not self:qa_check('怪物前摇后攻击造成25伤害',p.hp==75,p.hp)then return end
@@ -237,9 +243,9 @@ function Demo:update_qa(dt)
   self:qa_combat_position(0);self:qa_stage(11)
  elseif q.stage==11 and q.t>.3 then
   self:qa_face_monster()
-  local sense=self.adapter:sense({user_instance_id='player_local',target_instance_id='monster_cube_1',mode='weapon'}).data
+  local sense=self.adapter:sense({user_instance_id='player_local',target_instance_id='monster_inkwave_1',mode='weapon'}).data
   if not sense.visible and q.t<5 then q.attempt=(q.attempt or 0)+1;self:qa_combat_position(q.attempt);q.frame=self.frame;return end
-  local r=self:dispatch('attack');local pp=self.adapter:position('player_local');local mp=self.adapter:position('monster_cube_1')
+  local r=self:dispatch('attack');local pp=self.adapter:position('player_local');local mp=self.adapter:position('monster_inkwave_1')
   local detail=tostring(r and r.reason)..' d='..tostring(sense.distance_m)..' arc='..tostring(sense.angular_valid)..' los='..tostring(sense.line_of_sight)..' p='..pp.x..','..pp.z..' m='..mp.x..','..mp.z
   if not self:qa_check('第二次铲击',r and r.ok,detail)then return end;self:qa_stage(12)
  elseif q.stage==12 and m.hp==0 then
@@ -248,6 +254,8 @@ function Demo:update_qa(dt)
  elseif q.stage==13 and q.t>.4 then
   local r=self:dispatch('interact');if not self:qa_check('撤离区域读条开始',r and r.ok,r and r.reason)then return end;self:qa_stage(14)
  elseif q.stage==14 and s.result then
+  local view=self.adapter.inkwave:status()
+  if not self:qa_check('怪物专属声音与墨枪特效触发',view.audio_events>0 and view.fx_events>=3,'sounds='..view.audio_events..' fx='..view.fx_events)then return end
   if not self:qa_check('3秒后结算成功带出宝物',s.result.success and s.result.loot_value>=250,s.result.reason..' value='..s.result.loot_value)then return end
   local id=s.result.result_id;self.context.services.Session:try_finish(self:request('qa_duplicate',{terminal_reason='extraction'}))
   if not self:qa_check('重复结束不二次结算',s.result.result_id==id)then return end
@@ -257,7 +265,7 @@ end
 function Demo:GetSnapshot()
  if not self.context then return {ready=false,pending=self.pending}end
  local s=self.context.state
- return {ready=self.started,project=self.config.projectName,run_id=s.run_id,phase=s.phase,clock=s.clock,player=copy(s.entities.player_local),monster=copy(s.entities.monster_cube_1),monster_state=self.objects.monster.ai_state,bag=copy(s.containers.bag_player_local),result=copy(s.result),speed_write_ok=self.adapter.speed_write_ok,speed_readback=self.adapter.speed_readback,collider_apply_ok=self.adapter.collider_apply_ok,collider_readback=copy(self.adapter.collider_readback),qa=copy(self.qa_results),qa_summary=self.qa_summary}
+ return {ready=self.started,project=self.config.projectName,run_id=s.run_id,phase=s.phase,clock=s.clock,player=copy(s.entities.player_local),monster=copy(s.entities.monster_inkwave_1),monster_state=self.objects.monster.ai_state,bag=copy(s.containers.bag_player_local),result=copy(s.result),speed_write_ok=self.adapter.speed_write_ok,speed_readback=self.adapter.speed_readback,collider_apply_ok=self.adapter.collider_apply_ok,collider_readback=copy(self.adapter.collider_readback),qa=copy(self.qa_results),qa_summary=self.qa_summary,presentation=self.adapter.inkwave and self.adapter.inkwave:status()}
 end
 function Demo:dispose()
  self.qa=nil;if self.setup then self.setup:dispose()end;if self.bag then self.bag:dispose()end;if self.ui then self.ui:dispose()end;if self.adapter then self.adapter:dispose()end

@@ -18,7 +18,7 @@ function Controller:start(map)
  local ctx=self.context;local inv=ctx.services.Inventory
  self.objects={}
  local player=self:spawn('player_default','player_local',map.spawn,'player_default')
- local monster=self:spawn('monster_cube','monster_cube_1',map.monsterSpawn,'monster_cube',{route=map.patrolRoute})
+ local monster=self:spawn(ctx.monster_entity_id or 'monster_cube',ctx.monster_instance_id or 'monster_cube_1',map.monsterSpawn,ctx.monster_entity_id=='monster_inkwave' and 'monster_inkwave_actor' or (ctx.monster_entity_id or 'monster_cube'),{route=map.patrolRoute})
  local chest=self:spawn('chest_basic','chest_demo',map.chest,'chest_basic',{container_id='chest_demo'})
  -- Exit is a scene marker. Global extraction rules live in Session.
  ctx.services.Characters:spawn(self:request('spawn_exit',{entity_id='gate_exit',instance_id='exit_demo',position_m=map.exit}))

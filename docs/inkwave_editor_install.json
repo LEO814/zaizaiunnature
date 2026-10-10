@@ -1,0 +1,56 @@
+{
+  "ok": true,
+  "mode": "applied",
+  "generatedAt": "2026-10-10T13:56:34.827527+08:00",
+  "projectName": "仔仔搜打撤1.0",
+  "sourceRoot": "/Users/bytedance/Documents/Codex/zaizaipc3/仔仔搜打撤1.0",
+  "nativeProject": "/Users/bytedance/Library/Application Support/AI World Creator/projects/project_wv4fb1w4",
+  "importedNodeId": -746727844,
+  "importedOriginalName": "monster_inkwave_actor",
+  "assetID": "10541583365634",
+  "resourceUri": "hamlet-ugc/aigc_editor/dev/unity/MS4wLjABAAAAyIQDWHr5Q0NjO67oGX6DfYicWp-0IbjoECcIFEri7eg/main__upload_hwpfiixa.glb",
+  "monsterNodeName": "monster_inkwave_actor",
+  "disabledCubeNodeId": -367701850,
+  "monsterPosition": {
+    "x": 8,
+    "y": 0.05,
+    "z": 8
+  },
+  "migratedAttributeBindings": [
+    {
+      "scriptId": "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+      "scriptType": 1,
+      "paramsJson": "{\"monsterMaxHp\":60,\"monsterPatrolSpeedMps\":1,\"monsterChaseSpeedMps\":3,\"monsterPatrolWaitSec\":0.6,\"monsterArriveDistanceM\":0.25,\"monsterPathRefreshSec\":0.4,\"monsterPathFailureRetrySec\":0.6,\"monsterPatrolUnreachableSkipSec\":2,\"monsterLeashRadiusM\":15,\"monsterHurtPauseSec\":0.25,\"monsterSenseRangeM\":7,\"monsterFullAngleDeg\":100,\"monsterLoseSightGraceSec\":1.2,\"monsterSearchSec\":4,\"monsterDamageHp\":25,\"monsterWindupSec\":0.55,\"monsterActiveSec\":0.25,\"monsterRecoverySec\":0.7,\"monsterCooldownSec\":2,\"monsterAttackRangeM\":3.5,\"monsterAttackArcDeg\":100}"
+    }
+  ],
+  "retainedGlbBindings": [
+    {
+      "scriptId": "d6f83b17-d36c-4840-ae2a-b896be27b101",
+      "scriptType": 1,
+      "paramsJson": "{}"
+    }
+  ],
+  "attributeBindingSource": "native_actor",
+  "nativeImportedAssetPreserved": true,
+  "nativeBeforeSha256": "7fb5b6ebb7f4366fa3167ff36473b980a849fc3224692784ce0009bc67d8e5d8",
+  "sceneSha256": "7fb5b6ebb7f4366fa3167ff36473b980a849fc3224692784ce0009bc67d8e5d8",
+  "nativeNodeCount": 23,
+  "resourceRefsPreserved": true,
+  "unrelatedNodesPreserved": true,
+  "officialRuntimeScriptsPreserved": true,
+  "updatedRuntimeScriptIds": [
+    "b680ca44-9e0d-4880-9820-65899787da8d",
+    "ed22f5e1-e7bd-4bfe-9d47-f535a7ad2bee",
+    "63480fdf-d72b-48cc-9a5a-583a92702ea9",
+    "b6a67278-5cf1-4f71-89c4-925ebcdd41a4"
+  ],
+  "sceneRebuiltFromSeed": false,
+  "editorClosedOperatorAssertion": true,
+  "canonicalFileCount": 388,
+  "nativeProjectWritten": true,
+  "previewAcceptance": "not performed by filesystem installer",
+  "backup": "/Users/bytedance/Library/Application Support/AI World Creator/projects/project_wv4fb1w4/.demo_install_backups/inkwave-20261010-135634-1791611794862337000",
+  "sourceNativeFilesIdentical": true,
+  "sourceNativeDirectoriesIdentical": true,
+  "protectedConfigurationUnchanged": true
+}

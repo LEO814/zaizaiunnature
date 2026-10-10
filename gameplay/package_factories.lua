@@ -44,6 +44,10 @@ return {
     definition = require("gameplay.packages.monsters.monster_cube.definition"),
     controller = require("gameplay.packages.monsters.monster_cube.controller"),
   },
+  ["monster_inkwave"] = {
+    definition = require("gameplay.packages.monsters.monster_inkwave.definition"),
+    controller = require("gameplay.packages.monsters.monster_inkwave.controller"),
+  },
   ["monster_marmot"] = {
     definition = require("gameplay.packages.monsters.monster_marmot.definition"),
     controller = require("gameplay.packages.monsters.monster_marmot.controller"),

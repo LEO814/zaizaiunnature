@@ -1,0 +1,57 @@
+{
+  "ok": true,
+  "testsRun": 12,
+  "assertions": 230,
+  "checks": [
+    {
+      "name": "test_active_window_rechecks_visibility_and_tracks_only_last_seen",
+      "passed": true
+    },
+    {
+      "name": "test_attack_faces_only_current_visible_point_without_displacing",
+      "passed": true
+    },
+    {
+      "name": "test_coarse_frame_skipping_whole_damage_window_never_replays_hit",
+      "passed": true
+    },
+    {
+      "name": "test_hurt_cancels_attack_and_death_is_emitted_once",
+      "passed": true
+    },
+    {
+      "name": "test_low_hp_retreat_uses_navigation_without_healing",
+      "passed": true
+    },
+    {
+      "name": "test_occlusion_and_brief_glimpse_do_not_acquire",
+      "passed": true
+    },
+    {
+      "name": "test_path_failure_stops_and_skips_unreachable_patrol_point",
+      "passed": true
+    },
+    {
+      "name": "test_patrol_follows_navigation_and_never_acquires_from_behind",
+      "passed": true
+    },
+    {
+      "name": "test_reaction_delay_then_public_damage_and_scoped_feedback",
+      "passed": true
+    },
+    {
+      "name": "test_recovery_continues_attack_animation_tail_without_new_hit",
+      "passed": true
+    },
+    {
+      "name": "test_run_change_dispose_and_restart_never_leak_previous_target",
+      "passed": true
+    },
+    {
+      "name": "test_search_returns_home_and_session_end_cancels_everything",
+      "passed": true
+    }
+  ],
+  "runtime": "lupa.lua51",
+  "scope": "Real public Lua state/combat and authored spatial geometry; SDK transform/assets doubles. No editor/GLB/FX/audio acceptance."
+}

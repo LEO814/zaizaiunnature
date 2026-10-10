@@ -78,7 +78,7 @@
 ---@group 怪物／攻击
 ---@var monsterWindupSec:number=0.55
 ---@name 攻击前摇（秒）
----@desc 原生方块前摇反馈；并非骨骼动画资源
+---@desc 墨潮怪物骨骼前摇按此时间映射；伤害窗口由公共Combat裁定
 ---@range 0,10,0.05
 ---@group 怪物／攻击
 ---@var monsterActiveSec:number=0.25

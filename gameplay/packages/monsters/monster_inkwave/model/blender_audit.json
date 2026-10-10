@@ -1,0 +1,488 @@
+{
+  "blender": "5.2.2 LTS",
+  "workflow": "Blender import with merged vertices, unapplied Decimate modifiers, skin/eye silhouette retained, actual evaluated-mesh GLB export",
+  "trianglesBefore": 38710,
+  "trianglesAfter": 27953,
+  "meshTrianglesBefore": {
+    "iw_node_084": 3156,
+    "iw_node_085": 268,
+    "iw_node_089": 60,
+    "iw_node_091": 240,
+    "iw_node_093": 144,
+    "iw_node_095": 48,
+    "iw_node_099": 360,
+    "iw_node_100": 624,
+    "iw_skin": 10320,
+    "iw_cloth": 17272,
+    "iw_hair": 5002,
+    "iw_eyes": 616
+  },
+  "meshTrianglesAfter": {
+    "iw_node_084": 2272,
+    "iw_node_085": 226,
+    "iw_node_089": 50,
+    "iw_node_091": 204,
+    "iw_node_093": 122,
+    "iw_node_095": 40,
+    "iw_node_099": 306,
+    "iw_node_100": 530,
+    "iw_skin": 10320,
+    "iw_cloth": 10017,
+    "iw_hair": 3250,
+    "iw_eyes": 616
+  },
+  "rigBones": [
+    [
+      "iw_kid",
+      87
+    ]
+  ],
+  "clips": [
+    [
+      "attack",
+      [
+        0.0,
+        45.0
+      ]
+    ],
+    [
+      "chase",
+      [
+        0.0,
+        24.0
+      ]
+    ],
+    [
+      "death",
+      [
+        0.0,
+        42.0
+      ]
+    ],
+    [
+      "hit",
+      [
+        0.0,
+        21.0
+      ]
+    ],
+    [
+      "idle",
+      [
+        0.0,
+        108.0
+      ]
+    ],
+    [
+      "patrol",
+      [
+        0.0,
+        36.0
+      ]
+    ]
+  ],
+  "textureResize": [
+    {
+      "name": "Image_0",
+      "before": [
+        1024,
+        1024
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_1",
+      "before": [
+        1024,
+        1024
+      ],
+      "after": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_10",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_11",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_12",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_13",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_14",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_15",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_16",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_17",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_18",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_19",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_2",
+      "before": [
+        1024,
+        1024
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_20",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_21",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_22",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_23",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_24",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_25",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_26",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_27",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_28",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_29",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_3",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_30",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_31",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "name": "Image_32",
+      "before": [
+        2048,
+        2048
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_33",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_34",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_35",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_4",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_5",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_6",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_7",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        512,
+        512
+      ]
+    },
+    {
+      "name": "Image_8",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    },
+    {
+      "name": "Image_9",
+      "before": [
+        512,
+        512
+      ],
+      "after": [
+        256,
+        256
+      ]
+    }
+  ],
+  "glbBytes": 7382108,
+  "highDetailBytes": 13293876,
+  "budgetBytes": 9961472,
+  "trianglesAfterGLB": 27952,
+  "glbBytesBeforeTimeNormalization": 7382324,
+  "atlasEdgeDilation": true
+}

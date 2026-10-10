@@ -1,0 +1,211 @@
+{
+  "ok": true,
+  "runtime": {
+    "package": "lupa",
+    "version": "2.6",
+    "module": "lupa.lua51",
+    "implementation": "Lua 5.1",
+    "luaVersion": [
+      5,
+      1
+    ]
+  },
+  "bundle": {
+    "path": "dist/zaizai_surreal.lua",
+    "moduleCount": 52,
+    "sha256": "fe9bbded7523503d831180c764580e550bee946c0330137039e3788d18edb884"
+  },
+  "declaredMethodCount": 34,
+  "implementedDemoConstructors": 8,
+  "futureTemplateControllers": 11,
+  "checks": [
+    {
+      "name": "bundle_loads_bootstrap",
+      "passed": true,
+      "detail": "Bootstrap.create is a Lua function"
+    },
+    {
+      "name": "default_adapter_rejected",
+      "passed": true,
+      "detail": "ADAPTER_NOT_READY"
+    },
+    {
+      "name": "empty_service_tables_rejected",
+      "passed": true,
+      "detail": "ADAPTER_NOT_READY"
+    },
+    {
+      "name": "declared_methods_allow_scaffold_binding",
+      "passed": true,
+      "detail": "34 inert method doubles"
+    },
+    {
+      "name": "definition_identity_matches_manifest",
+      "passed": true,
+      "detail": "19 definition IDs and types match registry entries"
+    },
+    {
+      "name": "clip_sources_match_owned_runtime_resources",
+      "passed": true,
+      "detail": "Every clip identifies its package's runtime model/animation/scene chunk"
+    },
+    {
+      "name": "future_templates_refuse_gameplay_start",
+      "passed": true,
+      "detail": "11 future controllers return NOT_IMPLEMENTED"
+    },
+    {
+      "name": "disposed_future_templates_refuse_restart",
+      "passed": true,
+      "detail": "11 future controllers return DISPOSED"
+    },
+    {
+      "name": "implemented_demo_controllers_classified_separately",
+      "passed": true,
+      "detail": "8 implemented constructors; use real Demo integration tests"
+    },
+    {
+      "name": "inkwave_requires_public_session_authority",
+      "passed": true,
+      "detail": "MISSING_SESSION_STATE"
+    },
+    {
+      "name": "inkwave_revalidates_required_public_methods",
+      "passed": true,
+      "detail": "MISSING_METHOD:Navigation.find_path"
+    },
+    {
+      "name": "inkwave_inert_world_does_not_claim_gameplay_started",
+      "passed": true,
+      "detail": "POSITION_UNAVAILABLE"
+    },
+    {
+      "name": "disposed_inkwave_refuses_restart",
+      "passed": true,
+      "detail": "DISPOSED"
+    },
+    {
+      "name": "unknown_entity_rejected",
+      "passed": true,
+      "detail": "UNKNOWN_ENTITY"
+    }
+  ],
+  "entities": [
+    {
+      "id": "chest_basic",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    },
+    {
+      "id": "gate_exit",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "item_capture",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "item_flashlight",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "item_heal_small",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    },
+    {
+      "id": "item_music_box",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "item_treasure",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "map_demo",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    },
+    {
+      "id": "map_tomb",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "monster_bat",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "monster_cube",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    },
+    {
+      "id": "monster_inkwave",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    },
+    {
+      "id": "monster_marmot",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "monster_slime",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "player_default",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    },
+    {
+      "id": "trap_spikes",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "ui_main",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    },
+    {
+      "id": "weapon_ranged_sample",
+      "start": "NOT_IMPLEMENTED",
+      "afterDispose": "DISPOSED",
+      "kind": "future_template"
+    },
+    {
+      "id": "weapon_shovel",
+      "start": "DEMO_IMPLEMENTED",
+      "afterDispose": "NOT_EXERCISED_HERE",
+      "kind": "demo"
+    }
+  ],
+  "scope": "Lua syntax, static module closure, bootstrap service checks and future-template NOT_IMPLEMENTED lifecycle responses. Implemented Demo constructors are classified separately and exercised by tests/test_demo_runtime.py / test_inkwave_monster.py; INKWAVE startup rejects missing authority, methods and position. Native UI/SDK start is not called by inert doubles. No model import, SDK compatibility or preview acceptance.",
+  "documentation": "https://pypi.org/project/lupa/2.6/"
+}

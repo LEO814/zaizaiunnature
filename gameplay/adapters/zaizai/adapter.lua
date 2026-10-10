@@ -3,6 +3,7 @@ local State=require('gameplay.core.state')
 local Services=require('gameplay.core.services')
 local Spatial=require('gameplay.core.spatial')
 local Api=require('gameplay.core.service_api')
+local InkwavePresentation=require('gameplay.adapters.zaizai.inkwave_presentation')
 local Adapter={};Adapter.__index=Adapter
 local function result(ok,reason,request,data)return {ok=ok,reason=reason or(ok and 'OK'or 'UNSUPPORTED'),request_id=request and request.request_id,data=data or{}}end
 local function plain(v)return {x=v.x,y=v.y,z=v.z}end
@@ -100,6 +101,9 @@ function Adapter:_install_engine_services()
  local assets=self.services.Assets
  function assets:resolve(r)
   local a=self._adapter
+  if r.resource_id=='asset_monster_inkwave' and (a.inkwave or U.GameObject.Find('monster_inkwave_actor'))then
+   return result(true,'IMPORTED_GLB',r,{path='gameplay/packages/monsters/monster_inkwave/model/main.glb',native_name='monster_inkwave_actor'})
+  end
   for _,e in ipairs(a.registry.entries)do for _,resource in ipairs(e.resources)do if resource.id==r.resource_id then return result(false,'PLANNED_MODEL_NOT_IMPORTED',r,{path=resource.path})end end end
   return result(false,'UNKNOWN_RESOURCE',r)
  end
@@ -109,6 +113,13 @@ function Adapter:_install_engine_services()
   else local name=r.node_name or r.entity_id;go=a.native_nodes[name]or U.GameObject.Find(name);if go then a.native_nodes[name]=go end end
   if not go then return result(false,'NATIVE_PROXY_MISSING',r,{entity_id=r.entity_id})end
   a.nodes[r.instance_id]=go
+  if r.entity_id=='monster_inkwave'then
+   go:SetActive(true)
+   if r.position_m then go.transform.position=a:vector(r.position_m);go.transform.rotation=U.Quaternion.identity end
+   if a.inkwave then a.inkwave:reset()else a.inkwave=InkwavePresentation.new(a,go)end
+   a.feedback[r.instance_id]={rigged=true,clip='idle',at=a.state.clock}
+   return result(true,'IMPORTED_GLB',r,{native_name=go.name,instance_id=r.instance_id,rigged_animation=true})
+  end
   local renderer=go:GetComponent(typeof(U.Renderer));local mat=renderer and renderer.material;local color=mat and mat.color or U.Color(0.95,0.48,0.16,1)
   local key=r.node_name or r.entity_id;local base=a.native_baselines[key]
   if not base then base={scale=plain(go.transform.localScale),color={r=color.r,g=color.g,b=color.b,a=color.a}};a.native_baselines[key]=base end
@@ -124,6 +135,10 @@ function Adapter:_install_engine_services()
  function assets:play_clip(r)
   local a=self._adapter;local f=a.feedback[r.instance_id]
   if not f then return result(false,'MISSING_ENTITY',r)end
+  if f.rigged then
+   local ok,reason=a.inkwave:play(r)
+   return result(ok,reason,r,{clip_id=r.clip_id,rigged_animation=true})
+  end
   if r.native_action=='chest_open'or r.native_action=='chest_close'then
    local lid=U.GameObject.Find('chest_basic_lid')
    if lid then lid.transform.rotation=U.Quaternion.Euler(r.native_action=='chest_open'and -80 or 0,0,0)end
@@ -133,7 +148,13 @@ function Adapter:_install_engine_services()
   f.clip=r.clip_id;f.at=a.state.clock
   return result(true,'NATIVE_DEMO_FEEDBACK',r,{clip_id=r.clip_id,rigged_animation=false})
  end
- function assets:resolve_socket(r)return result(false,'UNSUPPORTED',r,{reason='Native character bone contract remains unverified'})end
+ function assets:resolve_socket(r)
+  local a=self._adapter
+  if a.feedback[r.instance_id] and a.feedback[r.instance_id].rigged and (r.socket_id=='muzzle'or r.socket_name=='muzzle')then
+   return result(true,'OK',r,{position_m=plain(a.inkwave.muzzle.position)})
+  end
+  return result(false,'UNSUPPORTED',r,{reason='Unknown socket'})
+ end
  function assets:destroy(r)
   local a=self._adapter;local go=a.nodes[r.instance_id]
   if go and r.instance_id~='player_local'then go:SetActive(false)end
@@ -179,7 +200,8 @@ function Adapter:tick(dt)
  end
  for id,f in pairs(self.feedback)do
   local go=self.nodes[id]
-  if go and id~='player_local'then
+  if go and f.rigged then self.inkwave:update(self.dt)
+  elseif go and id~='player_local'then
    local age=self.state.clock-f.at;local clip=f.clip
    local scale=copy(f.base_scale);local bc=f.base_color;local color=U.Color(bc.r,bc.g,bc.b,bc.a)
    if clip=='native_death'then go:SetActive(false)
@@ -196,7 +218,8 @@ function Adapter:tick(dt)
 end
 function Adapter:dispose()
  local actor=self:actor();if actor then actor:Immobilize(false);if self.original_speed then pcall(function()actor.speed=self.original_speed end)end end
- for id,f in pairs(self.feedback)do local go=self.nodes[id];if go and id~='player_local'then go:SetActive(true);go.transform.localScale=self:vector(f.base_scale)end end
+ if self.inkwave then self.inkwave:dispose();self.inkwave=nil end
+ for id,f in pairs(self.feedback)do local go=self.nodes[id];if go and id~='player_local'then go:SetActive(true);if f.base_scale then go.transform.localScale=self:vector(f.base_scale)end end end
  self.subscriptions={};if self.runtime_root then self.U.Object.Destroy(self.runtime_root)end
  self.is_ready=false
 end

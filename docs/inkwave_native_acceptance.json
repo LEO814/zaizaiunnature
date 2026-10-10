@@ -1,0 +1,203 @@
+{
+  "projectName": "仔仔搜打撤1.0",
+  "generatedAt": "2026-10-10T13:56:17.204068+08:00",
+  "status": "passed_scoped_native_acceptance",
+  "model": {
+    "sha256": "8fe3a3194c04ff9f8dff56e5a5008e972b8d709720b4e92c0293b704b6d029e0",
+    "bytes": 7382108,
+    "trianglesBefore": 38710,
+    "trianglesAfter": 27952,
+    "reductionPercent": 27.8,
+    "uniqueBones": 87,
+    "clips": [
+      "idle",
+      "patrol",
+      "chase",
+      "attack",
+      "hit",
+      "death"
+    ],
+    "defaultClip": "idle"
+  },
+  "nativeImport": {
+    "acceptedByEditor": true,
+    "assetID": "10541583365634",
+    "resourceUri": "hamlet-ugc/aigc_editor/dev/unity/MS4wLjABAAAAyIQDWHr5Q0NjO67oGX6DfYicWp-0IbjoECcIFEri7eg/main__upload_hwpfiixa.glb",
+    "nodeId": -746727844,
+    "nodeName": "monster_inkwave_actor",
+    "preservedInspectorParameters": 21,
+    "preservedOtherNodes": true
+  },
+  "nativeDiagnostics": {
+    "skinCount": 4,
+    "sumBoneReferencesAcrossRenderers": 348,
+    "uniqueBonesFromGLB": 87,
+    "patrolHeadFootHeightM": 0.91,
+    "patrolMuzzleForwardDot": 0.99,
+    "evidence": "docs/evidence/inkwave_imported_skin_diagnostics.png",
+    "note": "348=4 renderers × 87 shared bones; does not mean 348 unique bones. Height/dot are one actual native preview sample."
+  },
+  "automatedNativeQA": {
+    "passedCount": 22,
+    "checks": [
+      {
+        "name": "GLB骨骼曲线绑定并实际更新",
+        "passed": true
+      },
+      {
+        "name": "导入蒙皮保留真实骨骼绑定",
+        "passed": true
+      },
+      {
+        "name": "死亡默认姿态不污染巡逻站姿",
+        "passed": true
+      },
+      {
+        "name": "八条怪物音效完成AudioClip上传",
+        "passed": true
+      },
+      {
+        "name": "初始角色100HP与怪物60HP",
+        "passed": true
+      },
+      {
+        "name": "墨潮怪物巡逻位移",
+        "passed": true
+      },
+      {
+        "name": "打开宝箱",
+        "passed": true
+      },
+      {
+        "name": "宝物1份与药品2份进入背包",
+        "passed": true
+      },
+      {
+        "name": "满血用药拒绝",
+        "passed": true
+      },
+      {
+        "name": "视野背后不索敌",
+        "passed": true
+      },
+      {
+        "name": "怪物前摇后攻击造成25伤害",
+        "passed": true
+      },
+      {
+        "name": "受伤可开始药品读条",
+        "passed": true
+      },
+      {
+        "name": "读条完成回血100HP",
+        "passed": true
+      },
+      {
+        "name": "只消耗一份药品",
+        "passed": true
+      },
+      {
+        "name": "铲击进入前摇",
+        "passed": true
+      },
+      {
+        "name": "首个有效窗口扣30HP",
+        "passed": true
+      },
+      {
+        "name": "第二次铲击",
+        "passed": true
+      },
+      {
+        "name": "怪物死亡停止行为",
+        "passed": true
+      },
+      {
+        "name": "撤离区域读条开始",
+        "passed": true
+      },
+      {
+        "name": "怪物专属声音与墨枪特效触发",
+        "passed": true
+      },
+      {
+        "name": "3秒后结算成功带出宝物",
+        "passed": true
+      },
+      {
+        "name": "重复结束不二次结算",
+        "passed": true
+      }
+    ],
+    "defaultPlayerHp": 100,
+    "defaultMonsterHp": 60,
+    "resultId": "run_2:result",
+    "terminalReason": "extraction",
+    "lootValue": 280,
+    "evidence": "docs/evidence/inkwave_native_22_pass.png",
+    "method": "native Teleport places test actor at acceptance points; shared services own damage, inventory and result."
+  },
+  "restartAfterMonsterDeath": {
+    "passed": true,
+    "playerHp": 100,
+    "monsterHp": 60,
+    "bagSlotsUsed": 0,
+    "phase": "EXPLORE",
+    "evidence": "docs/evidence/inkwave_restart_final.png"
+  },
+  "naturalPlaySample": {
+    "method": "manual WASD through hall door and monster-room door; no Teleport",
+    "uprightChaseAndWeaponObserved": true,
+    "playerKilledByMonster": true,
+    "playerHp": 0,
+    "resultId": "run_3:result",
+    "terminalReason": "death",
+    "lootValue": 0,
+    "evidence": "docs/evidence/inkwave_natural_chase_death.png",
+    "scope": "A movement/chase/death sample; not complete natural pickup-extraction playthrough."
+  },
+  "visualChecks": {
+    "editorUprightModel": true,
+    "limbPoseChangesObserved": true,
+    "weaponAttachmentObserved": true,
+    "evidence": "docs/evidence/inkwave_final_editor_model.png"
+  },
+  "fixedIssues": [
+    "Blender Decimate and texture resizing meet real editor asset-size validation.",
+    "Default first GLB clip changed from death to idle.",
+    "Presentation uses GLB bank rest TRS rather than an already animated import pose.",
+    "Native asset replacement clears property bindings; incremental installer restores SHA-verified 21 parameters while preserving new real resource references."
+  ],
+  "offline": {
+    "ai": {
+      "cases": 12,
+      "assertions": 230
+    },
+    "presentation": {
+      "cases": 12,
+      "assertions": 177
+    },
+    "generatedEntry": {
+      "cases": 20,
+      "assertions": 108,
+      "modules": 57,
+      "runtimes": [
+        "Lua5.1",
+        "Lua5.4"
+      ]
+    },
+    "coreRegression": {
+      "cases": 13,
+      "assertions": 301
+    },
+    "packageContracts": 22,
+    "bundleSmokeChecks": 14
+  },
+  "savedNativeSceneSha256": "7fb5b6ebb7f4366fa3167ff36473b980a849fc3224692784ce0009bc67d8e5d8",
+  "limits": [
+    "AudioClip upload and play events were exercised; speaker audibility and per-clip subjective loudness were not independently measured.",
+    "Original shader-specific dynamic mouth/pupil/glass effects are baked or approximated; not an exact shader port.",
+    "No mobile-device performance, multiplayer, warehouse, shop, persistence or cross-account imported-asset access acceptance.",
+    "AI, sounds and runtime FX accompany the GLB as Lua/audio resources; GLB itself contains mesh, skin, materials and animation."
+  ]
+}

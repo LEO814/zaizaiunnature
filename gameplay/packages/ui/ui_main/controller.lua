@@ -61,11 +61,15 @@ function UI:refresh_modal()
  self.take:SetActive(self.view=='chest')
  if self.view=='attributes'then
   local p=ctx.services.Characters:read_snapshot({run_id=s.run_id,instance_id='player_local'}).data
-  local m=ctx.services.Characters:read_snapshot({run_id=s.run_id,instance_id='monster_cube_1'}).data
-  local d=ctx.definitions.monster_cube
+  local m=ctx.services.Characters:read_snapshot({run_id=s.run_id,instance_id=ctx.monster_instance_id or 'monster_cube_1'}).data
+  local d=ctx.definitions[ctx.monster_entity_id or 'monster_cube']
   self.modal_title.text='Demo · 公共属性与对象挂钩'
-  local content='角色 HP '..tostring(p.hp)..' / '..tostring(p.max_hp)..'\n步行 '..ctx.config.player.walkSpeedMps..'  冲刺 '..ctx.config.player.sprintSpeedMps..'  蹲行 '..ctx.config.player.crouchSpeedMps..' m/s\n出生保护 '..ctx.config.player.spawnProtectionSec..' s  受击保护 '..ctx.config.player.hitInvulnerabilitySec..' s\n方块怪物 HP '..tostring(m.hp)..' / '..tostring(m.max_hp)..'\n视距 '..d.sense.rangeM..' m  视角 '..d.sense.fullAngleDeg..'°\n怪物伤害 '..d.attacks[1].damageHp..'  铲伤害 '..ctx.definitions.weapon_shovel.attack.damageHp
-  local label=self:text(self.modal,'attributes_body',content,0,20,610,255,19);self.rows[1]=label.gameObject
+  local content='角色 HP '..tostring(p.hp)..' / '..tostring(p.max_hp)..'\n步行 '..ctx.config.player.walkSpeedMps..'  冲刺 '..ctx.config.player.sprintSpeedMps..'  蹲行 '..ctx.config.player.crouchSpeedMps..' m/s\n出生保护 '..ctx.config.player.spawnProtectionSec..' s  受击保护 '..ctx.config.player.hitInvulnerabilitySec..' s\n墨潮怪物 HP '..tostring(m.hp)..' / '..tostring(m.max_hp)..'\n视距 '..d.sense.rangeM..' m  视角 '..d.sense.fullAngleDeg..'°\n怪物伤害 '..d.attacks[1].damageHp..'  铲伤害 '..ctx.definitions.weapon_shovel.attack.damageHp
+  if ctx.adapter.inkwave then
+   local v=ctx.adapter.inkwave:status();local pos=ctx.adapter:position('player_local')
+   content=content..'\n导入蒙皮 '..tostring(v.skin_count or'-')..' · 绑定骨骼 '..tostring(v.skin_bone_count or'-')..'\n头脚高度 '..string.format('%.2f',v.head_foot_height_m or 0)..' m · 枪口朝向 '..string.format('%.2f',v.muzzle_forward_dot or 0)..'\n玩家坐标 '..string.format('%.1f / %.1f',pos.x,pos.z)..' · 动作 '..tostring(v.clip)
+  end
+  local label=self:text(self.modal,'attributes_body',content,0,20,610,255,16);self.rows[1]=label.gameObject
   self.modal_hint.text='逻辑属性调整后重启预览 · 实际速度 '..tostring(ctx.adapter.speed_readback or'未映射')..' · 胶囊 '..(ctx.adapter.collider_apply_ok and'已映射'or'待 SDK 映射')
   return
  end
@@ -83,11 +87,12 @@ end
 function UI:update_snapshot(r)if self.view then self:refresh_modal()end end
 function UI:update(dt)
  if not self.started then return end
- local ctx=self.context;local s=ctx.state;local p=s.entities.player_local;local m=s.entities.monster_cube_1
+ local ctx=self.context;local s=ctx.state;local p=s.entities.player_local;local m=s.entities[ctx.monster_instance_id or 'monster_cube_1']
  local remaining=math.max(0,ctx.config.session.roundDurationSec-s.clock)
- self.status.text='HP '..tostring(p and p.hp or'-')..' / '..ctx.config.player.maxHp..'    时间 '..math.floor(remaining/60)..':'..string.format('%02d',math.floor(remaining%60))..'    方块 HP '..tostring(m and m.hp or'-')..'    '..tostring(s.phase)
+ self.status.text='HP '..tostring(p and p.hp or'-')..' / '..ctx.config.player.maxHp..'    时间 '..math.floor(remaining/60)..':'..string.format('%02d',math.floor(remaining%60))..'    怪物 HP '..tostring(m and m.hp or'-')..'    '..tostring(s.phase)
  local bag=s.containers.bag_player_local;local count=bag and#bag.items or 0
  self.hint.text='背包 '..count..' / '..ctx.config.inventory.bagSlots..'    怪物：'..tostring(ctx.demo and ctx.demo.objects.monster.ai_state or'等待')..'    搜集后回绿色区域撤离'
+ if ctx.adapter.inkwave then local v=ctx.adapter.inkwave:status();self.hint.text=self.hint.text..' · 骨骼 '..tostring(v.clip)..' / '..v.changed_bone_frames end
  if s.extract then self.hint.text='撤离中 '..string.format('%.1f',math.max(0,ctx.config.session.extractionHoldSec-(s.clock-s.extract.started_at)))..' 秒 · 离区或受击取消'end
  self.notice.text=s.toast or''
  if ctx.demo and ctx.demo.qa_summary then self.notice.text=ctx.demo.qa_summary end
